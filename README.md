@@ -24,14 +24,10 @@
 ## 运行方式
 
 1. 确认环境：Python 3.8+，且可 `pip install requests`（Linux/Mac/WSL 自带）。  
-2. 打开 `main.py`，在 `OPENAI_SETTINGS["api_key"]` 写入自己的 OpenAI API Key：  
-   ```python
-   OPENAI_SETTINGS = {
-       "api_key": "sk-xxxx",
-       ...
-   }
-   ```  
-   若希望区分不同模型，可分别修改 `controller_model`、`thinking_model`、`reasoning_model`。
+2. 将仓库根目录下自动生成的 `config.json` 或 `api_key.txt` 填入真实密钥：  
+   - 推荐编辑 `config.json`，在 `api_key` 字段写入 `sk-xxxx`；其余字段可继续沿用默认模型。  
+   - 如果更喜欢存放在纯文本中，可把密钥黏贴到 `api_key.txt` 第一行；当两个文件都写了 key 时，以 `config.json` 为准。  
+   - 这两个文件已在 `.gitignore` 中列出，不会被提交。  
 3. 运行：
    ```bash
    python3 main.py
@@ -42,7 +38,7 @@
 
 | 配置项 | 位置 | 说明 |
 | --- | --- | --- |
-| `OPENAI_SETTINGS` | `main.py:22` | 集中维护 API Key、Base URL 及三种模型与温度。 |
+| `OPENAI_SETTINGS` | `main.py:24` | 运行时会被 `config.json`/`api_key.txt` 中的值覆盖。 |
 | `CONTROLLER_SYSTEM_PROMPT` | `main.py:43` | 约束控制模型仅输出合法 JSON，含需要思考与否的决策。 |
 | `THINKING_SYSTEM_PROMPT` | `main.py:63` | 规范可见思考模型只能输出 2-4 句短语，语气自然。 |
 | `REASONING_SYSTEM_PROMPT` | `main.py:57` | 让主回答保持 2-3 句友好口吻，并隐藏内部推理。 |
