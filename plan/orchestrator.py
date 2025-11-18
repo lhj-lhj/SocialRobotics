@@ -34,6 +34,30 @@ def normalize_thinking_notes(notes: Any) -> List[str]:
         return [notes.strip()]
     return []
 
+def normalize_behavior_plan(plan: Any) -> List[Dict[str, str]]:
+    """Normalize controller-provided behavior plan entries."""
+    normalized: List[Dict[str, str]] = []
+    if isinstance(plan, list):
+        for entry in plan:
+            if not isinstance(entry, dict):
+                continue
+            gesture = str(entry.get("gesture", "")).strip()
+            expression = str(entry.get("expression", "")).strip()
+            led = str(entry.get("led", "")).strip()
+            reason = str(entry.get("reason", "")).strip()
+            if not (gesture or expression or led):
+                continue
+            normalized.append(
+                {
+                    "gesture": gesture,
+                    "expression": expression,
+                    "led": led,
+                    "reason": reason,
+                }
+            )
+    return normalized
+
+
 def _is_meaningful_thinking_cue(text: str) -> bool:
     """Filter out tokens that contain only punctuation or whitespace."""
     stripped = text.strip()
@@ -73,6 +97,7 @@ class Orchestrator:
 
         thinking_notes = normalize_thinking_notes(self.decision.get("thinking_notes"))
         reasoning_hint = self.decision.get("reasoning_hint", "")
+        behavior_plan = normalize_behavior_plan(self.decision.get("thinking_behavior_plan"))
         tone_instruction = CONFIDENCE_TONE_GUIDANCE.get(confidence_hint, "")
         self.behavior_generator.set_thinking_mode(True)
 
@@ -93,7 +118,9 @@ class Orchestrator:
             system_prompt=REASONING_SYSTEM_PROMPT,
         )
 
-        thinking_task = asyncio.create_task(self._relay_thinking(thinking_model, thinking_notes))
+        thinking_task = asyncio.create_task(
+            self._relay_thinking(thinking_model, thinking_notes, behavior_plan)
+        )
         try:
             await self._relay_answer(reasoning_model, confidence_hint)
         finally:
@@ -119,7 +146,12 @@ class Orchestrator:
         
         self.current_answer_text = full_answer
 
-    async def _relay_thinking(self, thinking_model: ChatGPTSentenceStreamer, thinking_notes: List[str]):
+    async def _relay_thinking(
+        self,
+        thinking_model: ChatGPTSentenceStreamer,
+        thinking_notes: List[str],
+        behavior_plan: List[Dict[str, str]],
+    ):
         """Relay thinking: emit controller notes first, then the thinking model."""
         loop = asyncio.get_running_loop()
         deadline = loop.time() + THINKING_DURATION_SECONDS
@@ -130,7 +162,12 @@ class Orchestrator:
             if self.furhat_client:
                 await self.furhat_client.request_speak_text(text)
             if self.behavior_generator:
-                await self.behavior_generator.perform_thinking_behavior(index)
+                instruction = None
+                if behavior_plan:
+                    instruction = behavior_plan[index % len(behavior_plan)]
+                await self.behavior_generator.perform_thinking_behavior(
+                    index, instruction=instruction
+                )
 
         try:
             for note in thinking_notes:

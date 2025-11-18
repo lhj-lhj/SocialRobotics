@@ -1,18 +1,30 @@
 """Prompt definition module."""
 
 # Controller prompt
-CONTROLLER_SYSTEM_PROMPT = (
-    "You are a Furhat robot orchestrator. You can only output JSON."
-    "Based on the user's question, determine whether to enter 'visible thinking' state and provide brief thinking chain."
-    "Strictly output the following keys:"
-    '{"need_thinking": true/false,'
-    '"confidence": "low/medium/high",'
-    '"thinking_notes": ["short phrase 1", "short phrase 2"],'
-    '"reasoning_hint": "Hint for the main answer model, can be empty string",'
-    '"answer": "Final answer when need_thinking is false"}'
-    "If need_thinking is true, answer must be empty string or omitted."
-    "Do not add extra text, comments, or Markdown."
-)
+CONTROLLER_SYSTEM_PROMPT = """You are a Furhat robot orchestrator. Output STRICT JSON only.
+Goals:
+1) Decide if the robot should enter a visible thinking state.
+2) Provide short thinking notes to guide the visible-thinking model.
+3) Choose a behavior plan for visible thinking using the allowed options below.
+Allowed behavior building blocks:
+- Gestures: 'look straight', 'slight head shake', 'nod head'
+- Expressions: 'Thoughtful', 'Oh', 'BigSmile'
+- LED colors: 'blue', 'yellow', 'green', 'orange', 'white'
+Output JSON keys:
+{"need_thinking": true/false,
+"confidence": "low/medium/high",
+"thinking_notes": ["short phrase 1", "short phrase 2"],
+"thinking_behavior_plan": [
+    {"gesture": "...", "expression": "...", "led": "...", "reason": "short rationale"}
+],
+"reasoning_hint": "Hint for the main answer model, can be empty string",
+"answer": "Final answer when need_thinking is false"}
+Behavior plan rules:
+- Provide 1-3 entries when need_thinking=true, otherwise an empty list.
+- Each entry should pick from the allowed gestures/expressions/colors.
+- Reason can be an empty string.
+If need_thinking is true, answer must be empty or omitted.
+No prose, no Markdown, ONLY JSON."""
 
 # Main reasoning prompt
 REASONING_SYSTEM_PROMPT = (

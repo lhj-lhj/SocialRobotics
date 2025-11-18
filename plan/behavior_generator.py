@@ -64,9 +64,17 @@ class BehaviorGenerator:
         self._pending_confidence = None
         return value
 
-    async def perform_thinking_behavior(self, sequence_index: int = 0):
+    async def perform_thinking_behavior(
+        self,
+        sequence_index: int = 0,
+        instruction: Optional[Dict[str, Any]] = None,
+    ):
         """Loop through gestures/expressions/LED cues during thinking."""
         if not self.furhat:
+            return
+
+        if instruction:
+            await self._apply_behavior_instruction(instruction)
             return
 
         gesture_cycle = ["look straight", "slight head shake"]
@@ -83,6 +91,28 @@ class BehaviorGenerator:
             self.execute_led_color_hex(led_color),
             return_exceptions=True
         )
+
+    async def _apply_behavior_instruction(self, instruction: Dict[str, Any]):
+        """Execute gestures/expressions/LED settings defined by the controller."""
+        tasks = []
+        gesture = instruction.get("gesture")
+        expression = instruction.get("expression")
+        led = instruction.get("led") or instruction.get("led_color") or instruction.get("led_hex")
+
+        if gesture:
+            tasks.append(self.execute_gesture(gesture))
+        if expression:
+            tasks.append(self.execute_gesture_expression(expression))
+        if led:
+            led = str(led)
+            if led.startswith("#"):
+                tasks.append(self.execute_led_color_hex(led))
+            else:
+                tasks.append(self.execute_led_color(led))
+
+        if tasks:
+            import asyncio
+            await asyncio.gather(*tasks, return_exceptions=True)
 
     async def execute_multimodal_behavior(self, confidence: str):
         """Perform the confidence-specific multimodal behavior."""
