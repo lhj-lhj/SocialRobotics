@@ -7,6 +7,11 @@ class BehaviorGenerator:
     """Convert confidence levels and action descriptions into multimodal behaviors."""
 
     # Confidence tier to (verbal prefix, base gesture, expression, LED color)
+    # CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
+    #     "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
+    #     "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
+    #     "high": ("I'm confident that", "nod head", "BigSmile", "green"),
+    # }
     CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
         "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
         "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
@@ -25,6 +30,7 @@ class BehaviorGenerator:
     def __init__(self, furhat_client: Optional[AsyncFurhatClient] = None):
         self.furhat = furhat_client
         self._thinking_mode = False
+        self._pending_confidence: Optional[str] = None
 
     def get_confidence_behavior(self, confidence: str) -> Tuple[str, str]:
         """Return the verbal prefix and gesture for the given confidence tier."""
@@ -44,6 +50,19 @@ class BehaviorGenerator:
 
     def is_in_thinking_mode(self) -> bool:
         return self._thinking_mode
+
+    def set_pending_confidence(self, confidence: str):
+        """Store the resolved confidence for the next utterance."""
+        if confidence in self.CONFIDENCE_BEHAVIORS:
+            self._pending_confidence = confidence
+        else:
+            self._pending_confidence = "medium"
+
+    def consume_pending_confidence(self) -> Optional[str]:
+        """Return and clear the stored confidence value."""
+        value = self._pending_confidence
+        self._pending_confidence = None
+        return value
 
     async def perform_thinking_behavior(self, sequence_index: int = 0):
         """Loop through gestures/expressions/LED cues during thinking."""
@@ -188,7 +207,10 @@ class BehaviorGenerator:
         return self._estimate_confidence_from_words(word_count)
 
     def infer_confidence_from_text(self, text: str) -> str:
-        """Infer confidence level based on the spoken text."""
+        """Infer confidence level based on the spoken text or a stored hint."""
+        pending = self.consume_pending_confidence()
+        if pending:
+            return pending
         text_lower = text.lower()
         if "i'm not entirely sure" in text_lower or "i'm not sure" in text_lower:
             return "low"

@@ -39,12 +39,13 @@ def build_thinking_prompt(question: str, notes: list) -> str:
     )
 
 
-def build_reasoning_prompt(question: str, hint: str) -> str:
+def build_reasoning_prompt(question: str, hint: str, tone_instruction: str = "") -> str:
     """Build the reasoning prompt fed to the answer model."""
     hint_part = f"\nPreliminary hint to consider: {hint}" if hint else ""
+    tone_part = f"\nAdopt this tone: {tone_instruction}" if tone_instruction else ""
     return (
         f"User question: {question}"
-        f"{hint_part}\n"
+        f"{hint_part}{tone_part}\n"
         "Please summarize the solution in 2-3 sentences, do not output chain-of-thought reasoning."
     )
 

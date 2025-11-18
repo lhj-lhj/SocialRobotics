@@ -19,6 +19,12 @@ MAX_THINKING_CUES = 12
 THINKING_DURATION_SECONDS = 10.0
 THINKING_PAUSE_SECONDS = 0.5
 
+CONFIDENCE_TONE_GUIDANCE = {
+    "low": "Sound tentative and gentle, acknowledging uncertainty briefly.",
+    "medium": "Use a thoughtful, balanced tone that shows measured confidence.",
+    "high": "Respond with warm, natural confidence without sounding scripted.",
+}
+
 
 def normalize_thinking_notes(notes: Any) -> List[str]:
     """Normalize thinking notes so the list is safe to iterate."""
@@ -67,6 +73,7 @@ class Orchestrator:
 
         thinking_notes = normalize_thinking_notes(self.decision.get("thinking_notes"))
         reasoning_hint = self.decision.get("reasoning_hint", "")
+        tone_instruction = CONFIDENCE_TONE_GUIDANCE.get(confidence_hint, "")
         self.behavior_generator.set_thinking_mode(True)
 
         thinking_model = ChatGPTSentenceStreamer(
@@ -76,7 +83,11 @@ class Orchestrator:
             system_prompt=THINKING_SYSTEM_PROMPT,
         )
         reasoning_model = ChatGPTSentenceStreamer(
-            user_content=build_reasoning_prompt(self.question, reasoning_hint),
+            user_content=build_reasoning_prompt(
+                self.question,
+                reasoning_hint,
+                tone_instruction=tone_instruction,
+            ),
             model=OPENAI_SETTINGS["reasoning_model"],
             temperature=OPENAI_SETTINGS["reasoning_temperature"],
             system_prompt=REASONING_SYSTEM_PROMPT,
@@ -95,8 +106,9 @@ class Orchestrator:
             answer = "I'm sorry, I can't provide an answer at the moment."
         
         confidence = confidence_hint if confidence_hint in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"
-        prefix, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
-        full_answer = f"{prefix} {answer}".strip()
+        _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
+        self.behavior_generator.set_pending_confidence(confidence)
+        full_answer = answer.strip()
         
         cprint(f"Robot directly responds (confidence={confidence}, gesture={gesture_description})")
         cprint(f"Robot: {full_answer}")
@@ -154,10 +166,8 @@ class Orchestrator:
         confidence_hint: Optional[str],
     ):
         """Relay the streamed answer."""
-        prefix = ""
         gesture_description = ""
         first_clause = True
-        answer_parts = []
         full_answer_parts = []
 
         # Collect all sentences first
@@ -167,20 +177,19 @@ class Orchestrator:
                 confidence_level = self.behavior_generator.resolve_confidence(
                     confidence_hint, reasoning_model.word_count
                 )
-                prefix, gesture_description = self.behavior_generator.get_confidence_behavior(confidence_level)
+                _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence_level)
+                self.behavior_generator.set_pending_confidence(confidence_level)
                 cprint(f"Robot switches to answer mode (confidence={confidence_level}, gesture={gesture_description})")
                 
                 # Gestures are dispatched by the bridge when speech starts
                 first_clause = False
 
-            answer_parts.append(clause)
-            full_clause = f"{prefix} {clause}".strip() if prefix else clause
+            cprint(f"Robot: {clause}")
             full_answer_parts.append(clause)
-            cprint(f"Robot: {full_clause}")
         
         # Send a single combined utterance to Furhat to avoid repeated triggers
         if full_answer_parts:
-            full_answer = f"{prefix} {' '.join(full_answer_parts)}".strip() if prefix else " ".join(full_answer_parts)
+            full_answer = " ".join(full_answer_parts).strip()
             self.current_answer_text = full_answer
             
             # Only send once at the end
