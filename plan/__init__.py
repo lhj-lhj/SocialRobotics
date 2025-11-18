@@ -1,4 +1,4 @@
-"""计划模块：判断信任程度、组织行为和表现思考状态"""
+"""Planning module: confidence control, behavior orchestration, and thinking display."""
 from .controller import ControllerModel
 from .orchestrator import Orchestrator
 from .behavior_generator import BehaviorGenerator

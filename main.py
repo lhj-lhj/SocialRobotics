@@ -1,8 +1,8 @@
-"""主入口：控制要不要 plan"""
+"""Main entry point controlling whether to use the planning module."""
 import sys
 import os
 
-# 添加项目根目录到路径（必须在导入之前）
+# Add project root to sys.path before importing local modules
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import asyncio
@@ -12,10 +12,11 @@ from connection.furhat_bridge import FurhatBridge
 from plan.behavior_generator import BehaviorGenerator
 from plan import Orchestrator
 from utils.print_utils import cprint
+from plan.orchestrator import Orchestrator
 
 
 async def _run_bridge(bridge: FurhatBridge):
-    """异步运行桥接器"""
+    """Run the bridge event loop asynchronously."""
     await bridge.run()
 
 
@@ -47,24 +48,29 @@ async def _run_local_test():
 
 
 def main():
-    """主函数：控制是否使用 plan 模块"""
-    parser = argparse.ArgumentParser(description="Furhat 机器人对话系统")
+    """Main function: optionally run without the planning module or in test mode."""
+    parser = argparse.ArgumentParser(description="Furhat dialogue system")
     parser.add_argument(
         "--host",
         type=str,
-        default="192.168.1.110",
+        default="192.168.1.114",
         help="Furhat 机器人 IP 地址"
     )
     parser.add_argument(
         "--auth_key",
         type=str,
         default=None,
-        help="Realtime API 的认证密钥"
+        help="Realtime API auth key"
     )
     parser.add_argument(
         "--no-plan",
         action="store_true",
-        help="不使用 plan 模块（仅用于调试）"
+        help="Skip the planning module (debug only)"
+    )
+    parser.add_argument(
+        "--test",
+        action="store_true",
+        help="Test language/thinking only without connecting to Furhat"
     )
     parser.add_argument(
         "--local-test",
@@ -74,26 +80,22 @@ def main():
     args = parser.parse_args()
 
     try:
-        if args.local_test:
-            asyncio.run(_run_local_test())
-            return
-
         # 创建连接桥接器
         bridge = FurhatBridge(host=args.host, auth_key=args.auth_key)
         
         if args.no_plan:
-            cprint("警告：未使用 plan 模块，仅连接模式")
-            # 可以在这里添加不使用 plan 的逻辑
+            cprint("Warning: planning module disabled (connection-only mode)")
+            # Insert custom logic for no-plan mode here if needed
         
-        # 运行主循环
+        # Run the main event loop
         asyncio.run(_run_bridge(bridge))
         
     except KeyboardInterrupt:
-        cprint("\n程序被用户中断")
+        cprint("\nInterrupted by user")
     except RuntimeError as err:
-        cprint(f"配置错误：{err}")
+        cprint(f"Configuration error: {err}")
     except Exception as err:
-        cprint(f"未预期的错误：{err}")
+        cprint(f"Unexpected error: {err}")
         import traceback
         traceback.print_exc()
 

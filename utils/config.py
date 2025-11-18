@@ -1,4 +1,4 @@
-"""配置加载模块"""
+"""Configuration loader."""
 import json
 import os
 from pathlib import Path
@@ -9,7 +9,7 @@ CONFIG_JSON_PATH = Path("config.json")
 API_KEY_TXT_PATH = Path("api_key.txt")
 SETTINGS_LOADED = False
 
-# ==== 基础配置 ====
+# ==== Base configuration (overridden by config files) ====
 OPENAI_SETTINGS: Dict[str, Any] = {
     "api_key": "",
     "base_url": "https://api.openai.com",
@@ -23,7 +23,7 @@ OPENAI_SETTINGS: Dict[str, Any] = {
 
 
 def load_api_settings_from_files():
-    """从 config.json 或 api_key.txt 或 .env 加载配置"""
+    """Load API settings from config.json, api_key.txt, or .env files."""
     global SETTINGS_LOADED
     if SETTINGS_LOADED:
         return
@@ -31,9 +31,9 @@ def load_api_settings_from_files():
     api_key = ""
     config_data: Dict[str, Any] = {}
 
-    # 优先从 config.json 加载
+    # Prefer config.json from project root
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    # 查找当前目录和上一级目录的 config.json
+    # Look for config.json in current and parent directories
     config_path = Path(script_dir).parent / CONFIG_JSON_PATH
     if not config_path.exists():
         config_path = Path(script_dir).parent.parent / CONFIG_JSON_PATH
@@ -45,7 +45,7 @@ def load_api_settings_from_files():
                 if isinstance(loaded, dict):
                     config_data = loaded
         except json.JSONDecodeError as err:
-            print(f"警告：config.json 解析失败：{err}")
+            print(f"Warning: failed to parse config.json: {err}")
 
     if config_data:
         for field in [
@@ -62,7 +62,7 @@ def load_api_settings_from_files():
                 OPENAI_SETTINGS[field] = config_data[field]
         api_key = str(config_data.get("api_key", "")).strip()
 
-    # 如果没有从 config.json 获取到，尝试 api_key.txt
+    # Fall back to api_key.txt if needed
     if not api_key:
         api_key_path = Path(script_dir).parent / API_KEY_TXT_PATH
         if not api_key_path.exists():
@@ -75,7 +75,7 @@ def load_api_settings_from_files():
                         api_key = line
                         break
 
-    # 如果还没有，尝试从 .env 加载
+    # Finally, try .env files
     if not api_key:
         env_path = os.path.join(Path(script_dir).parent, '.env')
         if not os.path.exists(env_path):
@@ -85,7 +85,7 @@ def load_api_settings_from_files():
 
     if not api_key:
         raise RuntimeError(
-            "未找到 API Key。请在 config.json 的 api_key 字段、api_key.txt 或 .env 文件中的 OPENAI_API_KEY 填写密钥。"
+            "API key not found. Please populate config.json (api_key), api_key.txt, or .env (OPENAI_API_KEY)."
         )
 
     OPENAI_SETTINGS["api_key"] = api_key

@@ -1,4 +1,4 @@
-"""连接模块：用于和机器人连接做调试"""
+"""Connection layer for interacting with the robot during debugging."""
 from .furhat_bridge import FurhatBridge
 
 __all__ = ['FurhatBridge']

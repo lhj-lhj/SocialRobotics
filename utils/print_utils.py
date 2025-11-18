@@ -1,8 +1,8 @@
-"""打印工具，支持中文输出"""
+"""Printing helpers that handle UTF-8 output safely."""
 import sys
 import io
 
-# 确保控制台能正确输出中文
+# Ensure the console can emit UTF-8 text
 try:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
@@ -15,7 +15,7 @@ except Exception:
 
 
 def cprint(text: str, end: str = "\n"):
-    """安全打印中文，支持 end 参数"""
+    """Print text safely with UTF-8 fallback."""
     try:
         print(text, end=end)
         if end != "\n":

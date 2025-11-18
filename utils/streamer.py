@@ -1,4 +1,4 @@
-"""流式处理模块"""
+"""Streaming helpers for ChatGPT-like APIs."""
 import asyncio
 import json
 import threading
@@ -9,7 +9,7 @@ from utils.config import load_api_settings_from_files, OPENAI_SETTINGS
 
 
 class ChatGPTSentenceStreamer:
-    """从 ChatGPT 接口流式获取句子级片段"""
+    """Stream sentence-level chunks from the ChatGPT API."""
 
     def __init__(
         self,
@@ -26,12 +26,12 @@ class ChatGPTSentenceStreamer:
         self.system_prompt = system_prompt
         self.api_key = OPENAI_SETTINGS["api_key"]
         if not self.api_key:
-            raise RuntimeError("请在配置中填入合法的 API Key")
+            raise RuntimeError("Please configure a valid API key.")
         self.base_url = OPENAI_SETTINGS["base_url"].rstrip("/")
         self.word_count = 0
 
     async def stream(self):
-        """异步返回句子级别的流式片段"""
+        """Yield sentence-like chunks asynchronously."""
         queue: asyncio.Queue = asyncio.Queue()
         loop = asyncio.get_running_loop()
 
@@ -104,7 +104,7 @@ class ChatGPTSentenceStreamer:
 
     @staticmethod
     def _pop_ready_clauses(text: str) -> Tuple[List[str], str]:
-        """按句子分割文本"""
+        """Split accumulated text by sentence boundaries."""
         clauses: List[str] = []
         start = 0
         for idx, char in enumerate(text):

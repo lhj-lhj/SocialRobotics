@@ -1,4 +1,4 @@
-"""控制模块：判断信任程度和是否需要思考"""
+"""Controller module: decide confidence and whether visible thinking is needed."""
 import json
 import requests
 from typing import Any, Dict
@@ -8,20 +8,20 @@ from plan.prompts import CONTROLLER_SYSTEM_PROMPT
 
 
 class ControllerModel:
-    """调用控制模型，判断是否需要显示思考并给出提示"""
+    """Call the controller model to decide if thinking should be shown and gather hints."""
 
     def __init__(self, question: str):
         load_api_settings_from_files()
         self.question = question
         self.api_key = OPENAI_SETTINGS["api_key"]
         if not self.api_key:
-            raise RuntimeError("请在配置中填入合法的 API Key")
+            raise RuntimeError("Please configure a valid API key.")
         self.base_url = OPENAI_SETTINGS["base_url"].rstrip("/")
         self.model = OPENAI_SETTINGS.get("controller_model", OPENAI_SETTINGS["reasoning_model"])
         self.temperature = OPENAI_SETTINGS.get("controller_temperature", 0.2)
 
     def decide(self) -> Dict[str, Any]:
-        """决策是否需要思考，并返回信心等级等信息"""
+        """Determine whether thinking is needed and return metadata such as confidence."""
         url = f"{self.base_url}/v1/chat/completions"
         headers = {
             "Authorization": f"Bearer {self.api_key}",
@@ -42,7 +42,7 @@ class ControllerModel:
 
     @staticmethod
     def _parse_json(text: str) -> Dict[str, Any]:
-        """解析控制模型返回的 JSON"""
+        """Parse the JSON payload returned by the controller model."""
         candidate = text.strip()
         if candidate.startswith("```"):
             candidate = candidate.strip("`")
@@ -51,5 +51,5 @@ class ControllerModel:
         try:
             return json.loads(candidate)
         except json.JSONDecodeError as err:
-            raise RuntimeError(f"控制模型返回的内容无法解析为 JSON：{candidate}") from err
+            raise RuntimeError(f"Controller response is not valid JSON: {candidate}") from err
 
