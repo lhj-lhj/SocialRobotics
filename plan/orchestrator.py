@@ -1,10 +1,11 @@
 """编排器：组织思考和回答流程"""
 import asyncio
+import json
 from typing import Any, Dict, Optional, List
 
 from utils.streamer import ChatGPTSentenceStreamer
-from utils.print_utils import cprint
 from utils.config import OPENAI_SETTINGS
+from utils.session_logger import SessionLogger
 from plan.controller import ControllerModel
 from plan.behavior_generator import BehaviorGenerator
 from plan.prompts import (
@@ -15,7 +16,7 @@ from plan.prompts import (
 )
 
 # Visible thinking configuration
-MAX_THINKING_CUES = 12
+MAX_THINKING_CUES = 3
 THINKING_DURATION_SECONDS = 10.0
 THINKING_PAUSE_SECONDS = 0.5
 THINKING_FALLBACK_LINES = [
@@ -46,10 +47,11 @@ class Orchestrator:
     """调度思考层与 ChatGPT 主回答，控制可见的状态切换"""
 
     def __init__(
-        self, 
-        question: str, 
+        self,
+        question: str,
         behavior_generator: Optional[BehaviorGenerator] = None,
-        furhat_client = None
+        furhat_client=None,
+        session_logger: Optional[SessionLogger] = None,
     ):
         self.question = question
         self.controller = ControllerModel(question)
@@ -58,13 +60,18 @@ class Orchestrator:
         self.decision: Dict[str, Any] = {}
         self.current_answer_text = ""
         self.thinking_window_done = asyncio.Event()
+        self.logger = session_logger or SessionLogger()
 
     async def run(self):
         """运行编排流程"""
+        self.logger.log("UserQuestion", self.question)
         self.decision = self.controller.decide()
+        self.logger.log_block(
+            "ControllerDecision",
+            json.dumps(self.decision, ensure_ascii=False, indent=2)
+        )
         need_thinking = bool(self.decision.get("need_thinking", False))
         confidence_hint = self.decision.get("confidence")
-        cprint(f"User: {self.question}")
         self.thinking_window_done.clear()
 
         if not need_thinking:
@@ -102,13 +109,20 @@ class Orchestrator:
         if not answer:
             answer = "I'm sorry, I can't provide an answer at the moment."
         
-        confidence = confidence_hint if confidence_hint in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"
+        confidence = (
+            confidence_hint
+            if confidence_hint in self.behavior_generator.CONFIDENCE_BEHAVIORS
+            else "medium"
+        )
         prefix, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
         full_answer = f"{prefix} {answer}".strip()
-        
-        cprint(f"Robot directly responds (confidence={confidence}, gesture={gesture_description})")
-        cprint(f"Robot: {full_answer}")
-        
+
+        self.logger.log(
+            "DirectResponse",
+            f"confidence={confidence}, gesture={gesture_description}"
+        )
+        self.logger.log("RobotOutput", full_answer)
+
         # 发送文本到 Furhat（只发送一次完整答案）
         # 动作会在 on_speak_start 事件中根据文本内容自动执行
         if self.furhat_client:
@@ -124,7 +138,7 @@ class Orchestrator:
         fallback_idx = 0
 
         async def emit_line(text: str, index: int):
-            cprint(f"Robot (thinking): {text}")
+            self.logger.log("ThinkingCue", f"#{index + 1}: {text}")
             if self.furhat_client:
                 await self.furhat_client.request_speak_text(text)
             if self.behavior_generator:
@@ -154,6 +168,7 @@ class Orchestrator:
         finally:
             self.behavior_generator.set_thinking_mode(False)
             self.thinking_window_done.set()
+            self.logger.log("ThinkingPhase", "finished")
 
     async def _relay_answer(
         self,
@@ -175,7 +190,10 @@ class Orchestrator:
                     confidence_hint, reasoning_model.word_count
                 )
                 prefix, gesture_description = self.behavior_generator.get_confidence_behavior(confidence_level)
-                cprint(f"Robot switches to answer mode (confidence={confidence_level}, gesture={gesture_description})")
+                self.logger.log(
+                    "AnswerMode",
+                    f"confidence={confidence_level}, gesture={gesture_description}"
+                )
                 
                 # 动作会在 on_speak_start 事件中根据文本内容自动执行，这里不需要手动执行
                 first_clause = False
@@ -183,17 +201,18 @@ class Orchestrator:
             answer_parts.append(clause)
             full_clause = f"{prefix} {clause}".strip() if prefix else clause
             full_answer_parts.append(clause)
-            cprint(f"Robot: {full_clause}")
+            self.logger.log("AnswerClause", full_clause)
         
         # 合并所有句子，一次性发送到 Furhat（避免每个句子都触发事件）
         if full_answer_parts:
             full_answer = f"{prefix} {' '.join(full_answer_parts)}".strip() if prefix else " ".join(full_answer_parts)
             self.current_answer_text = full_answer
+            self.logger.log("RobotOutput", full_answer)
             
             # 只在最后发送一次完整答案
             if self.furhat_client:
                 await self.furhat_client.request_speak_text(full_answer)
         
         if gesture_description:
-            cprint(f"Robot (non-verbal gesture): {gesture_description}")
+            self.logger.log("RobotGesture", gesture_description)
 

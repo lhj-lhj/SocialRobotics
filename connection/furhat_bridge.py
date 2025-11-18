@@ -12,7 +12,7 @@ from utils.print_utils import cprint
 class FurhatBridge:
     """Furhat 机器人连接桥接器"""
 
-    def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None):
+    def __init__(self, host: str = "192.168.1.110", auth_key: Optional[str] = None):
         self.host = host
         self.auth_key = auth_key
         self.conversation_starter = "Hello, I am Furhat. How are you today?"

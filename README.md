@@ -69,3 +69,14 @@ Social Robotics/
 ```
 
 Feel free to extend this prototype for user studies. You can log the controller JSON, thinking cues, and final answers inside `Orchestrator` if you need structured datasets for downstream analysis.
+
+
+
+Furhat表情大全（用于找到可能与thinking behaviour相关的表情）：
+When your robot is running, you can go to http://<ROBOT_IP>:9000/ where you will find a playground. Here, you can test out the different requests you can send using the websocket API. This lets you easily test and understand what the different methods do.
+If you want to access the same playground but use it for your virtual furhat, you go to http://192.168.1.110:9000/.
+
+
+
+Furhat API：
+https://docs.furhat.io/realtime-api/intro
