@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Optional, Tuple, Dict, Any, List
 from furhat_realtime_api import AsyncFurhatClient
 from utils.print_utils import cprint
+from plan.thinking_config import get_thinking_config
 
 
 class BehaviorGenerator:
@@ -291,7 +292,17 @@ class BehaviorGenerator:
         return "medium"
 
     def _load_thinking_script(self) -> List[Dict[str, Any]]:
-        """Load scripted thinking behaviors from thinking_behaviors.json if present."""
+        """Load scripted thinking behaviors from config (with legacy fallback)."""
+        config = get_thinking_config()
+        behaviors = config.get("behaviors") or []
+        if isinstance(behaviors, list):
+            cleaned: List[Dict[str, Any]] = []
+            for entry in behaviors:
+                if isinstance(entry, dict):
+                    cleaned.append(entry)
+            return cleaned
+
+        # Legacy fallback to thinking_behaviors.json if config malformed
         script_path = Path(__file__).resolve().parent.parent / "thinking_behaviors.json"
         if not script_path.exists():
             return []

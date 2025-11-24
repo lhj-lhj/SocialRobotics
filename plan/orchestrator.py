@@ -7,6 +7,7 @@ from utils.print_utils import cprint
 from utils.config import OPENAI_SETTINGS
 from plan.controller import ControllerModel
 from plan.behavior_generator import BehaviorGenerator
+from plan.thinking_config import get_thinking_config
 from plan.prompts import (
     THINKING_SYSTEM_PROMPT,
     REASONING_SYSTEM_PROMPT,
@@ -15,9 +16,13 @@ from plan.prompts import (
 )
 
 # Visible thinking configuration
-MAX_THINKING_CUES = 12
-THINKING_DURATION_SECONDS = 10.0
-THINKING_PAUSE_SECONDS = 0.5
+THINKING_CONFIG = get_thinking_config()
+MAX_THINKING_CUES = int(THINKING_CONFIG.get("max_cues", 12) or 12)
+THINKING_DURATION_SECONDS = float(THINKING_CONFIG.get("max_duration_seconds", 10.0) or 10.0)
+THINKING_PAUSE_SECONDS = float(THINKING_CONFIG.get("pause_seconds", 0.5) or 0.5)
+MIN_THINKING_DURATION_SECONDS = float(
+    THINKING_CONFIG.get("min_duration_seconds", 8.0) or 8.0
+)  # Ensure thinking lasts at least this long
 
 CONFIDENCE_TONE_GUIDANCE = {
     "low": "Sound tentative and gentle, acknowledging uncertainty briefly.",
@@ -154,7 +159,8 @@ class Orchestrator:
     ):
         """Relay thinking: emit controller notes first, then the thinking model."""
         loop = asyncio.get_running_loop()
-        deadline = loop.time() + THINKING_DURATION_SECONDS
+        start_time = loop.time()
+        deadline = start_time + THINKING_DURATION_SECONDS
         emitted = 0
 
         async def emit_line(text: str, index: int):
@@ -192,6 +198,11 @@ class Orchestrator:
                     break
                 await asyncio.sleep(THINKING_PAUSE_SECONDS)
         finally:
+            # Enforce a minimum thinking duration
+            min_duration = min(MIN_THINKING_DURATION_SECONDS, THINKING_DURATION_SECONDS)
+            elapsed = loop.time() - start_time
+            if elapsed < min_duration:
+                await asyncio.sleep(min_duration - elapsed)
             self.behavior_generator.set_thinking_mode(False)
             self.thinking_window_done.set()
 

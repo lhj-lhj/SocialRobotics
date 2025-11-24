@@ -1,0 +1,74 @@
+{
+  "min_duration_seconds": 6.0,
+  "max_duration_seconds": 10.0,
+  "pause_seconds": 1,
+  "max_cues": 12,
+  "behaviors": [
+    {
+      "utterance": "let me think",
+      "gesture": "look straight",
+      "expression": "Thoughtful",
+      "led": "blue"
+    },
+    {
+      "gesture": "slight head shake",
+      "expression": "Oh",
+      "led": "purple"
+    },
+    {
+      "gesture": "nod head",
+      "expression": "Thoughtful",
+      "led": "yellow"
+    },
+    {
+      "utterance": "emmmm",
+      "gesture": "look straight",
+      "expression": "Thoughtful",
+      "led": "blue"
+    },
+    {
+      "gesture": "slight head shake",
+      "expression": "Oh",
+      "led": "purple"
+    },
+    {
+      "gesture": "nod head",
+      "expression": "Thoughtful",
+      "led": "yellow"
+    },
+    {
+      "utterance": "let me think",
+      "gesture": "look straight",
+      "expression": "Thoughtful",
+      "led": "blue"
+    },
+    {
+      "gesture": "slight head shake",
+      "expression": "Oh",
+      "led": "purple"
+    },
+    {
+      "gesture": "nod head",
+      "expression": "Thoughtful",
+      "led": "yellow"
+    },
+    {
+      "utterance": "oh",
+      "gesture": "look straight",
+      "expression": "Thoughtful",
+      "led": "blue"
+    },
+    {
+      "gesture": "slight head shake",
+      "expression": "Oh",
+      "led": "purple"
+    },
+    {
+      "utterance": "e",
+      "gesture": "nod head",
+      "expression": "Thoughtful",
+      "led": "yellow"
+      
+    }
+  ]
+}
