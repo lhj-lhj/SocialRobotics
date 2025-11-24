@@ -23,7 +23,7 @@ def main():
     parser.add_argument(
         "--host",
         type=str,
-        default="192.168.1.110",
+        default="192.168.1.175",
         help="Furhat robot IP address"
     )
     parser.add_argument(

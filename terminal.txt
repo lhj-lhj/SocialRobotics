@@ -1,0 +1,63 @@
+[2025-11-24 11:52:02] Starting dialogue...
+[2025-11-24 11:52:02] Press Ctrl+C to stop gracefully
+[2025-11-24 11:52:02] [Robot] Started speaking: Hello, I am Furhat. How are you today?
+[2025-11-24 11:52:02] [System] Inferred confidence: medium
+[2025-11-24 11:52:02] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful, LED=blue
+[2025-11-24 11:52:07] 
+[User] Started speaking...
+[2025-11-24 11:52:08] [User] Speech content: uh I'm good
+[2025-11-24 11:52:09] User: uh I'm good
+[2025-11-24 11:52:09] Robot directly responds (confidence=high, gesture=nod head)
+[2025-11-24 11:52:09] Robot: Okay, let me know if you need anything.
+[2025-11-24 11:52:10] [Robot] Started speaking: Okay, let me know if you need anything.
+[2025-11-24 11:52:10] [System] Inferred confidence: high
+[2025-11-24 11:52:10] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile, LED=green
+[2025-11-24 11:52:14] 
+[User] Started speaking...
+[2025-11-24 11:52:18] [User] Speech content: uh I want to know how to build a robot like you
+[2025-11-24 11:52:20] User: uh I want to know how to build a robot like you
+[2025-11-24 11:52:20] Robot (thinking): considering robot building steps
+[2025-11-24 11:52:20] Robot (thinking): evaluating complexity
+[2025-11-24 11:52:22] Robot (thinking): I'm considering robot building steps.
+[2025-11-24 11:52:22] Robot (thinking): I'm evaluating complexity levels.
+[2025-11-24 11:52:23] Robot (thinking): I'm recalling key components needed.
+[2025-11-24 11:52:23] Robot (thinking): I'm organizing the process logically.
+[2025-11-24 11:52:24] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-11-24 11:52:24] Robot: Building a robot like me involves combining advanced hardware, such as sensors and motors for movement and expression, with sophisticated software for speech recognition, natural language processing, and social interaction.
+[2025-11-24 11:52:24] Robot: You would need skills in robotics, AI programming, and design to create a system that can engage naturally with people.
+[2025-11-24 11:52:24] Robot: Starting with open-source robotics platforms and AI tools can be a great way to begin exploring this complex but rewarding field.
+[2025-11-24 11:52:24] Robot (non-verbal gesture): look straight
+[2025-11-24 11:52:24] [Robot] Started speaking: Building a robot like me involves combining advanced hardware, such as sensors and motors for movement and expression, with sophisticated software for speech recognition, natural language processing, and social interaction. You would need skills in robotics, AI programming, and design to create a system that can engage naturally with people. Starting with open-source robotics platforms and AI tools can be a great way to begin exploring this complex but rewarding field.
+[2025-11-24 11:52:24] [System] Inferred confidence: medium
+[2025-11-24 11:52:24] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful, LED=blue
+[2025-11-24 11:52:58] 
+[User] Started speaking...
+[2025-11-24 11:53:01] [User] Speech content: uh and I want to know like uh how to become
+[2025-11-24 11:53:03] User: uh and I want to know like uh how to become
+[2025-11-24 11:53:03] Robot (thinking): User is hesitating
+[2025-11-24 11:53:03] 
+[User] Started speaking...
+[2025-11-24 11:53:03] [System] Cancelling request...
+[2025-11-24 11:53:03] [System] Previous request still processing, ignoring new input
+[2025-11-24 11:53:04] Robot (thinking): User is asking how to become something
+[2025-11-24 11:53:05] Robot (thinking): I'm listening carefully.
+[2025-11-24 11:53:05] Robot (thinking): I'm processing your question.
+[2025-11-24 11:53:06] Robot (thinking): I'm identifying key information.
+[2025-11-24 11:53:06] [System] Request cancelled
+[2025-11-24 11:53:16] 
+[User] Started speaking...
+[2025-11-24 11:53:18] [User] Speech content: uh and I want to know like uh how to become engineer why request a canceled
+[2025-11-24 11:53:20] User: uh and I want to know like uh how to become engineer why request a canceled
+[2025-11-24 11:53:20] Robot (thinking): Clarify user's intent
+[2025-11-24 11:53:21] Robot (thinking): Consider multiple topics
+[2025-11-24 11:53:22] Robot (thinking): I'm trying to understand your question.
+[2025-11-24 11:53:22] Robot (thinking): I'm clarifying the topic about becoming an engineer.
+[2025-11-24 11:53:23] Robot (thinking): I'm considering the part about request cancellation.
+[2025-11-24 11:53:23] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-11-24 11:53:23] Robot: To become an engineer, you typically need to study engineering at a university or technical school and gain practical experience through internships or projects.
+[2025-11-24 11:53:23] Robot: If your request was canceled, it might be helpful to check the reason or contact the organization involved for clarification.
+[2025-11-24 11:53:23] Robot: Let me know if you want guidance on specific engineering fields or how to handle canceled requests!
+[2025-11-24 11:53:23] Robot (non-verbal gesture): look straight
+[2025-11-24 11:53:23] [Robot] Started speaking: To become an engineer, you typically need to study engineering at a university or technical school and gain practical experience through internships or projects. If your request was canceled, it might be helpful to check the reason or contact the organization involved for clarification. Let me know if you want guidance on specific engineering fields or how to handle canceled requests!
+[2025-11-24 11:53:23] [System] Inferred confidence: medium
+[2025-11-24 11:53:23] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful, LED=blue

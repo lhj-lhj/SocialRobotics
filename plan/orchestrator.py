@@ -159,8 +159,6 @@ class Orchestrator:
 
         async def emit_line(text: str, index: int):
             cprint(f"Robot (thinking): {text}")
-            if self.furhat_client:
-                await self.furhat_client.request_speak_text(text)
             if self.behavior_generator:
                 instruction = None
                 if behavior_plan:
@@ -235,4 +233,3 @@ class Orchestrator:
         
         if gesture_description:
             cprint(f"Robot (non-verbal gesture): {gesture_description}")
-
