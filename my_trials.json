@@ -1,0 +1,115 @@
+[
+  {
+    "question": "A group of friends who live in a neighborhood want to play in the fresh snow in the local park. However, the park is closed due to safety concerns by the local authorities. Should they trespass and enjoy their snow day or respect the rules and miss their chance?",
+    "answer": "It's best for the friends to respect the park's closure since safety concerns are important and rules help protect everyone. They can find alternative ways to enjoy the snow together, like playing in a safe, open area nearby. This way, they stay safe while still making the most of their snowy day.",
+    "thinking_cues": [
+      "Consider safety and legality",
+      "Weigh fun against rules",
+      "I'm weighing safety against fun.",
+      "I'm considering the importance of rules.",
+      "I'm thinking about potential consequences.",
+      "I'm reflecting on respect for authority."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "Consider safety and legality",
+        "Weigh fun against rules"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "led": "blue",
+          "reason": "Reflecting on safety concerns"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "Thoughtful",
+          "led": "orange",
+          "reason": "Considering the consequences of trespassing"
+        },
+        {
+          "gesture": "nod head",
+          "expression": "Thoughtful",
+          "led": "yellow",
+          "reason": "Acknowledging the importance of rules"
+        }
+      ],
+      "reasoning_hint": "Balance between respecting rules and desire for fun"
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "a group of friends who live in neighborhoods want to play in the fresh snow in the local part however the parties closed due to safety concerns by the local authorities should they to high pass and enjoy the snow day or respected roles and meet their chance",
+    "answer": "It's best for the group to respect the local authorities' safety concerns and avoid the closed park to stay safe. They can look for alternative places where it's allowed to enjoy the snow or plan another day when the park reopens. Prioritizing safety ensures everyone can have fun without unnecessary risks.",
+    "thinking_cues": [
+      "consider safety concerns",
+      "weigh fun vs rules",
+      "I'm considering safety risks.",
+      "I'm weighing fun against rules.",
+      "I'm reflecting on consequences."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "consider safety concerns",
+        "weigh fun vs rules"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "led": "blue",
+          "reason": "considering safety"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "Thoughtful",
+          "led": "orange",
+          "reason": "weighing consequences"
+        }
+      ],
+      "reasoning_hint": "Evaluate the importance of following rules versus enjoying the snow safely."
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "about",
+    "answer": "It seems like you might be asking for information \"about\" something, but I'm not quite sure what you mean. Could you please clarify or provide a bit more detail so I can assist you better? I'm here to help with whatever you need!",
+    "thinking_cues": [
+      "User input is vague",
+      "Clarify intent",
+      "I'm analyzing your question.",
+      "Trying to understand your intent.",
+      "Considering possible meanings.",
+      "Formulating a clarifying response."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "low",
+      "thinking_notes": [
+        "User input is vague",
+        "Clarify intent"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "led": "blue",
+          "reason": "User input is unclear, thinking to clarify"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "Thoughtful",
+          "led": "blue",
+          "reason": "Considering possible meanings"
+        }
+      ],
+      "reasoning_hint": "User input 'about' is ambiguous, need to clarify intent"
+    },
+    "final_confidence": "low"
+  }
+]

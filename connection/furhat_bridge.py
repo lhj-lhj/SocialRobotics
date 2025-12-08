@@ -15,7 +15,11 @@ class FurhatBridge:
     def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None):
         self.host = host
         self.auth_key = auth_key
-        self.conversation_starter = "Hello, I am Furhat. How are you today?"
+        # Opening line: self-intro + task framing
+        self.conversation_starter = (
+            "I am Elizabeth, a robot that shows visible thinking. I will answer your moral "
+            "dilemma questions: I will think first, then give a conclusion and a brief reason."
+        )
         self.stop_event: Optional[asyncio.Event] = None
         self.shutting_down = False
         
@@ -204,7 +208,7 @@ class FurhatBridge:
             stop_user_end=False,
             stop_robot_start=True,  # pause ASR while robot speaks
             resume_robot_end=True,  # resume ASR after robot finishes
-            end_speech_timeout=0.5
+            end_speech_timeout=2.5  # allow longer pause for long questions
         )
 
         # Wait for shutdown signal
@@ -220,4 +224,3 @@ class FurhatBridge:
             cprint("Disconnected from Furhat")
         except Exception as e:
             cprint(f"Error disconnecting: {e}")
-

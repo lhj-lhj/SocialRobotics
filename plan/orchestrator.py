@@ -8,6 +8,7 @@ from utils.config import OPENAI_SETTINGS
 from plan.controller import ControllerModel
 from plan.behavior_generator import BehaviorGenerator
 from plan.thinking_config import get_thinking_config
+from utils.trial_memory import TrialMemory
 from plan.prompts import (
     THINKING_SYSTEM_PROMPT,
     REASONING_SYSTEM_PROMPT,
@@ -77,27 +78,41 @@ class Orchestrator:
         self, 
         question: str, 
         behavior_generator: Optional[BehaviorGenerator] = None,
-        furhat_client = None
+        furhat_client = None,
+        trial_memory: Optional[TrialMemory] = None,
     ):
         self.question = question
         self.controller = ControllerModel(question)
         self.behavior_generator = behavior_generator or BehaviorGenerator()
         self.furhat_client = furhat_client  # Furhat client used to send speech
+        self.trial_memory = trial_memory or TrialMemory()
         self.decision: Dict[str, Any] = {}
         self.current_answer_text = ""
+        self.thinking_cues_emitted: List[str] = []
+        self.resolved_confidence: Optional[str] = None
         self.thinking_window_done = asyncio.Event()
 
     async def run(self):
         """Execute the full pipeline."""
+        self.thinking_cues_emitted = []
+        self.resolved_confidence = None
+        self.thinking_window_done.clear()
+        cprint(f"User: {self.question}")
+
+        cached = self.trial_memory.get(self.question)
+        if cached:
+            cprint("Replaying recorded response for repeated question (no new model calls)")
+            await self._replay_cached_trial(cached)
+            return
+
         self.decision = self.controller.decide()
         need_thinking = bool(self.decision.get("need_thinking", False))
         confidence_hint = self.decision.get("confidence")
-        cprint(f"User: {self.question}")
-        self.thinking_window_done.clear()
 
         if not need_thinking:
             self.thinking_window_done.set()
             await self._respond_directly(confidence_hint)
+            self._persist_trial_record()
             return
 
         thinking_notes = normalize_thinking_notes(self.decision.get("thinking_notes"))
@@ -130,6 +145,7 @@ class Orchestrator:
             await self._relay_answer(reasoning_model, confidence_hint)
         finally:
             await thinking_task
+        self._persist_trial_record()
 
     async def _respond_directly(self, confidence_hint: Optional[str]):
         """Handle situations where no thinking window is required."""
@@ -141,6 +157,7 @@ class Orchestrator:
         _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
         self.behavior_generator.set_pending_confidence(confidence)
         full_answer = answer.strip()
+        self.resolved_confidence = confidence
         
         cprint(f"Robot directly responds (confidence={confidence}, gesture={gesture_description})")
         cprint(f"Robot: {full_answer}")
@@ -180,6 +197,7 @@ class Orchestrator:
                 cleaned = note.strip()
                 if not cleaned:
                     continue
+                self.thinking_cues_emitted.append(cleaned)
                 await emit_line(cleaned, emitted)
                 emitted += 1
                 if loop.time() >= deadline or emitted >= MAX_THINKING_CUES:
@@ -192,6 +210,7 @@ class Orchestrator:
                 if not _is_meaningful_thinking_cue(cue):
                     continue
 
+                self.thinking_cues_emitted.append(cue)
                 await emit_line(cue, emitted)
                 emitted += 1
                 if loop.time() >= deadline or emitted >= MAX_THINKING_CUES:
@@ -223,6 +242,7 @@ class Orchestrator:
                 confidence_level = self.behavior_generator.resolve_confidence(
                     confidence_hint, reasoning_model.word_count
                 )
+                self.resolved_confidence = confidence_level
                 _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence_level)
                 self.behavior_generator.set_pending_confidence(confidence_level)
                 cprint(f"Robot switches to answer mode (confidence={confidence_level}, gesture={gesture_description})")
@@ -244,3 +264,72 @@ class Orchestrator:
         
         if gesture_description:
             cprint(f"Robot (non-verbal gesture): {gesture_description}")
+
+    async def _replay_cached_trial(self, record: Dict[str, Any]):
+        """Replay a stored trial without calling models again."""
+        self.decision = record.get("decision") if isinstance(record.get("decision"), dict) else {}
+        answer = str(record.get("answer", "")).strip()
+        thinking_cues = []
+        for cue in record.get("thinking_cues") or []:
+            text = str(cue).strip()
+            if text:
+                thinking_cues.append(text)
+        self.thinking_cues_emitted = thinking_cues
+
+        final_confidence = str(record.get("final_confidence", "")).strip()
+        if not final_confidence:
+            raw_conf = self.decision.get("confidence")
+            if isinstance(raw_conf, str) and raw_conf.strip():
+                final_confidence = raw_conf.strip()
+
+        behavior_plan = normalize_behavior_plan(self.decision.get("thinking_behavior_plan"))
+        need_thinking = bool(self.decision.get("need_thinking", bool(thinking_cues)))
+
+        if need_thinking and thinking_cues:
+            self.behavior_generator.set_thinking_mode(True)
+            loop = asyncio.get_running_loop()
+            start_time = loop.time()
+            for idx, cue in enumerate(thinking_cues):
+                cprint(f"Robot (thinking): {cue}")
+                if self.behavior_generator:
+                    instruction = behavior_plan[idx % len(behavior_plan)] if behavior_plan else None
+                    await self.behavior_generator.perform_thinking_behavior(idx, instruction=instruction)
+                if idx < len(thinking_cues) - 1:
+                    await asyncio.sleep(THINKING_PAUSE_SECONDS)
+
+            min_duration = min(MIN_THINKING_DURATION_SECONDS, THINKING_DURATION_SECONDS)
+            elapsed = loop.time() - start_time
+            if elapsed < min_duration:
+                await asyncio.sleep(min_duration - elapsed)
+            self.behavior_generator.set_thinking_mode(False)
+            self.thinking_window_done.set()
+        else:
+            self.thinking_window_done.set()
+
+        confidence = final_confidence if final_confidence in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"
+        self.resolved_confidence = confidence
+        _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
+        self.behavior_generator.set_pending_confidence(confidence)
+        cprint(f"Robot switches to answer mode (confidence={confidence}, gesture={gesture_description})")
+        cprint(f"Robot: {answer}")
+        if self.furhat_client:
+            await self.furhat_client.request_speak_text(answer)
+        if gesture_description:
+            cprint(f"Robot (non-verbal gesture): {gesture_description}")
+        self.current_answer_text = answer
+
+    def _persist_trial_record(self):
+        """Save the latest run so repeated questions reuse the same flow."""
+        if not self.current_answer_text:
+            return
+        record = {
+            "question": self.question,
+            "answer": self.current_answer_text,
+            "thinking_cues": self.thinking_cues_emitted,
+            "decision": self.decision,
+            "final_confidence": self.resolved_confidence,
+        }
+        try:
+            self.trial_memory.save_record(record)
+        except Exception as err:
+            cprint(f"[TrialMemory] Failed to persist record: {err}")
