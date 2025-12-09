@@ -3,3 +3,69 @@ Received SIGINT, shutting down gracefully...
 [2025-12-09 12:31:01] Shutting down...
 [2025-12-09 12:31:01] Shutting down...
 [2025-12-09 12:31:01] Disconnected from Furhat
+[2025-12-09 12:32:22] Starting dialogue...
+[2025-12-09 12:32:22] Press Ctrl+C to stop gracefully
+[2025-12-09 12:32:22] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 12:32:22] [System] Inferred confidence: medium
+[2025-12-09 12:32:22] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 12:33:15] 
+[User] Started speaking...
+[2025-12-09 12:33:19] [User] Speech content: ball
+[2025-12-09 12:33:19] User: ball
+[2025-12-09 12:33:21] Robot (thinking): Considering the meaning of 'ball'
+[2025-12-09 12:33:21] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the word to understand context', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 12:33:21] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 12:33:21] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 12:33:23] Robot (thinking): Checking possible contexts
+[2025-12-09 12:33:23] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Evaluating different interpretations'}
+[2025-12-09 12:33:27] Robot (thinking): I'm considering different meanings of 'ball'  
+I'm exploring contexts for 'ball' usage  
+I'm comparing sports and social event meanings  
+I'm confirming relevant interpretations
+[2025-12-09 12:33:27] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the word to understand context', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 12:33:29] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 12:33:29] Robot: The term "ball" can refer to a round object used in various sports and games, or it can mean a formal social gathering or dance event.
+[2025-12-09 12:33:29] Robot: If you have a specific context in mind, I can provide more detailed information.
+[2025-12-09 12:33:29] Robot: Let me know how you'd like to explore the meaning of "ball.
+[2025-12-09 12:33:29] Robot: "
+[2025-12-09 12:33:29] Robot (non-verbal gesture): look straight
+[2025-12-09 12:33:29] [Robot] Started speaking: The term "ball" can refer to a round object used in various sports and games, or it can mean a formal social gathering or dance event. If you have a specific context in mind, I can provide more detailed information. Let me know how you'd like to explore the meaning of "ball. " Do you have another question?
+[2025-12-09 12:33:29] [System] Inferred confidence: medium
+[2025-12-09 12:33:29] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 12:33:37] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 12:33:42] Shutting down...
+[2025-12-09 12:33:42] Shutting down...
+[2025-12-09 12:33:42] Disconnected from Furhat
+[2025-12-09 12:48:58] Starting dialogue...
+[2025-12-09 12:48:58] Press Ctrl+C to stop gracefully
+[2025-12-09 12:48:58] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 12:48:58] [System] Inferred confidence: medium
+[2025-12-09 12:48:58] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 12:49:19] 
+[User] Started speaking...
+[2025-12-09 12:49:37] [User] Speech content: you have been best friends with Alex for years and have always been honest with each others Alice has been trading on his girlfriend who is also a close friend of yours and he has sworn you to secrecy should you break your promise to add it and tell his girlfriend about his Infinity
+[2025-12-09 12:49:37] User: you have been best friends with Alex for years and have always been honest with each others Alice has been trading on his girlfriend who is also a close friend of yours and he has sworn you to secrecy should you break your promise to add it and tell his girlfriend about his Infinity
+[2025-12-09 12:49:37] [TrialMemory] Fuzzy matched to: you have been best friends with Alex for years and have always been honest with each others Alex has been cheating on his girlfriend who is also a close friend of yours and he was swung your secrecy should you break your promise to Alex and tell his girlfriend about his infidelity (score=0.49)
+[2025-12-09 12:49:37] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 12:49:37] Robot (thinking): Consider loyalty to Alex
+[2025-12-09 12:49:37] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 12:49:37] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 12:49:37] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 12:49:39] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-09 12:49:39] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 12:49:41] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-09 12:49:41] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 12:49:43] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-09 12:49:43] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 12:49:43] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 12:49:43] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 12:49:43] Robot (non-verbal gesture): look straight
+[2025-12-09 12:49:43] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 12:49:43] [System] Inferred confidence: medium
+[2025-12-09 12:49:43] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 12:49:58] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 12:50:11] Shutting down...
+[2025-12-09 12:50:11] Shutting down...
+[2025-12-09 12:50:11] Disconnected from Furhat
