@@ -1,71 +1,73 @@
-# Visible Thinking Furhat Prototype
+# Furhat Visible Thinking: Code Map & Usage
 
-This project demonstrates a **controller → thinking stream → final answer** pipeline that lets a Furhat robot expose lightweight “thinking” cues before speaking, while also mapping confidence levels to verbal and nonverbal behaviors. All logic lives in `main.py`.
+This repository runs a two-stage pipeline for the Furhat robot:
+- **Controller** decides whether to show visible thinking, suggests short thinking notes, confidence, and (optionally) a final answer.
+- **Thinking stream** emits short cues/behaviors while “thinking”.
+- **Reasoning stream** outputs the final answer and post-answer prompt (“Do you have another question?”).
+- **Replay-only** mode can serve stored answers from `my_trials.json` without calling models; stored thinking cues are skipped by default.
 
-## Architecture
+## Code Structure (where things live)
+- `main.py` — entry point; CLI flags (`--replay-only`, `--test`), spins up the Furhat bridge.
+- `connection/furhat_bridge.py` — connects to Furhat, handles ASR/speech events, suppresses input while the robot speaks.
+- `plan/orchestrator.py` — coordinates controller → thinking stream → final answer; optional replay-only and direct-response delay.
+- `plan/controller.py` — calls LLM with `CONTROLLER_SYSTEM_PROMPT` (see `plan/prompts.py`); parses JSON decision.
+- `plan/prompts.py` — system prompts and prompt builders.
+- `plan/behavior_generator.py` — maps confidence to gesture/expression (LED removed), handles optional `look_at` and `utterance` during thinking.
+- `plan/thinking_config.py` / `thinking_config.json` — timing and scripted thinking behaviors (no LED fields).
+- `utils/trial_memory.py` — loads `my_trials.json`, fuzzy matches questions (threshold 0.6), returns stored answers.
+- `my_trials.json` — your recorded QA pairs (see format below).
 
-1. **Controller Model (`ControllerModel`)**  
-   - A lightweight ChatGPT call produces strict JSON describing whether visible thinking is required, the confidence tier, 2‑4 short “thought snippets,” an optional reasoning hint, and (when no thinking is needed) the final answer.  
-   - Offloading this decision keeps interactions snappy—simple questions bypass the thinking layer, complex ones get richer behaviors.
+## Run
+```bash
+python3 main.py                 # normal: controller + thinking + reasoning
+python3 main.py --replay-only   # use answers from my_trials.json; skip stored thinking cues
+python3 main.py --test          # local test without Furhat
+```
 
-2. **Thinking Model (`ChatGPTSentenceStreamer`)**  
-   - When the controller asks for visible thinking, we build a prompt using the user question plus those thought snippets.  
-   - The model streams 2‑4 short phrases (≤12 words) that imitate human deliberation; you can later replace the `cprint` output with Furhat speech/gestures.
+Prereqs: Python 3.8+, `requests`. Put API key in `config.json` (`"api_key"`) or `api_key.txt` (root). `config.json` overrides defaults in `utils/config.py`.
 
-3. **Reasoning Model (`ChatGPTSentenceStreamer`)**  
-   - A second stream delivers the actual answer. As soon as the first clause arrives we stop the thinking stream, look up the confidence → behavior mapping, and continue printing the answer with the appropriate prefix/gesture metadata.
+## Config Quick Reference
+- `config.json` — API key, base URL, model names/temps for controller/thinking/reasoning.
+- `thinking_config.json` — `min/max_duration_seconds`, `pause_seconds`, `max_cues`, `direct_response_delay_seconds`, and `behaviors` (array of `{gesture, expression, look_at?, utterance?}`).
+- `plan/prompts.py` — edit prompts if you need to change tone/format.
+- LEDs are fully removed; ignore any `led` fields.
 
-4. **Output & Encoding**  
-   - `cprint` normalizes UTF‑8 output so Windows/WSL terminals behave.  
-   - If the controller already gave a final answer, the orchestrator skips the thinking stage entirely and immediately emits the answer plus gestures.
+## `my_trials.json` Format (for replay)
+List of objects:
+```json
+{
+  "question": "What is your name?",
+  "answer": "I'm Elizabeth. Do you have another question?",
+  "thinking_cues": ["Recalling my name", "Preparing a short reply"],
+  "decision": {"need_thinking": false, "confidence": "medium"},
+  "final_confidence": "medium"
+}
+```
+Matching is fuzzy (0.6), so paraphrased questions hit the same answer. In `--replay-only`, thinking cues are ignored by default.
 
-## Running the Prototype
-
-1. Requirements: Python 3.8+ and `requests` (`pip install requests` if needed).  
-2. Provide your OpenAI key in either `config.json` or `api_key.txt` at the repo root:  
-   - Editing `config.json` is recommended—set the `"api_key"` value to your `sk-...` key (other fields are optional overrides).  
-   - Alternatively, place the key on the first non-comment line of `api_key.txt`. If both files contain keys, `config.json` wins.  
-   - Both files are listed in `.gitignore`, so secrets stay local.  
-3. Run:
-   ```bash
-   python3 main.py
+## Experiment Guide
+### A) With visible thinking (default)
+1. Run `python3 main.py`.
+2. Tweak `thinking_config.json` to set pace (`pause_seconds`, `min/max_duration_seconds`, `max_cues`).
+3. Add behaviors if desired:
+   ```json
+   { "gesture": "look straight", "expression": "Thoughtful", "utterance": "Let me think..." },
+   { "gesture": "nod head", "expression": "Thoughtful", "look_at": { "x": 0.2, "y": 0.0, "z": 1.0 } }
    ```
-   Ask any question and you’ll see Furhat spend ~10 seconds speaking short thinking cues (with gestures) before handing over to the final answer stream whenever the controller requests visible thinking.
+4. Optional: set `"direct_response_delay_seconds": 1.0` to delay immediate answers when no thinking is needed.
 
-## Key Configuration Points
+### B) Without thinking cues (replay answers)
+1. Populate `my_trials.json` with your QA pairs.
+2. Run `python3 main.py --replay-only`.
+3. If no match is found, the robot says it has no stored answer and asks for a prepared question.
 
-| Setting | Location | Notes |
-| --- | --- | --- |
-| `OPENAI_SETTINGS` | `main.py:24` | Runtime values are overridden by `config.json` / `api_key.txt`. |
-| `CONTROLLER_SYSTEM_PROMPT` | `main.py:43` | Forces the controller model to emit clean JSON decisions. |
-| `THINKING_SYSTEM_PROMPT` | `plan/prompts.py` | Constrains the visible-thinking stream to short, natural phrases. |
-| `REASONING_SYSTEM_PROMPT` | `plan/prompts.py` | Keeps final answers short, friendly, and rationale-free. |
-| `CONFIDENCE_BEHAVIORS` | `plan/behavior_generator.py` | Maps confidence tiers to speech prefixes and gesture placeholders. |
-| `MAX_THINKING_CUES` | `plan/orchestrator.py` | Upper bound on visible-thinking phrases (prevents endless “...” tokens). |
+## Notes on ASR / Interruptions
+- ASR keeps running, but while the robot speaks we ignore incoming audio (`robot_speaking` guard). After speech ends, user input is processed.
+- If you need barge-in, adjust `connection/furhat_bridge.py` to handle input during speech and/or change `stop_robot_start` back to `True`.
 
-## Customization Ideas
-
-- **Hook into the actual Furhat SDK** by swapping `cprint` inside `_relay_thinking`, `_relay_answer`, and `_respond_directly` with TTS/gesture/motor commands.  
-- **Use different models per stage** by editing `controller_model`, `thinking_model`, and `reasoning_model` in `config.json`—they don’t need to be the same endpoint.  
-- **Extend controller policy** by adding new JSON fields (e.g., scenario tags) and parsing them inside `ControllerModel.decide()`.  
-- **Improve confidence estimation** with model logprobs or external scorers; the current fallback is purely length-based.
-
-## Troubleshooting
-
-- **“Configuration error: API key not found”** → No key detected in either file; double-check spelling and JSON syntax.  
-- **Controller returns invalid JSON** → Prompt may have been edited; tighten `CONTROLLER_SYSTEM_PROMPT` or add more robust parsing.  
-- **Thinking never triggers (or always triggers)** → Adjust the controller temperature/prompt to bias when `need_thinking` flips.  
-- **Windows terminal shows garbled text** → The script already forces UTF‑8, but you can also run PowerShell/WSL or execute `chcp 65001`.
-
-## Project Structure
-
-```
-Social Robotics/
-├── main.py                # Controller + thinking + reasoning pipeline
-├── config.json            # Local settings (ignored by git)
-├── api_key.txt            # Optional plain-text key (ignored by git)
-├── realtime-api-examples/ # OpenAI samples (unchanged)
-└── README.md
-```
-
-Feel free to extend this prototype for user studies. You can log the controller JSON, thinking cues, and final answers inside `Orchestrator` if you need structured datasets for downstream analysis.
+## Recent Changes
+- LEDs removed entirely.
+- Replay-only path with fuzzy matching.
+- Direct-response delay option.
+- Continuous invitation (“Do you have another question?”) instead of 5-question cap.
+- ASR ignores input while speaking to avoid cancels.

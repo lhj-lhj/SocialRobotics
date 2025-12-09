@@ -1,0 +1,253 @@
+[
+  {
+    "question": "a group of friends who live in a neighborhood want to play in the fresh snow in the local park however the park is closed due to safety concerns by the local authorities should they try pass and enjoy their snow day or respect the rules and miss their chance",
+    "answer": "It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "Consider safety implications",
+      "Weigh rules vs fun",
+      "I'm considering safety first.",
+      "I'm weighing rules against fun."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "high",
+      "thinking_notes": [
+        "Consider safety implications",
+        "Weigh rules vs fun"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "Reflecting on safety and rules"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "Concern about breaking rules"
+        },
+        {
+          "gesture": "nod head",
+          "expression": "Thoughtful",
+          "reason": "Acknowledging importance of safety"
+        }
+      ],
+      "reasoning_hint": "Consider the importance of safety and respecting local authority rules versus the desire for fun.",
+      "answer": ""
+    },
+    "final_confidence": "high"
+  },
+  {
+    "question": "you have been best friends with Alex for years and have always been honest with each others Alex has been cheating on his girlfriend who is also a close friend of yours and he was swung your secrecy should you break your promise to Alex and tell his girlfriend about his infidelity",
+    "answer": "It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "Consider loyalty to Alex",
+      "Consider honesty to the girlfriend",
+      "Weigh consequences of breaking secrecy",
+      "I'm weighing loyalty versus honesty."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "Consider loyalty to Alex",
+        "Consider honesty to the girlfriend",
+        "Weigh consequences of breaking secrecy"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "look_at": {
+            "x": 0.2,
+            "y": 0.3,
+            "z": 1.0
+          },
+          "reason": "Reflecting on the conflict of loyalty"
+        },
+        {
+          "gesture": "nod head",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0.0,
+            "y": 0.2,
+            "z": 1.0
+          },
+          "reason": "Considering honesty and consequences"
+        }
+      ],
+      "reasoning_hint": "Weigh the ethical dilemma between loyalty and honesty",
+      "answer": ""
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "Sarah is a single mother working two jobs to make ends meet, but she wants to pursue higher education to improve her living standards. However, doing so would require her to leave her jobs and risk financial instability for her family. Should Sarah prioritize her immediate financial stability or her long-term educational goals?",
+    "answer": "Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "Weigh immediate financial stability against long-term benefits",
+      "Consider risks and potential rewards of education",
+      "I'm weighing immediate needs versus future gains.",
+      "I'm considering potential risks and rewards."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "Weigh immediate financial stability against long-term benefits",
+        "Consider risks and potential rewards of education"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "Focusing on the dilemma"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "Reflecting on the challenges"
+        }
+      ],
+      "reasoning_hint": "Consider the trade-offs between short-term financial needs and long-term educational benefits"
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support?",
+    "answer": "It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "consider emotional impact",
+      "weigh loyalty against support",
+      "evaluate long-term consequences",
+      "I'm reflecting on emotional impact."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "consider emotional impact",
+        "weigh loyalty against support",
+        "evaluate long-term consequences"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "reflecting on the complexity of the situation"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "look_at": {
+            "x": 0.1,
+            "y": 0.2,
+            "z": 1
+          },
+          "reason": "acknowledging the difficulty of betrayal"
+        },
+        {
+          "gesture": "nod head",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": -0.1,
+            "y": 0.3,
+            "z": 1
+          },
+          "reason": "considering the importance of support"
+        }
+      ],
+      "reasoning_hint": "Balance emotional betrayal with the support received to guide the decision."
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "John's sister have been stealing money from their elderly mother savings to support her drug addiction Joan is torn because his duty to protest his mother and his desire to support his sisters in overcoming her Edition should John report his sister's action to the authorities",
+    "answer": "John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "Consider ethical dilemma",
+      "Balance family loyalty and legal duty",
+      "I'm considering ethical implications.",
+      "I'm weighing family loyalty versus legal responsibility."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "Consider ethical dilemma",
+        "Balance family loyalty and legal duty"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "Reflecting on the complexity of the situation"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "Acknowledging the difficulty of the decision"
+        }
+      ],
+      "reasoning_hint": "Weigh the moral responsibility to protect the mother against the desire to help the sister recover",
+      "answer": ""
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "ball",
+    "answer": "The term \"ball\" can refer to a round object used in various sports and games, or it can mean a formal social gathering or dance event. If you have a specific context in mind, I can provide more detailed information. Let me know how you'd like to explore the meaning of \"ball. \" Do you have another question?",
+    "thinking_cues": [
+      "Considering the meaning of 'ball'",
+      "Checking possible contexts",
+      "I'm considering different meanings of 'ball'  \nI'm exploring contexts for 'ball' usage  \nI'm comparing sports and social event meanings  \nI'm confirming relevant interpretations"
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "Considering the meaning of 'ball'",
+        "Checking possible contexts"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
+          "expression": "Thoughtful",
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "Focusing on the word to understand context"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "Evaluating different interpretations"
+        }
+      ],
+      "reasoning_hint": "Determine if 'ball' refers to an object, event, or concept"
+    },
+    "final_confidence": "medium"
+  }
+]

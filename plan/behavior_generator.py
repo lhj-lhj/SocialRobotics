@@ -1,21 +1,20 @@
 """Behavior generator: translate action descriptions into Furhat API calls."""
-from typing import Optional, Tuple, Dict, Any
+import json
+from pathlib import Path
+from typing import Optional, Tuple, Dict, Any, List
 from furhat_realtime_api import AsyncFurhatClient
+from utils.print_utils import cprint
+from plan.thinking_config import get_thinking_config
 
 
 class BehaviorGenerator:
     """Convert confidence levels and action descriptions into multimodal behaviors."""
 
-    # Confidence tier to (verbal prefix, base gesture, expression, LED color)
-    # CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
-    #     "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
-    #     "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
-    #     "high": ("I'm confident that", "nod head", "BigSmile", "green"),
-    # }
-    CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
-        "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
-        "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
-        "high": ("I'm confident that", "nod head", "BigSmile", "green"),
+    # Confidence tier to (verbal prefix, base gesture, expression) — LED removed globally
+    CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str]] = {
+        "low": ("I'm not entirely sure, but", "slight head shake", "Oh"),
+        "medium": ("Let me think", "look straight", "Thoughtful"),
+        "high": ("I'm confident that", "nod head", "BigSmile"),
     }
 
     # Legacy tuple format (verbal prefix + base gesture)
@@ -23,7 +22,7 @@ class BehaviorGenerator:
     def _get_legacy_behavior(confidence: str) -> Tuple[str, str]:
         """Return the two-field legacy format (verbal prefix + gesture)."""
         full = BehaviorGenerator.CONFIDENCE_BEHAVIORS.get(
-            confidence, ("Let me think", "look straight", "Oh", "blue")
+            confidence, ("Let me think", "look straight", "Oh")
         )
         return (full[0], full[1])
 
@@ -31,6 +30,8 @@ class BehaviorGenerator:
         self.furhat = furhat_client
         self._thinking_mode = False
         self._pending_confidence: Optional[str] = None
+        self._thinking_script: List[Dict[str, Any]] = self._load_thinking_script()
+        self._spoken_thinking_steps: set[int] = set()
 
     def get_confidence_behavior(self, confidence: str) -> Tuple[str, str]:
         """Return the verbal prefix and gesture for the given confidence tier."""
@@ -38,15 +39,32 @@ class BehaviorGenerator:
             confidence = "medium"
         return self._get_legacy_behavior(confidence)
 
-    def get_full_confidence_behavior(self, confidence: str) -> Tuple[str, str, str, str]:
+    def get_full_confidence_behavior(self, confidence: str) -> Tuple[str, str, str]:
         """Return the full multimodal behavior tuple for the confidence tier."""
         if confidence not in self.CONFIDENCE_BEHAVIORS:
             confidence = "medium"
         return self.CONFIDENCE_BEHAVIORS[confidence]
 
+    @staticmethod
+    def _normalize_location_target(value: Any) -> Optional[Dict[str, float]]:
+        """Extract an {x,y,z} dict if provided."""
+        if isinstance(value, dict):
+            try:
+                return {
+                    "x": float(value["x"]),
+                    "y": float(value["y"]),
+                    "z": float(value["z"]),
+                }
+            except (KeyError, TypeError, ValueError):
+                return None
+        return None
+
     def set_thinking_mode(self, active: bool):
         """Flag that the robot is currently verbalizing visible thinking."""
         self._thinking_mode = active
+        if not active:
+            # Reset per-thinking-window state
+            self._spoken_thinking_steps.clear()
 
     def is_in_thinking_mode(self) -> bool:
         return self._thinking_mode
@@ -69,17 +87,32 @@ class BehaviorGenerator:
         sequence_index: int = 0,
         instruction: Optional[Dict[str, Any]] = None,
     ):
-        """Loop through gestures/expressions/LED cues during thinking."""
+        """Loop through gestures/expressions during thinking (LED disabled)."""
         if not self.furhat:
             return
 
         if instruction:
-            await self._apply_behavior_instruction(instruction)
+            merged = dict(instruction)
+            # If the controller plan lacks some fields, optionally fill from scripted step
+            if self._thinking_script:
+                script_step = self._thinking_script[sequence_index % len(self._thinking_script)]
+                for key in ("gesture", "expression", "led", "led_color", "led_hex", "utterance", "speech", "look_at"):
+                    if key not in merged and key in script_step:
+                        merged[key] = script_step[key]
+            cprint(f"[Thinking] Using controller plan (merged): {merged}")
+            await self._apply_behavior_instruction(merged)
+            return
+
+        # If a scripted thinking sequence is present, cycle through it
+        if self._thinking_script:
+            step_index = sequence_index % len(self._thinking_script)
+            step = self._thinking_script[step_index]
+            cprint(f"[Thinking] Using scripted step: {step}")
+            await self._apply_behavior_instruction(step, step_index=step_index)
             return
 
         gesture_cycle = ["look straight", "slight head shake"]
         expression_cycle = ["Thoughtful", "Oh"]
-        led_color = "#FFA500"
 
         gesture = gesture_cycle[sequence_index % len(gesture_cycle)]
         expression = expression_cycle[sequence_index % len(expression_cycle)]
@@ -88,47 +121,71 @@ class BehaviorGenerator:
         await asyncio.gather(
             self.execute_gesture(gesture),
             self.execute_gesture_expression(expression),
-            self.execute_led_color_hex(led_color),
             return_exceptions=True
         )
 
-    async def _apply_behavior_instruction(self, instruction: Dict[str, Any]):
-        """Execute gestures/expressions/LED settings defined by the controller."""
+    async def _apply_behavior_instruction(self, instruction: Dict[str, Any], step_index: Optional[int] = None):
+        """Execute gestures/expressions/look targets defined by the controller."""
         tasks = []
         gesture = instruction.get("gesture")
         expression = instruction.get("expression")
-        led = instruction.get("led") or instruction.get("led_color") or instruction.get("led_hex")
+        # LED changes are disabled globally; ignore any LED fields in instructions
+        led = None
+        look_at = self._normalize_location_target(
+            instruction.get("look_at") or instruction.get("location") or instruction.get("target")
+        )
+        utterance = instruction.get("utterance") or instruction.get("speech")
+        speak_allowed = True
+        if step_index is not None:
+            # Only speak once per step per thinking window
+            if step_index in self._spoken_thinking_steps:
+                speak_allowed = False
 
         if gesture:
             tasks.append(self.execute_gesture(gesture))
         if expression:
             tasks.append(self.execute_gesture_expression(expression))
-        if led:
-            led = str(led)
-            if led.startswith("#"):
-                tasks.append(self.execute_led_color_hex(led))
-            else:
-                tasks.append(self.execute_led_color(led))
+        if look_at:
+            tasks.append(self.execute_attend_location(look_at["x"], look_at["y"], look_at["z"]))
 
         if tasks:
             import asyncio
             await asyncio.gather(*tasks, return_exceptions=True)
+
+        # Optional utterance during thinking
+        if utterance and self.furhat and speak_allowed:
+            try:
+                await self.furhat.request_speak_text(str(utterance))
+                cprint(f"[Thinking] Instruction utterance: {utterance}")
+                if step_index is not None:
+                    self._spoken_thinking_steps.add(step_index)
+            except Exception as e:
+                cprint(f"[Thinking] Failed to speak instruction utterance: {e}")
 
     async def execute_multimodal_behavior(self, confidence: str):
         """Perform the confidence-specific multimodal behavior."""
         if not self.furhat:
             return
 
-        prefix, gesture, expression, led_color = self.get_full_confidence_behavior(confidence)
+        prefix, gesture, expression = self.get_full_confidence_behavior(confidence)
 
         import asyncio
         tasks = []
 
         tasks.append(self.execute_gesture(gesture))
         tasks.append(self.execute_gesture_expression(expression))
-        tasks.append(self.execute_led_color(led_color))
 
         await asyncio.gather(*tasks, return_exceptions=True)
+
+    async def execute_attend_location(self, x: float, y: float, z: float):
+        """Move gaze/head to a specific point in meters relative to the robot."""
+        if not self.furhat:
+            return
+        try:
+            await self.furhat.request_attend_location(x, y, z)
+            print(f"[Multimodal] Attend location: x={x}, y={y}, z={z}")
+        except Exception as e:
+            print(f"Failed to attend to location ({x}, {y}, {z}): {e}")
 
     async def execute_gesture(self, gesture_description: str):
         """Map a gesture description to a Furhat action call."""
@@ -249,6 +306,34 @@ class BehaviorGenerator:
         elif "let me think" in text_lower or "i think" in text_lower:
             return "medium"
         return "medium"
+
+    def _load_thinking_script(self) -> List[Dict[str, Any]]:
+        """Load scripted thinking behaviors from config (with legacy fallback)."""
+        config = get_thinking_config()
+        behaviors = config.get("behaviors") or []
+        if isinstance(behaviors, list):
+            cleaned: List[Dict[str, Any]] = []
+            for entry in behaviors:
+                if isinstance(entry, dict):
+                    cleaned.append(entry)
+            return cleaned
+
+        # Legacy fallback to thinking_behaviors.json if config malformed
+        script_path = Path(__file__).resolve().parent.parent / "thinking_behaviors.json"
+        if not script_path.exists():
+            return []
+        try:
+            with script_path.open("r", encoding="utf-8") as fp:
+                data = json.load(fp)
+            if isinstance(data, list):
+                cleaned = []
+                for entry in data:
+                    if isinstance(entry, dict):
+                        cleaned.append(entry)
+                return cleaned
+        except Exception as e:
+            cprint(f"Failed to load thinking_behaviors.json: {e}")
+        return []
 
     @staticmethod
     def _estimate_confidence_from_words(word_count: int) -> str:

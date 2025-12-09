@@ -12,12 +12,19 @@ from utils.print_utils import cprint
 class FurhatBridge:
     """Bridge between the local planner and the Furhat robot."""
 
-    def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None):
+    def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None, replay_only: bool = False):
         self.host = host
         self.auth_key = auth_key
-        self.conversation_starter = "Hello, I am Furhat. How are you today?"
+        # Opening line: self-intro + task framing
+        self.conversation_starter = (
+            "I am Elizabeth, a robot that shows visible thinking. I will answer your moral "
+            "dilemma questions: I will think first, then give a conclusion and a brief reason."
+        )
         self.stop_event: Optional[asyncio.Event] = None
         self.shutting_down = False
+        self.replay_only = replay_only
+        # When replaying stored trials, skip thinking behaviors if requested (default true for replay-only)
+        self.skip_replay_thinking = replay_only
         
         # Connect to Furhat
         self.furhat = AsyncFurhatClient(host, auth_key=auth_key)
@@ -125,11 +132,11 @@ class FurhatBridge:
 
             # Infer confidence based on the spoken prefix and fire behaviors
             confidence = self.behavior_generator.infer_confidence_from_text(robot_text)
-            prefix, gesture, expression, led_color = self.behavior_generator.get_full_confidence_behavior(confidence)
+            prefix, gesture, expression = self.behavior_generator.get_full_confidence_behavior(confidence)
             cprint(f"[System] Inferred confidence: {confidence}")
-            cprint(f"[System] Multimodal behaviors: gesture={gesture}, expression={expression}, LED={led_color}")
+            cprint(f"[System] Multimodal behaviors: gesture={gesture}, expression={expression}")
 
-            # Execute gestures + expression + LED concurrently
+            # Execute gestures + expression concurrently (LEDs disabled)
             if self.behavior_generator.furhat:
                 await self.behavior_generator.execute_multimodal_behavior(confidence)
 
@@ -155,7 +162,9 @@ class FurhatBridge:
             orchestrator = Orchestrator(
                 user_text, 
                 behavior_generator=self.behavior_generator,
-                furhat_client=self.furhat
+                furhat_client=self.furhat,
+                replay_only=self.replay_only,
+                skip_replay_thinking=self.skip_replay_thinking,
             )
             await orchestrator.run()
             # Clear the task upon completion
@@ -204,7 +213,7 @@ class FurhatBridge:
             stop_user_end=False,
             stop_robot_start=True,  # pause ASR while robot speaks
             resume_robot_end=True,  # resume ASR after robot finishes
-            end_speech_timeout=0.5
+            end_speech_timeout=2.5  # allow longer pause for long questions
         )
 
         # Wait for shutdown signal
@@ -220,4 +229,3 @@ class FurhatBridge:
             cprint("Disconnected from Furhat")
         except Exception as e:
             cprint(f"Error disconnecting: {e}")
-
