@@ -10,16 +10,11 @@ from plan.thinking_config import get_thinking_config
 class BehaviorGenerator:
     """Convert confidence levels and action descriptions into multimodal behaviors."""
 
-    # Confidence tier to (verbal prefix, base gesture, expression, LED color)
-    # CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
-    #     "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
-    #     "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
-    #     "high": ("I'm confident that", "nod head", "BigSmile", "green"),
-    # }
-    CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str, str]] = {
-        "low": ("I'm not entirely sure, but", "slight head shake", "Oh", "yellow"),
-        "medium": ("Let me think", "look straight", "Thoughtful", "blue"),
-        "high": ("I'm confident that", "nod head", "BigSmile", "green"),
+    # Confidence tier to (verbal prefix, base gesture, expression) — LED removed globally
+    CONFIDENCE_BEHAVIORS: Dict[str, Tuple[str, str, str]] = {
+        "low": ("I'm not entirely sure, but", "slight head shake", "Oh"),
+        "medium": ("Let me think", "look straight", "Thoughtful"),
+        "high": ("I'm confident that", "nod head", "BigSmile"),
     }
 
     # Legacy tuple format (verbal prefix + base gesture)
@@ -27,7 +22,7 @@ class BehaviorGenerator:
     def _get_legacy_behavior(confidence: str) -> Tuple[str, str]:
         """Return the two-field legacy format (verbal prefix + gesture)."""
         full = BehaviorGenerator.CONFIDENCE_BEHAVIORS.get(
-            confidence, ("Let me think", "look straight", "Oh", "blue")
+            confidence, ("Let me think", "look straight", "Oh")
         )
         return (full[0], full[1])
 
@@ -44,11 +39,25 @@ class BehaviorGenerator:
             confidence = "medium"
         return self._get_legacy_behavior(confidence)
 
-    def get_full_confidence_behavior(self, confidence: str) -> Tuple[str, str, str, str]:
+    def get_full_confidence_behavior(self, confidence: str) -> Tuple[str, str, str]:
         """Return the full multimodal behavior tuple for the confidence tier."""
         if confidence not in self.CONFIDENCE_BEHAVIORS:
             confidence = "medium"
         return self.CONFIDENCE_BEHAVIORS[confidence]
+
+    @staticmethod
+    def _normalize_location_target(value: Any) -> Optional[Dict[str, float]]:
+        """Extract an {x,y,z} dict if provided."""
+        if isinstance(value, dict):
+            try:
+                return {
+                    "x": float(value["x"]),
+                    "y": float(value["y"]),
+                    "z": float(value["z"]),
+                }
+            except (KeyError, TypeError, ValueError):
+                return None
+        return None
 
     def set_thinking_mode(self, active: bool):
         """Flag that the robot is currently verbalizing visible thinking."""
@@ -78,7 +87,7 @@ class BehaviorGenerator:
         sequence_index: int = 0,
         instruction: Optional[Dict[str, Any]] = None,
     ):
-        """Loop through gestures/expressions/LED cues during thinking."""
+        """Loop through gestures/expressions during thinking (LED disabled)."""
         if not self.furhat:
             return
 
@@ -87,7 +96,7 @@ class BehaviorGenerator:
             # If the controller plan lacks some fields, optionally fill from scripted step
             if self._thinking_script:
                 script_step = self._thinking_script[sequence_index % len(self._thinking_script)]
-                for key in ("gesture", "expression", "led", "led_color", "led_hex", "utterance", "speech"):
+                for key in ("gesture", "expression", "led", "led_color", "led_hex", "utterance", "speech", "look_at"):
                     if key not in merged and key in script_step:
                         merged[key] = script_step[key]
             cprint(f"[Thinking] Using controller plan (merged): {merged}")
@@ -104,7 +113,6 @@ class BehaviorGenerator:
 
         gesture_cycle = ["look straight", "slight head shake"]
         expression_cycle = ["Thoughtful", "Oh"]
-        led_color = "#FFA500"
 
         gesture = gesture_cycle[sequence_index % len(gesture_cycle)]
         expression = expression_cycle[sequence_index % len(expression_cycle)]
@@ -113,16 +121,19 @@ class BehaviorGenerator:
         await asyncio.gather(
             self.execute_gesture(gesture),
             self.execute_gesture_expression(expression),
-            self.execute_led_color_hex(led_color),
             return_exceptions=True
         )
 
     async def _apply_behavior_instruction(self, instruction: Dict[str, Any], step_index: Optional[int] = None):
-        """Execute gestures/expressions/LED settings defined by the controller."""
+        """Execute gestures/expressions/look targets defined by the controller."""
         tasks = []
         gesture = instruction.get("gesture")
         expression = instruction.get("expression")
-        led = instruction.get("led") or instruction.get("led_color") or instruction.get("led_hex")
+        # LED changes are disabled globally; ignore any LED fields in instructions
+        led = None
+        look_at = self._normalize_location_target(
+            instruction.get("look_at") or instruction.get("location") or instruction.get("target")
+        )
         utterance = instruction.get("utterance") or instruction.get("speech")
         speak_allowed = True
         if step_index is not None:
@@ -134,12 +145,8 @@ class BehaviorGenerator:
             tasks.append(self.execute_gesture(gesture))
         if expression:
             tasks.append(self.execute_gesture_expression(expression))
-        if led:
-            led = str(led)
-            if led.startswith("#"):
-                tasks.append(self.execute_led_color_hex(led))
-            else:
-                tasks.append(self.execute_led_color(led))
+        if look_at:
+            tasks.append(self.execute_attend_location(look_at["x"], look_at["y"], look_at["z"]))
 
         if tasks:
             import asyncio
@@ -160,16 +167,25 @@ class BehaviorGenerator:
         if not self.furhat:
             return
 
-        prefix, gesture, expression, led_color = self.get_full_confidence_behavior(confidence)
+        prefix, gesture, expression = self.get_full_confidence_behavior(confidence)
 
         import asyncio
         tasks = []
 
         tasks.append(self.execute_gesture(gesture))
         tasks.append(self.execute_gesture_expression(expression))
-        tasks.append(self.execute_led_color(led_color))
 
         await asyncio.gather(*tasks, return_exceptions=True)
+
+    async def execute_attend_location(self, x: float, y: float, z: float):
+        """Move gaze/head to a specific point in meters relative to the robot."""
+        if not self.furhat:
+            return
+        try:
+            await self.furhat.request_attend_location(x, y, z)
+            print(f"[Multimodal] Attend location: x={x}, y={y}, z={z}")
+        except Exception as e:
+            print(f"Failed to attend to location ({x}, {y}, {z}): {e}")
 
     async def execute_gesture(self, gesture_description: str):
         """Map a gesture description to a Furhat action call."""

@@ -8,20 +8,20 @@ Goals:
 3) Choose a behavior plan for visible thinking using the allowed options below.
 Allowed behavior building blocks:
 - Gestures: 'look straight', 'slight head shake', 'nod head'
-- Expressions: 'Thoughtful', 'Oh', 'BigSmile'
-- LED colors: 'blue', 'yellow', 'green', 'orange', 'white'
+- Expressions: 'Thoughtful', 'Oh', 'BrowFrown'
+- Head targets: optional look_at coordinates in meters, e.g. {"x":0.1,"y":0.3,"z":1.0}
 Output JSON keys:
 {"need_thinking": true/false,
 "confidence": "low/medium/high",
 "thinking_notes": ["short phrase 1", "short phrase 2"],
 "thinking_behavior_plan": [
-    {"gesture": "...", "expression": "...", "led": "...", "reason": "short rationale"}
+    {"gesture": "...", "expression": "...", "look_at": {"x":0,"y":0,"z":1}, "reason": "short rationale"}
 ],
 "reasoning_hint": "Hint for the main answer model, can be empty string",
 "answer": "Final answer when need_thinking is false"}
 Behavior plan rules:
 - Provide 1-3 entries when need_thinking=true, otherwise an empty list.
-- Each entry should pick from the allowed gestures/expressions/colors.
+- Each entry can mix the allowed gestures/expressions and optionally a look_at target.
 - Reason can be an empty string.
 If need_thinking is true, answer must be empty or omitted.
 No prose, no Markdown, ONLY JSON."""
@@ -60,4 +60,3 @@ def build_reasoning_prompt(question: str, hint: str, tone_instruction: str = "")
         f"{hint_part}{tone_part}\n"
         "Please summarize the solution in 2-3 sentences, do not output chain-of-thought reasoning."
     )
-

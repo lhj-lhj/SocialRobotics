@@ -51,16 +51,29 @@ def normalize_behavior_plan(plan: Any) -> List[Dict[str, str]]:
             expression = str(entry.get("expression", "")).strip()
             led = str(entry.get("led", "")).strip()
             reason = str(entry.get("reason", "")).strip()
-            if not (gesture or expression or led):
+            look_at = None
+            target = entry.get("look_at") or entry.get("location") or entry.get("target")
+            if isinstance(target, dict):
+                try:
+                    look_at = {
+                        "x": float(target["x"]),
+                        "y": float(target["y"]),
+                        "z": float(target["z"]),
+                    }
+                except (KeyError, TypeError, ValueError):
+                    look_at = None
+
+            if not (gesture or expression or led or look_at):
                 continue
-            normalized.append(
-                {
-                    "gesture": gesture,
-                    "expression": expression,
-                    "led": led,
-                    "reason": reason,
-                }
-            )
+            item: Dict[str, Any] = {
+                "gesture": gesture,
+                "expression": expression,
+                "led": led,
+                "reason": reason,
+            }
+            if look_at:
+                item["look_at"] = look_at
+            normalized.append(item)
     return normalized
 
 
@@ -80,12 +93,16 @@ class Orchestrator:
         behavior_generator: Optional[BehaviorGenerator] = None,
         furhat_client = None,
         trial_memory: Optional[TrialMemory] = None,
+        question_number: int = 1,
+        question_limit: int = 5,
     ):
         self.question = question
         self.controller = ControllerModel(question)
         self.behavior_generator = behavior_generator or BehaviorGenerator()
         self.furhat_client = furhat_client  # Furhat client used to send speech
         self.trial_memory = trial_memory or TrialMemory()
+        self.question_number = max(1, question_number)
+        self.question_limit = max(1, question_limit)
         self.decision: Dict[str, Any] = {}
         self.current_answer_text = ""
         self.thinking_cues_emitted: List[str] = []
@@ -147,6 +164,14 @@ class Orchestrator:
             await thinking_task
         self._persist_trial_record()
 
+    def _append_follow_up(self, answer: str) -> str:
+        """Add a short guidance line to prompt the next question."""
+        if self.question_number >= self.question_limit:
+            tail = "That's all for today's questions, but I'm happy to keep chatting if you'd like."
+        else:
+            tail = "If you have another question, please ask me another one."
+        return f"{answer} {tail}".strip()
+
     async def _respond_directly(self, confidence_hint: Optional[str]):
         """Handle situations where no thinking window is required."""
         answer = (self.decision.get("answer") or "").strip()
@@ -156,7 +181,7 @@ class Orchestrator:
         confidence = confidence_hint if confidence_hint in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"
         _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
         self.behavior_generator.set_pending_confidence(confidence)
-        full_answer = answer.strip()
+        full_answer = self._append_follow_up(answer.strip())
         self.resolved_confidence = confidence
         
         cprint(f"Robot directly responds (confidence={confidence}, gesture={gesture_description})")
@@ -255,7 +280,7 @@ class Orchestrator:
         
         # Send a single combined utterance to Furhat to avoid repeated triggers
         if full_answer_parts:
-            full_answer = " ".join(full_answer_parts).strip()
+            full_answer = self._append_follow_up(" ".join(full_answer_parts).strip())
             self.current_answer_text = full_answer
             
             # Only send once at the end

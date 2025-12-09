@@ -33,6 +33,8 @@ class FurhatBridge:
         self.dialog_history = []
         self.current_user_utt: Optional[str] = None
         self.orchestrator_task: Optional[asyncio.Task] = None
+        self.question_count = 0
+        self.question_limit = 5
 
     def setup_signal_handlers(self):
         """Install signal handlers for graceful shutdown."""
@@ -129,11 +131,11 @@ class FurhatBridge:
 
             # Infer confidence based on the spoken prefix and fire behaviors
             confidence = self.behavior_generator.infer_confidence_from_text(robot_text)
-            prefix, gesture, expression, led_color = self.behavior_generator.get_full_confidence_behavior(confidence)
+            prefix, gesture, expression = self.behavior_generator.get_full_confidence_behavior(confidence)
             cprint(f"[System] Inferred confidence: {confidence}")
-            cprint(f"[System] Multimodal behaviors: gesture={gesture}, expression={expression}, LED={led_color}")
+            cprint(f"[System] Multimodal behaviors: gesture={gesture}, expression={expression}")
 
-            # Execute gestures + expression + LED concurrently
+            # Execute gestures + expression concurrently (LEDs disabled)
             if self.behavior_generator.furhat:
                 await self.behavior_generator.execute_multimodal_behavior(confidence)
 
@@ -159,9 +161,13 @@ class FurhatBridge:
             orchestrator = Orchestrator(
                 user_text, 
                 behavior_generator=self.behavior_generator,
-                furhat_client=self.furhat
+                furhat_client=self.furhat,
+                question_number=min(self.question_count + 1, self.question_limit),
+                question_limit=self.question_limit,
             )
             await orchestrator.run()
+            # Increment question counter after a completed answer
+            self.question_count = min(self.question_count + 1, self.question_limit)
             # Clear the task upon completion
             self.orchestrator_task = None
                 

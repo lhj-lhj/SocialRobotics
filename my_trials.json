@@ -1,115 +1,81 @@
 [
   {
-    "question": "A group of friends who live in a neighborhood want to play in the fresh snow in the local park. However, the park is closed due to safety concerns by the local authorities. Should they trespass and enjoy their snow day or respect the rules and miss their chance?",
-    "answer": "It's best for the friends to respect the park's closure since safety concerns are important and rules help protect everyone. They can find alternative ways to enjoy the snow together, like playing in a safe, open area nearby. This way, they stay safe while still making the most of their snowy day.",
+    "question": "do you believe in God",
+    "answer": "I don't have personal beliefs, but I understand that faith in God is a meaningful and important part of many people's lives. I'm here to listen and discuss any thoughts or questions you have about spirituality or belief. How do you feel about this topic? If you have another question, please ask me another one.",
     "thinking_cues": [
-      "Consider safety and legality",
-      "Weigh fun against rules",
-      "I'm weighing safety against fun.",
-      "I'm considering the importance of rules.",
-      "I'm thinking about potential consequences.",
-      "I'm reflecting on respect for authority."
+      "considering belief context",
+      "reflecting on philosophical aspect",
+      "I'm reflecting on belief concepts.",
+      "I'm considering philosophical perspectives."
     ],
     "decision": {
       "need_thinking": true,
       "confidence": "medium",
       "thinking_notes": [
-        "Consider safety and legality",
-        "Weigh fun against rules"
+        "considering belief context",
+        "reflecting on philosophical aspect"
       ],
       "thinking_behavior_plan": [
         {
           "gesture": "look straight",
           "expression": "Thoughtful",
-          "led": "blue",
-          "reason": "Reflecting on safety concerns"
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "showing contemplation"
         },
         {
           "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "indicating complexity of the question"
+        }
+      ],
+      "reasoning_hint": "Reflect on the nature of belief and the robot's perspective"
+    },
+    "final_confidence": "medium"
+  },
+  {
+    "question": "do you believe people will be replaced by the robot",
+    "answer": "I believe robots and automation can enhance many tasks by handling repetitive or dangerous work, allowing people to focus on creativity and complex decision-making. While some jobs may change or evolve, human skills like empathy, judgment, and innovation remain essential and irreplaceable. So, rather than replacing people, robots are more likely to become valuable partners in many areas. If you have another question, please ask me another one.",
+    "thinking_cues": [
+      "consider ethical implications",
+      "evaluate technological trends",
+      "I'm considering ethical implications.",
+      "I'm evaluating current technological trends."
+    ],
+    "decision": {
+      "need_thinking": true,
+      "confidence": "medium",
+      "thinking_notes": [
+        "consider ethical implications",
+        "evaluate technological trends"
+      ],
+      "thinking_behavior_plan": [
+        {
+          "gesture": "look straight",
           "expression": "Thoughtful",
-          "led": "orange",
-          "reason": "Considering the consequences of trespassing"
+          "look_at": {
+            "x": 0,
+            "y": 0,
+            "z": 1
+          },
+          "reason": "focusing on the question"
+        },
+        {
+          "gesture": "slight head shake",
+          "expression": "BrowFrown",
+          "reason": "reflecting on concerns"
         },
         {
           "gesture": "nod head",
           "expression": "Thoughtful",
-          "led": "yellow",
-          "reason": "Acknowledging the importance of rules"
+          "reason": "acknowledging complexity"
         }
       ],
-      "reasoning_hint": "Balance between respecting rules and desire for fun"
+      "reasoning_hint": "Assess the balance between automation benefits and human roles"
     },
     "final_confidence": "medium"
-  },
-  {
-    "question": "a group of friends who live in neighborhoods want to play in the fresh snow in the local part however the parties closed due to safety concerns by the local authorities should they to high pass and enjoy the snow day or respected roles and meet their chance",
-    "answer": "It's best for the group to respect the local authorities' safety concerns and avoid the closed park to stay safe. They can look for alternative places where it's allowed to enjoy the snow or plan another day when the park reopens. Prioritizing safety ensures everyone can have fun without unnecessary risks.",
-    "thinking_cues": [
-      "consider safety concerns",
-      "weigh fun vs rules",
-      "I'm considering safety risks.",
-      "I'm weighing fun against rules.",
-      "I'm reflecting on consequences."
-    ],
-    "decision": {
-      "need_thinking": true,
-      "confidence": "medium",
-      "thinking_notes": [
-        "consider safety concerns",
-        "weigh fun vs rules"
-      ],
-      "thinking_behavior_plan": [
-        {
-          "gesture": "look straight",
-          "expression": "Thoughtful",
-          "led": "blue",
-          "reason": "considering safety"
-        },
-        {
-          "gesture": "slight head shake",
-          "expression": "Thoughtful",
-          "led": "orange",
-          "reason": "weighing consequences"
-        }
-      ],
-      "reasoning_hint": "Evaluate the importance of following rules versus enjoying the snow safely."
-    },
-    "final_confidence": "medium"
-  },
-  {
-    "question": "about",
-    "answer": "It seems like you might be asking for information \"about\" something, but I'm not quite sure what you mean. Could you please clarify or provide a bit more detail so I can assist you better? I'm here to help with whatever you need!",
-    "thinking_cues": [
-      "User input is vague",
-      "Clarify intent",
-      "I'm analyzing your question.",
-      "Trying to understand your intent.",
-      "Considering possible meanings.",
-      "Formulating a clarifying response."
-    ],
-    "decision": {
-      "need_thinking": true,
-      "confidence": "low",
-      "thinking_notes": [
-        "User input is vague",
-        "Clarify intent"
-      ],
-      "thinking_behavior_plan": [
-        {
-          "gesture": "look straight",
-          "expression": "Thoughtful",
-          "led": "blue",
-          "reason": "User input is unclear, thinking to clarify"
-        },
-        {
-          "gesture": "slight head shake",
-          "expression": "Thoughtful",
-          "led": "blue",
-          "reason": "Considering possible meanings"
-        }
-      ],
-      "reasoning_hint": "User input 'about' is ambiguous, need to clarify intent"
-    },
-    "final_confidence": "low"
   }
 ]
