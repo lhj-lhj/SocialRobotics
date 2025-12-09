@@ -12,7 +12,7 @@ from utils.print_utils import cprint
 class FurhatBridge:
     """Bridge between the local planner and the Furhat robot."""
 
-    def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None, replay_only: bool = False):
+    def __init__(self, host: str = "192.168.1.114", auth_key: Optional[str] = None, replay_only: bool = False, use_trial_memory: bool = True):
         self.host = host
         self.auth_key = auth_key
         # Opening line: self-intro + task framing
@@ -23,6 +23,7 @@ class FurhatBridge:
         self.stop_event: Optional[asyncio.Event] = None
         self.shutting_down = False
         self.replay_only = replay_only
+        self.use_trial_memory = use_trial_memory
         # When replaying stored trials, skip thinking behaviors if requested (default true for replay-only)
         self.skip_replay_thinking = replay_only
         
@@ -165,6 +166,7 @@ class FurhatBridge:
                 furhat_client=self.furhat,
                 replay_only=self.replay_only,
                 skip_replay_thinking=self.skip_replay_thinking,
+                use_trial_memory=self.use_trial_memory,
             )
             await orchestrator.run()
             # Clear the task upon completion

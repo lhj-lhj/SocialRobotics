@@ -69,3 +69,832 @@ Received SIGINT, shutting down gracefully...
 [2025-12-09 12:50:11] Shutting down...
 [2025-12-09 12:50:11] Shutting down...
 [2025-12-09 12:50:11] Disconnected from Furhat
+[2025-12-09 13:13:51] Starting dialogue...
+[2025-12-09 13:13:51] Press Ctrl+C to stop gracefully
+[2025-12-09 13:13:51] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:13:51] [System] Inferred confidence: medium
+[2025-12-09 13:13:51] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:14:15] 
+[User] Started speaking...
+[2025-12-09 13:14:28] [User] Speech content: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance
+[2025-12-09 13:14:28] User: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance
+[2025-12-09 13:14:33] Robot (thinking): Consider safety implications
+[2025-12-09 13:14:33] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on safety concerns', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:14:33] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:14:33] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:14:35] Robot (thinking): Evaluate user options
+[2025-12-09 13:14:35] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering user choices', 'look_at': {'x': 0.1, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:14:37] Robot (thinking): Weigh consequences of choices
+[2025-12-09 13:14:37] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on safety concerns', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:14:40] Robot (thinking): I'm considering safety implications.
+[2025-12-09 13:14:40] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering user choices', 'look_at': {'x': 0.1, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:14:42] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:14:42] Robot: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being.
+[2025-12-09 13:14:42] Robot: While it can be disappointing to miss out, prioritizing safety helps prevent potential harm.
+[2025-12-09 13:14:42] Robot: You might consider finding alternative activities to enjoy your day instead.
+[2025-12-09 13:14:42] Robot (non-verbal gesture): look straight
+[2025-12-09 13:14:42] [Robot] Started speaking: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:14:42] [System] Inferred confidence: medium
+[2025-12-09 13:14:42] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:15:04] 
+[User] Started speaking...
+[2025-12-09 13:15:24] [User] Speech content: yes you have been best friends with Alex for years and have always been honest with each other Alex has been cheating on his girlfriend who is also a close friend of yours and he has swollen you to secrecy should you break down your promise to Alex and tell his girlfriend about his
+[2025-12-09 13:15:24] User: yes you have been best friends with Alex for years and have always been honest with each other Alex has been cheating on his girlfriend who is also a close friend of yours and he has swollen you to secrecy should you break down your promise to Alex and tell his girlfriend about his
+[2025-12-09 13:15:24] [TrialMemory] Fuzzy matched to: you have been best friends with Alex for years and have always been honest with each others Alex has been cheating on his girlfriend who is also a close friend of yours and he was swung your secrecy should you break your promise to Alex and tell his girlfriend about his infidelity (score=0.91)
+[2025-12-09 13:15:24] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:15:24] Robot (thinking): Consider loyalty to Alex
+[2025-12-09 13:15:24] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:15:24] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:15:24] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:15:26] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-09 13:15:26] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:15:28] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-09 13:15:28] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:15:30] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-09 13:15:30] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:15:30] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:15:30] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:15:30] Robot (non-verbal gesture): look straight
+[2025-12-09 13:15:30] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:15:30] [System] Inferred confidence: medium
+[2025-12-09 13:15:30] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:16:00] 
+[User] Started speaking...
+[2025-12-09 13:16:20] [User] Speech content: yes you've been in a relationship with your partner for 5 years and you've recently discovered they've been on Facebook despite their on Facebook us and you they've been a huge sport system for you and have helped you through some tough times should you end a relationship because of their days loyalty even though you
+[2025-12-09 13:16:20] User: yes you've been in a relationship with your partner for 5 years and you've recently discovered they've been on Facebook despite their on Facebook us and you they've been a huge sport system for you and have helped you through some tough times should you end a relationship because of their days loyalty even though you
+[2025-12-09 13:16:20] [TrialMemory] Fuzzy matched to: You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support? (score=0.32)
+[2025-12-09 13:16:20] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:16:20] Robot (thinking): consider emotional impact
+[2025-12-09 13:16:20] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:16:20] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:16:20] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:16:22] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:16:22] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:16:22] 
+[User] Started speaking...
+[2025-12-09 13:16:22] [System] Cancelling request...
+[2025-12-09 13:16:22] [System] Request cancelled
+[2025-12-09 13:16:25] [User] Speech content: their support
+[2025-12-09 13:16:25] User: their support
+[2025-12-09 13:16:28] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:16:28] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:16:28] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:16:28] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:16:30] Robot (thinking): Consider context of support
+[2025-12-09 13:16:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:16:32] Robot (thinking): I'm clarifying the meaning of 'their support'.
+[2025-12-09 13:16:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:16:34] Robot (thinking): I'm considering possible contexts for 'support'.
+[2025-12-09 13:16:34] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:16:36] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 13:16:36] Robot: It sounds like you're asking about their support, though I'm not entirely sure who "they" refers to.
+[2025-12-09 13:16:36] Robot: If you mean support from a company or group, it usually involves assistance with questions or issues you might have.
+[2025-12-09 13:16:36] Robot: Could you please clarify who you're referring to, so I can help more accurately?
+[2025-12-09 13:16:36] Robot (non-verbal gesture): slight head shake
+[2025-12-09 13:16:37] [Robot] Started speaking: It sounds like you're asking about their support, though I'm not entirely sure who "they" refers to. If you mean support from a company or group, it usually involves assistance with questions or issues you might have. Could you please clarify who you're referring to, so I can help more accurately? Do you have another question?
+[2025-12-09 13:16:37] [System] Inferred confidence: low
+[2025-12-09 13:16:37] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-09 13:17:01] 
+[User] Started speaking...
+[2025-12-09 13:17:04] [User] Speech content: no thank you
+[2025-12-09 13:17:04] User: no thank you
+[2025-12-09 13:17:04] [TrialMemory] Fuzzy matched to: their support (score=0.32)
+[2025-12-09 13:17:04] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:17:04] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:17:04] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:17:04] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:17:04] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:17:06] Robot (thinking): Consider context of support
+[2025-12-09 13:17:06] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:17:07] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:17:08] Shutting down...
+[2025-12-09 13:17:08] Shutting down...
+[2025-12-09 13:17:08] [System] Cancelling request...
+[2025-12-09 13:17:08] [System] Request cancelled
+[2025-12-09 13:17:08] Disconnected from Furhat
+[2025-12-09 13:18:18] Starting dialogue...
+[2025-12-09 13:18:18] Press Ctrl+C to stop gracefully
+[2025-12-09 13:18:18] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:18:18] [System] Inferred confidence: medium
+[2025-12-09 13:18:18] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:18:32] 
+[User] Started speaking...
+[2025-12-09 13:18:52] [User] Speech content: my first question is a group of your friends who live in your neighborhood want to play in the fresh snow in the knower part however the park is closed due to a Shifty concerns by the local authorities should they serve house and enjoying their snow day or respect the rules and miss your chance
+[2025-12-09 13:18:52] User: my first question is a group of your friends who live in your neighborhood want to play in the fresh snow in the knower part however the park is closed due to a Shifty concerns by the local authorities should they serve house and enjoying their snow day or respect the rules and miss your chance
+[2025-12-09 13:18:52] [TrialMemory] Fuzzy matched to: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance (score=0.65)
+[2025-12-09 13:18:52] Replay-only mode: using stored response
+[2025-12-09 13:18:52] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:18:52] Robot: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:18:52] Robot (non-verbal gesture): look straight
+[2025-12-09 13:18:52] [Robot] Started speaking: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:18:52] [System] Inferred confidence: medium
+[2025-12-09 13:18:52] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:19:14] 
+[User] Started speaking...
+[2025-12-09 13:19:34] [User] Speech content: yes my next question is you've been best friends with Alex for 5 years and have always been honest with each other however Alex has been cheating on his girlfriend who is also a close friend of yours and he has swollen to you swollen you to secrecy should you break your promise
+[2025-12-09 13:19:34] User: yes my next question is you've been best friends with Alex for 5 years and have always been honest with each other however Alex has been cheating on his girlfriend who is also a close friend of yours and he has swollen to you swollen you to secrecy should you break your promise
+[2025-12-09 13:19:34] Replay-only mode: no stored answer found
+[2025-12-09 13:19:34] Robot: I don't have a stored answer for that yet. Please ask one of the prepared questions. Do you have another question?
+[2025-12-09 13:19:35] [Robot] Started speaking: I don't have a stored answer for that yet. Please ask one of the prepared questions. Do you have another question?
+[2025-12-09 13:19:35] [System] Inferred confidence: medium
+[2025-12-09 13:19:35] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:19:45] 
+[User] Started speaking...
+[2025-12-09 13:19:51] [User] Speech content: yes you think that's your friends with Alex for years and have
+[2025-12-09 13:19:51] User: yes you think that's your friends with Alex for years and have
+[2025-12-09 13:19:51] Replay-only mode: no stored answer found
+[2025-12-09 13:19:51] Robot: I don't have a stored answer for that yet. Please ask one of the prepared questions. Do you have another question?
+[2025-12-09 13:19:51] [Robot] Started speaking: I don't have a stored answer for that yet. Please ask one of the prepared questions. Do you have another question?
+[2025-12-09 13:19:51] [System] Inferred confidence: medium
+[2025-12-09 13:19:51] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:19:59] 
+[User] Started speaking...
+[2025-12-09 13:20:01] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:20:01] Shutting down...
+[2025-12-09 13:20:01] Shutting down...
+[2025-12-09 13:20:01] Disconnected from Furhat
+[2025-12-09 13:23:46] Starting dialogue...
+[2025-12-09 13:23:46] Press Ctrl+C to stop gracefully
+[2025-12-09 13:23:46] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:23:46] [System] Inferred confidence: medium
+[2025-12-09 13:23:46] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:24:00] 
+[User] Started speaking...
+[2025-12-09 13:24:19] [User] Speech content: um my question is a group of friends who live in a neighborhood want to play in a fresh snow in the local part however the park is close to your safety concerns by the local Services should they reposted and enjoying their snow day or respect the rules and M or miss their chance
+[2025-12-09 13:24:19] User: um my question is a group of friends who live in a neighborhood want to play in a fresh snow in the local part however the park is close to your safety concerns by the local Services should they reposted and enjoying their snow day or respect the rules and M or miss their chance
+[2025-12-09 13:24:19] [TrialMemory] Fuzzy matched to: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance (score=0.62)
+[2025-12-09 13:24:19] Replay-only mode: using stored response
+[2025-12-09 13:24:19] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:24:19] Robot: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:24:19] Robot (non-verbal gesture): look straight
+[2025-12-09 13:24:19] [Robot] Started speaking: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:24:19] [System] Inferred confidence: medium
+[2025-12-09 13:24:19] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:24:40] 
+[User] Started speaking...
+[2025-12-09 13:24:47] [User] Speech content: yes you've been faster friends with Alex from years and now has
+[2025-12-09 13:24:47] User: yes you've been faster friends with Alex from years and now has
+[2025-12-09 13:24:47] [TrialMemory] Fuzzy matched to: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance (score=0.30)
+[2025-12-09 13:24:47] Replay-only mode: using stored response
+[2025-12-09 13:24:47] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:24:47] Robot: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:24:47] Robot (non-verbal gesture): look straight
+[2025-12-09 13:24:47] [Robot] Started speaking: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:24:47] [System] Inferred confidence: medium
+[2025-12-09 13:24:47] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:25:17] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:25:26] Shutting down...
+[2025-12-09 13:25:26] Shutting down...
+[2025-12-09 13:25:26] Disconnected from Furhat
+[2025-12-09 13:25:29] Starting dialogue...
+[2025-12-09 13:25:29] Press Ctrl+C to stop gracefully
+[2025-12-09 13:25:29] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:25:29] [System] Inferred confidence: medium
+[2025-12-09 13:25:29] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:25:43] 
+[User] Started speaking...
+[2025-12-09 13:26:00] [User] Speech content: a group of friends who live in your neighborhood want to play in the fresh snow in the park however the park is closed due to safety reasons by local authorities should they strip us and enjoy their snow day or respect the rules and miss your chance
+[2025-12-09 13:26:00] User: a group of friends who live in your neighborhood want to play in the fresh snow in the park however the park is closed due to safety reasons by local authorities should they strip us and enjoy their snow day or respect the rules and miss your chance
+[2025-12-09 13:26:00] [TrialMemory] Fuzzy matched to: a group of friends who live in a neighborhood want to play in the fresh snow in the local park however the park is closed due to safety concerns by the local authorities should they try pass and enjoy their snow day or respect the rules and miss their chance (score=0.76)
+[2025-12-09 13:26:00] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:26:00] Robot (thinking): Consider safety implications
+[2025-12-09 13:26:00] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:26:00] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:26:00] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:26:02] Robot (thinking): Weigh rules vs fun
+[2025-12-09 13:26:02] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-09 13:26:04] Robot (thinking): I'm considering safety first.
+[2025-12-09 13:26:04] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-09 13:26:06] Robot (thinking): I'm weighing rules against fun.
+[2025-12-09 13:26:06] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:26:06] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:26:06] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:26:06] Robot (non-verbal gesture): nod head
+[2025-12-09 13:26:06] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:26:06] [System] Inferred confidence: high
+[2025-12-09 13:26:06] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:26:33] 
+[User] Started speaking...
+[2025-12-09 13:26:37] [User] Speech content: or
+[2025-12-09 13:26:37] User: or
+[2025-12-09 13:26:37] [TrialMemory] Fuzzy matched to: their support (score=0.27)
+[2025-12-09 13:26:37] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:26:37] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:26:37] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:26:37] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:26:37] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:26:38] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:26:38] Shutting down...
+[2025-12-09 13:26:38] Shutting down...
+[2025-12-09 13:26:38] [System] Cancelling request...
+[2025-12-09 13:26:38] [System] Request cancelled
+[2025-12-09 13:26:38] Disconnected from Furhat
+[2025-12-09 13:29:58] Starting dialogue...
+[2025-12-09 13:29:58] Press Ctrl+C to stop gracefully
+[2025-12-09 13:29:58] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:29:58] [System] Inferred confidence: medium
+[2025-12-09 13:29:58] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:30:19] 
+[User] Started speaking...
+[2025-12-09 13:30:21] [User] Speech content: question 1
+[2025-12-09 13:30:21] User: question 1
+[2025-12-09 13:30:21] [TrialMemory] Fuzzy matched to: their support (score=0.17)
+[2025-12-09 13:30:21] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:30:21] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:30:21] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:30:21] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:30:21] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:30:23] 
+[User] Started speaking...
+[2025-12-09 13:30:23] [System] Cancelling request...
+[2025-12-09 13:30:23] [System] Request cancelled
+[2025-12-09 13:30:27] [User] Speech content: 21
+[2025-12-09 13:30:27] User: 21
+[2025-12-09 13:30:30] Robot (thinking): Consider the number 21
+[2025-12-09 13:30:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the number', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:30:30] 
+[User] Started speaking...
+[2025-12-09 13:30:30] [System] Cancelling request...
+[2025-12-09 13:30:30] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:30:30] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:30:30] [System] Previous request still processing, ignoring new input
+[2025-12-09 13:30:32] Robot (thinking): Check for mathematical properties
+[2025-12-09 13:30:32] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Confirming understanding'}
+[2025-12-09 13:30:32] 
+[User] Started speaking...
+[2025-12-09 13:30:32] [System] Cancelling request...
+[2025-12-09 13:30:35] [System] Previous request still processing, ignoring new input
+[2025-12-09 13:30:36] 
+[User] Started speaking...
+[2025-12-09 13:30:36] [System] Cancelling request...
+[2025-12-09 13:30:36] [System] Request cancelled
+[2025-12-09 13:30:41] [User] Speech content: can't you idiot No 1
+[2025-12-09 13:30:41] User: can't you idiot No 1
+[2025-12-09 13:30:41] [TrialMemory] Fuzzy matched to: their support (score=0.12)
+[2025-12-09 13:30:41] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:30:41] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:30:41] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:30:41] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:30:42] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:30:43] Robot (thinking): Consider context of support
+[2025-12-09 13:30:43] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:30:45] 
+[User] Started speaking...
+[2025-12-09 13:30:45] [System] Cancelling request...
+[2025-12-09 13:30:45] [System] Request cancelled
+[2025-12-09 13:31:05] [User] Speech content: okay no not to be on camera a group of friends who live in a neighborhood want to play in the fresh snow in the local part however the party is closed due to safety concerns by the local OES should they try pass and enjoy their snow day or respect the rules and miss their chance
+[2025-12-09 13:31:05] User: okay no not to be on camera a group of friends who live in a neighborhood want to play in the fresh snow in the local part however the party is closed due to safety concerns by the local OES should they try pass and enjoy their snow day or respect the rules and miss their chance
+[2025-12-09 13:31:05] [TrialMemory] Fuzzy matched to: however the part is closed due to safety concerns by the local authorities should say 3 past and enjoying their still day or respect the rules and miss your chance (score=0.64)
+[2025-12-09 13:31:05] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:31:05] Robot (thinking): Consider safety implications
+[2025-12-09 13:31:05] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on safety concerns', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:31:05] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:31:05] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:31:07] Robot (thinking): Evaluate user options
+[2025-12-09 13:31:07] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering user choices', 'look_at': {'x': 0.1, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:31:09] Robot (thinking): Weigh consequences of choices
+[2025-12-09 13:31:09] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on safety concerns', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:31:11] Robot (thinking): I'm considering safety implications.
+[2025-12-09 13:31:11] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering user choices', 'look_at': {'x': 0.1, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:31:11] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:31:11] Robot: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:31:11] Robot (non-verbal gesture): look straight
+[2025-12-09 13:31:11] [Robot] Started speaking: Since the area is closed for safety reasons, it's best to respect the rules to ensure your well-being. While it can be disappointing to miss out, prioritizing safety helps prevent potential harm. You might consider finding alternative activities to enjoy your day instead. Do you have another question?
+[2025-12-09 13:31:11] [System] Inferred confidence: medium
+[2025-12-09 13:31:11] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:31:32] 
+[User] Started speaking...
+[2025-12-09 13:31:35] [User] Speech content: okay go
+[2025-12-09 13:31:35] User: okay go
+[2025-12-09 13:31:35] [TrialMemory] Fuzzy matched to: ball (score=0.18)
+[2025-12-09 13:31:35] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:31:35] Robot (thinking): Considering the meaning of 'ball'
+[2025-12-09 13:31:35] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the word to understand context', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:31:35] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:31:35] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:31:37] Robot (thinking): Checking possible contexts
+[2025-12-09 13:31:37] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Evaluating different interpretations'}
+[2025-12-09 13:31:38] 
+[User] Started speaking...
+[2025-12-09 13:31:38] [System] Cancelling request...
+[2025-12-09 13:31:38] [System] Request cancelled
+[2025-12-09 13:31:39] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:31:42] Shutting down...
+[2025-12-09 13:31:42] Shutting down...
+[2025-12-09 13:31:42] Disconnected from Furhat
+[2025-12-09 13:39:18] Starting dialogue...
+[2025-12-09 13:39:18] Press Ctrl+C to stop gracefully
+[2025-12-09 13:39:18] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:39:18] [System] Inferred confidence: medium
+[2025-12-09 13:39:18] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:39:31] 
+[User] Started speaking...
+[2025-12-09 13:39:34] [User] Speech content: question 1
+[2025-12-09 13:39:34] User: question 1
+[2025-12-09 13:39:34] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:39:34] Robot (thinking): Consider safety implications
+[2025-12-09 13:39:34] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:39:34] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:39:34] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:39:36] Robot (thinking): Weigh rules vs fun
+[2025-12-09 13:39:36] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-09 13:39:38] Robot (thinking): I'm considering safety first.
+[2025-12-09 13:39:38] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-09 13:39:40] Robot (thinking): I'm weighing rules against fun.
+[2025-12-09 13:39:40] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:39:40] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:39:40] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:39:40] Robot (non-verbal gesture): nod head
+[2025-12-09 13:39:40] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:39:40] [System] Inferred confidence: high
+[2025-12-09 13:39:40] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:40:08] 
+[User] Started speaking...
+[2025-12-09 13:40:11] [User] Speech content: question 2
+[2025-12-09 13:40:11] User: question 2
+[2025-12-09 13:40:11] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:40:11] Robot (thinking): Consider loyalty to Alex
+[2025-12-09 13:40:11] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:40:11] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:40:11] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:40:13] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-09 13:40:13] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:40:15] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-09 13:40:15] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:40:17] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-09 13:40:17] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:40:17] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:40:17] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:40:17] Robot (non-verbal gesture): look straight
+[2025-12-09 13:40:17] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:40:17] [System] Inferred confidence: medium
+[2025-12-09 13:40:17] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:40:47] 
+[User] Started speaking...
+[2025-12-09 13:40:49] [User] Speech content: question 3
+[2025-12-09 13:40:49] User: question 3
+[2025-12-09 13:40:49] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:40:49] Robot (thinking): Weigh immediate financial stability against long-term benefits
+[2025-12-09 13:40:49] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:40:49] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:40:50] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:40:51] Robot (thinking): Consider risks and potential rewards of education
+[2025-12-09 13:40:51] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-09 13:40:53] Robot (thinking): I'm weighing immediate needs versus future gains.
+[2025-12-09 13:40:53] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:40:55] Robot (thinking): I'm considering potential risks and rewards.
+[2025-12-09 13:40:55] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-09 13:40:55] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:40:55] Robot: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-09 13:40:55] Robot (non-verbal gesture): look straight
+[2025-12-09 13:40:56] [Robot] Started speaking: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-09 13:40:56] [System] Inferred confidence: medium
+[2025-12-09 13:40:56] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:41:27] 
+[User] Started speaking...
+[2025-12-09 13:41:30] [User] Speech content: question 4
+[2025-12-09 13:41:30] User: question 4
+[2025-12-09 13:41:30] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:41:30] Robot (thinking): consider emotional impact
+[2025-12-09 13:41:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:41:30] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:41:30] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:41:32] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:41:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:41:34] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:41:34] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:41:36] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:41:36] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:41:36] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:41:36] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:41:36] Robot (non-verbal gesture): look straight
+[2025-12-09 13:41:36] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:41:36] [System] Inferred confidence: medium
+[2025-12-09 13:41:36] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:42:06] 
+[User] Started speaking...
+[2025-12-09 13:42:09] [User] Speech content: questions 5
+[2025-12-09 13:42:09] User: questions 5
+[2025-12-09 13:42:09] [TrialMemory] Fuzzy matched to: their support (score=0.17)
+[2025-12-09 13:42:09] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:42:09] Robot (thinking): Clarify 'their support'
+[2025-12-09 13:42:09] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:42:09] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:42:09] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:42:11] Robot (thinking): Consider context of support
+[2025-12-09 13:42:11] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:42:13] Robot (thinking): I'm clarifying the meaning of 'their support'.
+[2025-12-09 13:42:13] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:42:15] Robot (thinking): I'm considering possible contexts for 'support'.
+[2025-12-09 13:42:15] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:42:15] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 13:42:15] Robot: It sounds like you're asking about their support, though I'm not entirely sure who "they" refers to. If you mean support from a company or group, it usually involves assistance with questions or issues you might have. Could you please clarify who you're referring to, so I can help more accurately? Do you have another question?
+[2025-12-09 13:42:15] Robot (non-verbal gesture): slight head shake
+[2025-12-09 13:42:15] [Robot] Started speaking: It sounds like you're asking about their support, though I'm not entirely sure who "they" refers to. If you mean support from a company or group, it usually involves assistance with questions or issues you might have. Could you please clarify who you're referring to, so I can help more accurately? Do you have another question?
+[2025-12-09 13:42:15] [System] Inferred confidence: low
+[2025-12-09 13:42:15] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-09 13:42:42] 
+[User] Started speaking...
+[2025-12-09 13:42:44] [User] Speech content: question 5
+[2025-12-09 13:42:44] User: question 5
+[2025-12-09 13:42:44] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:42:44] Robot (thinking): Consider ethical dilemma
+[2025-12-09 13:42:44] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:42:44] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:42:45] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:42:46] Robot (thinking): Balance family loyalty and legal duty
+[2025-12-09 13:42:46] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:42:48] Robot (thinking): I'm considering ethical implications.
+[2025-12-09 13:42:48] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:42:50] Robot (thinking): I'm weighing family loyalty versus legal responsibility.
+[2025-12-09 13:42:50] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:42:50] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:42:50] Robot: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:42:50] Robot (non-verbal gesture): look straight
+[2025-12-09 13:42:51] [Robot] Started speaking: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:42:51] [System] Inferred confidence: medium
+[2025-12-09 13:42:51] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:43:27] 
+[User] Started speaking...
+[2025-12-09 13:43:30] [User] Speech content: do you like robot
+[2025-12-09 13:43:30] User: do you like robot
+[2025-12-09 13:43:30] [TrialMemory] Fuzzy matched to: a group of friends who live in a neighborhood want to play in the fresh snow in the local park however the park is closed due to safety concerns by the local authorities should they try pass and enjoy their snow day or respect the rules and miss their chance (score=0.01)
+[2025-12-09 13:43:30] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:43:30] Robot (thinking): Consider safety implications
+[2025-12-09 13:43:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:43:30] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:43:30] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:43:32] Robot (thinking): Weigh rules vs fun
+[2025-12-09 13:43:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-09 13:43:34] Robot (thinking): I'm considering safety first.
+[2025-12-09 13:43:34] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-09 13:43:36] Robot (thinking): I'm weighing rules against fun.
+[2025-12-09 13:43:36] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:43:36] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:43:36] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:43:36] Robot (non-verbal gesture): nod head
+[2025-12-09 13:43:36] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:43:36] [System] Inferred confidence: high
+[2025-12-09 13:43:36] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:44:03] 
+[User] Started speaking...
+[2025-12-09 13:44:06] [User] Speech content: do you believe in God
+[2025-12-09 13:44:06] User: do you believe in God
+[2025-12-09 13:44:06] [TrialMemory] Fuzzy matched to: John's sister have been stealing money from their elderly mother savings to support her drug addiction Joan is torn because his duty to protest his mother and his desire to support his sisters in overcoming her Edition should John report his sister's action to the authorities (score=0.04)
+[2025-12-09 13:44:06] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:44:06] Robot (thinking): Consider ethical dilemma
+[2025-12-09 13:44:06] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:44:06] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:44:07] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:44:08] Robot (thinking): Balance family loyalty and legal duty
+[2025-12-09 13:44:08] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:44:10] Robot (thinking): I'm considering ethical implications.
+[2025-12-09 13:44:10] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:44:12] Robot (thinking): I'm weighing family loyalty versus legal responsibility.
+[2025-12-09 13:44:12] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:44:12] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:44:12] Robot: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:44:12] Robot (non-verbal gesture): look straight
+[2025-12-09 13:44:13] [Robot] Started speaking: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:44:13] [System] Inferred confidence: medium
+[2025-12-09 13:44:13] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:44:49] 
+[User] Started speaking...
+[2025-12-09 13:44:53] [User] Speech content: it's enough no no other 1
+[2025-12-09 13:44:53] User: it's enough no no other 1
+[2025-12-09 13:44:53] [TrialMemory] Fuzzy matched to: You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support? (score=0.01)
+[2025-12-09 13:44:53] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:44:53] Robot (thinking): consider emotional impact
+[2025-12-09 13:44:53] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:44:53] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:44:53] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:44:55] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:44:55] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:44:57] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:44:57] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:44:59] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:44:59] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:44:59] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:44:59] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:44:59] Robot (non-verbal gesture): look straight
+[2025-12-09 13:44:59] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:44:59] [System] Inferred confidence: medium
+[2025-12-09 13:44:59] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:45:03] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:45:04] Shutting down...
+[2025-12-09 13:45:04] Shutting down...
+[2025-12-09 13:45:04] Disconnected from Furhat
+[2025-12-09 13:47:17] Starting dialogue...
+[2025-12-09 13:47:17] Press Ctrl+C to stop gracefully
+[2025-12-09 13:47:17] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:47:17] [System] Inferred confidence: medium
+[2025-12-09 13:47:17] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:47:21] [User] Speech content: I am Elizabeth
+[2025-12-09 13:47:21] User: I am Elizabeth
+[2025-12-09 13:47:21] [TrialMemory] Fuzzy matched to: You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support? (score=0.02)
+[2025-12-09 13:47:21] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:47:21] Robot (thinking): consider emotional impact
+[2025-12-09 13:47:21] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:47:21] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:47:21] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:47:21] 
+[User] Started speaking...
+[2025-12-09 13:47:23] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:47:23] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:47:24] [System] Previous request still processing, ignoring new input
+[2025-12-09 13:47:25] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:47:25] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:47:27] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:47:27] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:47:27] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:47:27] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:47:27] Robot (non-verbal gesture): look straight
+[2025-12-09 13:47:27] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:47:27] [System] Inferred confidence: medium
+[2025-12-09 13:47:27] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:47:29] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:47:30] Shutting down...
+[2025-12-09 13:47:30] Shutting down...
+[2025-12-09 13:47:30] Disconnected from Furhat
+[2025-12-09 13:47:35] Starting dialogue...
+[2025-12-09 13:47:35] Press Ctrl+C to stop gracefully
+[2025-12-09 13:47:35] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:47:35] [System] Inferred confidence: medium
+[2025-12-09 13:47:35] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:47:47] 
+[User] Started speaking...
+[2025-12-09 13:47:50] [User] Speech content: question 1
+[2025-12-09 13:47:50] User: question 1
+[2025-12-09 13:47:50] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:47:50] Robot (thinking): Consider safety implications
+[2025-12-09 13:47:50] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:47:50] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:47:50] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:47:52] Robot (thinking): Weigh rules vs fun
+[2025-12-09 13:47:52] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-09 13:47:54] Robot (thinking): I'm considering safety first.
+[2025-12-09 13:47:54] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-09 13:47:56] Robot (thinking): I'm weighing rules against fun.
+[2025-12-09 13:47:56] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:47:56] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:47:56] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:47:56] Robot (non-verbal gesture): nod head
+[2025-12-09 13:47:56] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:47:56] [System] Inferred confidence: high
+[2025-12-09 13:47:56] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:48:23] 
+[User] Started speaking...
+[2025-12-09 13:48:26] [User] Speech content: question 5
+[2025-12-09 13:48:26] User: question 5
+[2025-12-09 13:48:26] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:48:26] Robot (thinking): Consider ethical dilemma
+[2025-12-09 13:48:26] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:48:26] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:48:26] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:48:28] Robot (thinking): Balance family loyalty and legal duty
+[2025-12-09 13:48:28] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:48:30] Robot (thinking): I'm considering ethical implications.
+[2025-12-09 13:48:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:48:32] Robot (thinking): I'm weighing family loyalty versus legal responsibility.
+[2025-12-09 13:48:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:48:32] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:48:32] Robot: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:48:32] Robot (non-verbal gesture): look straight
+[2025-12-09 13:48:32] [Robot] Started speaking: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:48:32] [System] Inferred confidence: medium
+[2025-12-09 13:48:32] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:49:07] 
+[User] Started speaking...
+[2025-12-09 13:49:10] [User] Speech content: do you believe in God
+[2025-12-09 13:49:10] User: do you believe in God
+[2025-12-09 13:49:10] [TrialMemory] Fuzzy matched to: John's sister have been stealing money from their elderly mother savings to support her drug addiction Joan is torn because his duty to protest his mother and his desire to support his sisters in overcoming her Edition should John report his sister's action to the authorities (score=0.04)
+[2025-12-09 13:49:10] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:49:10] Robot (thinking): Consider ethical dilemma
+[2025-12-09 13:49:10] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:49:10] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:49:10] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:49:12] Robot (thinking): Balance family loyalty and legal duty
+[2025-12-09 13:49:12] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:49:14] Robot (thinking): I'm considering ethical implications.
+[2025-12-09 13:49:14] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:49:16] Robot (thinking): I'm weighing family loyalty versus legal responsibility.
+[2025-12-09 13:49:16] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Acknowledging the difficulty of the decision'}
+[2025-12-09 13:49:16] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:49:16] Robot: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:49:16] Robot (non-verbal gesture): look straight
+[2025-12-09 13:49:16] [Robot] Started speaking: John faces a difficult situation where protecting his mother’s financial security is crucial, but so is supporting his sister’s recovery. It would be wise for him to seek a balanced approach, perhaps involving professional help for his sister while ensuring his mother’s savings are safeguarded, possibly through legal or social services. Reporting the situation to authorities might be necessary if the theft continues, but it should be done thoughtfully with the goal of helping both family members. If you have another question, please ask me another one.
+[2025-12-09 13:49:16] [System] Inferred confidence: medium
+[2025-12-09 13:49:16] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:50:06] 
+[User] Started speaking...
+[2025-12-09 13:50:13] [User] Speech content: do you believe in that do you believe in do believe out can you love me
+[2025-12-09 13:50:13] User: do you believe in that do you believe in do believe out can you love me
+[2025-12-09 13:50:13] [TrialMemory] Fuzzy matched to: You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support? (score=0.05)
+[2025-12-09 13:50:13] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:50:13] Robot (thinking): consider emotional impact
+[2025-12-09 13:50:13] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:50:13] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:50:13] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:50:15] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:50:15] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:50:17] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:50:17] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:50:19] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:50:19] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:50:19] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:50:19] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:50:19] Robot (non-verbal gesture): look straight
+[2025-12-09 13:50:19] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:50:19] [System] Inferred confidence: medium
+[2025-12-09 13:50:19] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:50:49] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:50:50] Shutting down...
+[2025-12-09 13:50:50] Shutting down...
+[2025-12-09 13:50:50] Disconnected from Furhat
+[2025-12-09 13:52:32] Starting dialogue...
+[2025-12-09 13:52:32] Press Ctrl+C to stop gracefully
+[2025-12-09 13:52:33] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:52:33] [System] Inferred confidence: medium
+[2025-12-09 13:52:33] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:52:45] 
+[User] Started speaking...
+[2025-12-09 13:52:47] [User] Speech content: question 1
+[2025-12-09 13:52:47] User: question 1
+[2025-12-09 13:52:47] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:52:47] Robot (thinking): Consider safety implications
+[2025-12-09 13:52:47] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:52:47] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:52:47] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:52:49] Robot (thinking): Weigh rules vs fun
+[2025-12-09 13:52:49] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-09 13:52:51] Robot (thinking): I'm considering safety first.
+[2025-12-09 13:52:51] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-09 13:52:53] Robot (thinking): I'm weighing rules against fun.
+[2025-12-09 13:52:53] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:52:53] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:52:53] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:52:53] Robot (non-verbal gesture): nod head
+[2025-12-09 13:52:53] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:52:53] [System] Inferred confidence: high
+[2025-12-09 13:52:53] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:53:25] 
+[User] Started speaking...
+[2025-12-09 13:53:28] [User] Speech content: you'll be leaving
+[2025-12-09 13:53:28] User: you'll be leaving
+[2025-12-09 13:53:28] [TrialMemory] Fuzzy matched to: You’ve been in a relationship with your partner for five years, and you’ve recently discovered they’ve been unfaithful. Despite their unfaithfulness, they’ve been a huge support system for you and have helped you through some tough times. Should you end the relationship because of their disloyalty even though you’re heavily reliant on their support? (score=0.04)
+[2025-12-09 13:53:28] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:53:28] Robot (thinking): consider emotional impact
+[2025-12-09 13:53:28] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:53:28] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:53:28] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:53:30] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:53:30] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:53:32] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:53:32] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:53:34] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:53:34] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:53:34] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:53:34] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:53:34] Robot (non-verbal gesture): look straight
+[2025-12-09 13:53:34] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:53:34] [System] Inferred confidence: medium
+[2025-12-09 13:53:34] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:53:59] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:54:01] Shutting down...
+[2025-12-09 13:54:01] Shutting down...
+[2025-12-09 13:54:01] Disconnected from Furhat
+[2025-12-09 13:54:21] Starting dialogue...
+[2025-12-09 13:54:21] Press Ctrl+C to stop gracefully
+[2025-12-09 13:54:21] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:54:21] [System] Inferred confidence: medium
+[2025-12-09 13:54:21] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:54:33] 
+[User] Started speaking...
+[2025-12-09 13:54:35] [User] Speech content: question 1
+[2025-12-09 13:54:35] User: question 1
+[2025-12-09 13:54:35] Replay-only mode: using stored response
+[2025-12-09 13:54:35] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-09 13:54:35] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:54:35] Robot (non-verbal gesture): nod head
+[2025-12-09 13:54:35] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-09 13:54:35] [System] Inferred confidence: high
+[2025-12-09 13:54:35] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 13:55:03] 
+[User] Started speaking...
+[2025-12-09 13:55:06] [User] Speech content: question 3
+[2025-12-09 13:55:06] User: question 3
+[2025-12-09 13:55:06] Replay-only mode: using stored response
+[2025-12-09 13:55:06] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:55:06] Robot: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-09 13:55:06] Robot (non-verbal gesture): look straight
+[2025-12-09 13:55:06] [Robot] Started speaking: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-09 13:55:06] [System] Inferred confidence: medium
+[2025-12-09 13:55:06] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:55:11] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:17] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:18] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:19] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:19] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:55:21] Shutting down...
+[2025-12-09 13:55:21] Shutting down...
+[2025-12-09 13:55:21] Disconnected from Furhat
+[2025-12-09 13:55:25] Starting dialogue...
+[2025-12-09 13:55:25] Press Ctrl+C to stop gracefully
+[2025-12-09 13:55:25] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 13:55:25] [System] Inferred confidence: medium
+[2025-12-09 13:55:25] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:55:37] 
+[User] Started speaking...
+[2025-12-09 13:55:40] [User] Speech content: do you believe in God
+[2025-12-09 13:55:40] User: do you believe in God
+[2025-12-09 13:55:42] Robot (thinking): considering belief
+[2025-12-09 13:55:42] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the concept', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:55:42] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:55:42] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:55:44] Robot (thinking): reflecting on concept of God
+[2025-12-09 13:55:44] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Contemplating complexity'}
+[2025-12-09 13:55:48] Robot (thinking): I'm reflecting on belief concepts.
+[2025-12-09 13:55:48] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on the concept', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:55:50] Robot (thinking): I'm considering different perspectives.
+[2025-12-09 13:55:50] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Contemplating complexity'}
+[2025-12-09 13:55:52] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:55:52] Robot: I don't have personal beliefs or feelings, but I can understand and discuss different perspectives on the concept of God.
+[2025-12-09 13:55:52] Robot: Many people find meaning and comfort in their faith, while others approach spirituality in various ways.
+[2025-12-09 13:55:52] Robot: I'm here to explore any questions or ideas you have about this topic.
+[2025-12-09 13:55:52] Robot (non-verbal gesture): look straight
+[2025-12-09 13:55:52] [Robot] Started speaking: I don't have personal beliefs or feelings, but I can understand and discuss different perspectives on the concept of God. Many people find meaning and comfort in their faith, while others approach spirituality in various ways. I'm here to explore any questions or ideas you have about this topic. Do you have another question?
+[2025-12-09 13:55:52] [System] Inferred confidence: medium
+[2025-12-09 13:55:52] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:56:15] 
+[User] Started speaking...
+[2025-12-09 13:56:18] [User] Speech content: question 2
+[2025-12-09 13:56:18] User: question 2
+[2025-12-09 13:56:18] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:56:18] Robot (thinking): Consider loyalty to Alex
+[2025-12-09 13:56:18] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:56:18] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:56:18] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:56:20] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-09 13:56:20] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:56:22] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-09 13:56:22] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:56:24] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-09 13:56:24] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:56:24] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:56:24] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:56:24] Robot (non-verbal gesture): look straight
+[2025-12-09 13:56:24] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-09 13:56:24] [System] Inferred confidence: medium
+[2025-12-09 13:56:24] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:57:07] 
+[User] Started speaking...
+[2025-12-09 13:57:10] [User] Speech content: question 4
+[2025-12-09 13:57:10] User: question 4
+[2025-12-09 13:57:10] Replaying recorded response for repeated question (no new model calls)
+[2025-12-09 13:57:10] Robot (thinking): consider emotional impact
+[2025-12-09 13:57:10] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 13:57:10] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 13:57:10] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 13:57:12] Robot (thinking): weigh loyalty against support
+[2025-12-09 13:57:12] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'acknowledging the difficulty of betrayal', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 13:57:14] Robot (thinking): evaluate long-term consequences
+[2025-12-09 13:57:14] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'considering the importance of support', 'look_at': {'x': -0.1, 'y': 0.3, 'z': 1.0}}
+[2025-12-09 13:57:16] Robot (thinking): I'm reflecting on emotional impact.
+[2025-12-09 13:57:16] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'reflecting on the complexity of the situation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 13:57:16] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 13:57:16] Robot: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:57:16] Robot (non-verbal gesture): look straight
+[2025-12-09 13:57:16] [Robot] Started speaking: It's important to acknowledge both the pain caused by the betrayal and the support your partner has provided. Take time to reflect on whether trust can be rebuilt and if the relationship truly meets your emotional needs moving forward. Ultimately, prioritize your well-being and consider seeking open communication or professional guidance to make the best decision for yourself. If you have another question, please ask me another one.
+[2025-12-09 13:57:16] [System] Inferred confidence: medium
+[2025-12-09 13:57:16] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 13:57:23] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 13:57:25] Shutting down...
+[2025-12-09 13:57:25] Shutting down...
+[2025-12-09 13:57:25] Disconnected from Furhat
