@@ -10,6 +10,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     "max_duration_seconds": 10.0,
     "pause_seconds": 0.5,
     "max_cues": 12,
+    "direct_response_delay_seconds": 0.0,
     "behaviors": [],
 }
 

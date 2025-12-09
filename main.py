@@ -42,12 +42,17 @@ def main():
         action="store_true",
         help="Test language/thinking only without connecting to Furhat"
     )
+    parser.add_argument(
+        "--replay-only",
+        action="store_true",
+        help="Replay stored answers only (no controller/reasoning model calls)"
+    )
     args = parser.parse_args()
 
     if args.test:
         question = input("Test question (press Enter to use default): ").strip() or "How do you show thinking?"
         cprint("Test mode: running language and thinking pipeline only")
-        orchestrator = Orchestrator(question)
+        orchestrator = Orchestrator(question, replay_only=args.replay_only)
         try:
             asyncio.run(orchestrator.run())
         except KeyboardInterrupt:
@@ -62,7 +67,7 @@ def main():
 
     try:
         # Create the Furhat bridge
-        bridge = FurhatBridge(host=args.host, auth_key=args.auth_key)
+        bridge = FurhatBridge(host=args.host, auth_key=args.auth_key, replay_only=args.replay_only)
         
         if args.no_plan:
             cprint("Warning: planning module disabled (connection-only mode)")

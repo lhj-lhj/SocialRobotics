@@ -24,6 +24,9 @@ THINKING_PAUSE_SECONDS = float(THINKING_CONFIG.get("pause_seconds", 0.5) or 0.5)
 MIN_THINKING_DURATION_SECONDS = float(
     THINKING_CONFIG.get("min_duration_seconds", 8.0) or 8.0
 )  # Ensure thinking lasts at least this long
+DIRECT_RESPONSE_DELAY_SECONDS = float(
+    THINKING_CONFIG.get("direct_response_delay_seconds", 0.0) or 0.0
+)  # Optional delay before speaking when no thinking is needed
 
 CONFIDENCE_TONE_GUIDANCE = {
     "low": "Sound tentative and gentle, acknowledging uncertainty briefly.",
@@ -93,16 +96,16 @@ class Orchestrator:
         behavior_generator: Optional[BehaviorGenerator] = None,
         furhat_client = None,
         trial_memory: Optional[TrialMemory] = None,
-        question_number: int = 1,
-        question_limit: int = 5,
+        replay_only: bool = False,
+        skip_replay_thinking: bool = False,
     ):
         self.question = question
         self.controller = ControllerModel(question)
         self.behavior_generator = behavior_generator or BehaviorGenerator()
         self.furhat_client = furhat_client  # Furhat client used to send speech
         self.trial_memory = trial_memory or TrialMemory()
-        self.question_number = max(1, question_number)
-        self.question_limit = max(1, question_limit)
+        self.replay_only = replay_only
+        self.skip_replay_thinking = skip_replay_thinking or replay_only
         self.decision: Dict[str, Any] = {}
         self.current_answer_text = ""
         self.thinking_cues_emitted: List[str] = []
@@ -117,9 +120,18 @@ class Orchestrator:
         cprint(f"User: {self.question}")
 
         cached = self.trial_memory.get(self.question)
+        if self.replay_only:
+            if cached:
+                cprint("Replay-only mode: using stored response")
+                await self._replay_cached_trial(cached, skip_thinking=self.skip_replay_thinking)
+            else:
+                cprint("Replay-only mode: no stored answer found")
+                await self._respond_no_record()
+            return
+
         if cached:
             cprint("Replaying recorded response for repeated question (no new model calls)")
-            await self._replay_cached_trial(cached)
+            await self._replay_cached_trial(cached, skip_thinking=self.skip_replay_thinking)
             return
 
         self.decision = self.controller.decide()
@@ -164,19 +176,33 @@ class Orchestrator:
             await thinking_task
         self._persist_trial_record()
 
-    def _append_follow_up(self, answer: str) -> str:
-        """Add a short guidance line to prompt the next question."""
-        if self.question_number >= self.question_limit:
-            tail = "That's all for today's questions, but I'm happy to keep chatting if you'd like."
+    def _append_follow_up(self, answer: str, user_has_more: Optional[bool] = None) -> str:
+        """Add a short guidance line to prompt the next question or close."""
+        if user_has_more is False:
+            tail = "Thanks for chatting. That's all for today."
         else:
-            tail = "If you have another question, please ask me another one."
+            tail = "Do you have another question?"
         return f"{answer} {tail}".strip()
+
+    async def _respond_no_record(self):
+        """Respond when replay-only mode has no stored answer."""
+        full_answer = self._append_follow_up(
+            "I don't have a stored answer for that yet. Please ask one of the prepared questions."
+        )
+        cprint(f"Robot: {full_answer}")
+        if self.furhat_client:
+            await self.furhat_client.request_speak_text(full_answer)
+        self.current_answer_text = full_answer
+        self.thinking_window_done.set()
 
     async def _respond_directly(self, confidence_hint: Optional[str]):
         """Handle situations where no thinking window is required."""
         answer = (self.decision.get("answer") or "").strip()
         if not answer:
             answer = "I'm sorry, I can't provide an answer at the moment."
+
+        if DIRECT_RESPONSE_DELAY_SECONDS > 0:
+            await asyncio.sleep(DIRECT_RESPONSE_DELAY_SECONDS)
         
         confidence = confidence_hint if confidence_hint in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"
         _, gesture_description = self.behavior_generator.get_confidence_behavior(confidence)
@@ -290,7 +316,7 @@ class Orchestrator:
         if gesture_description:
             cprint(f"Robot (non-verbal gesture): {gesture_description}")
 
-    async def _replay_cached_trial(self, record: Dict[str, Any]):
+    async def _replay_cached_trial(self, record: Dict[str, Any], skip_thinking: bool = False):
         """Replay a stored trial without calling models again."""
         self.decision = record.get("decision") if isinstance(record.get("decision"), dict) else {}
         answer = str(record.get("answer", "")).strip()
@@ -308,7 +334,7 @@ class Orchestrator:
                 final_confidence = raw_conf.strip()
 
         behavior_plan = normalize_behavior_plan(self.decision.get("thinking_behavior_plan"))
-        need_thinking = bool(self.decision.get("need_thinking", bool(thinking_cues)))
+        need_thinking = bool(self.decision.get("need_thinking", bool(thinking_cues))) and not skip_thinking
 
         if need_thinking and thinking_cues:
             self.behavior_generator.set_thinking_mode(True)
@@ -329,6 +355,8 @@ class Orchestrator:
             self.behavior_generator.set_thinking_mode(False)
             self.thinking_window_done.set()
         else:
+            if DIRECT_RESPONSE_DELAY_SECONDS > 0:
+                await asyncio.sleep(DIRECT_RESPONSE_DELAY_SECONDS)
             self.thinking_window_done.set()
 
         confidence = final_confidence if final_confidence in self.behavior_generator.CONFIDENCE_BEHAVIORS else "medium"

@@ -22,7 +22,7 @@ def _normalize_text(text: str) -> str:
 class TrialMemory:
     """Load/save trials so similar questions reuse the same flow."""
 
-    def __init__(self, path: Optional[Path] = None, match_threshold: float = 0.75):
+    def __init__(self, path: Optional[Path] = None, match_threshold: float = 0.3):
         self.path = path or DEFAULT_TRIALS_PATH
         self.match_threshold = match_threshold
         self.records: Dict[str, Dict[str, Any]] = {}

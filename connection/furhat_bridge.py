@@ -36,8 +36,6 @@ class FurhatBridge:
         self.dialog_history = []
         self.current_user_utt: Optional[str] = None
         self.orchestrator_task: Optional[asyncio.Task] = None
-        self.question_count = 0
-        self.question_limit = 5
 
     def setup_signal_handlers(self):
         """Install signal handlers for graceful shutdown."""
@@ -165,14 +163,10 @@ class FurhatBridge:
                 user_text, 
                 behavior_generator=self.behavior_generator,
                 furhat_client=self.furhat,
-                question_number=min(self.question_count + 1, self.question_limit),
-                question_limit=self.question_limit,
                 replay_only=self.replay_only,
                 skip_replay_thinking=self.skip_replay_thinking,
             )
             await orchestrator.run()
-            # Increment question counter after a completed answer
-            self.question_count = min(self.question_count + 1, self.question_limit)
             # Clear the task upon completion
             self.orchestrator_task = None
                 
