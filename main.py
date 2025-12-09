@@ -47,12 +47,21 @@ def main():
         action="store_true",
         help="Replay stored answers only (no controller/reasoning model calls)"
     )
+    parser.add_argument(
+        "--no-trials",
+        action="store_true",
+        help="Ignore my_trials.json (force model path and no caching)"
+    )
     args = parser.parse_args()
 
     if args.test:
         question = input("Test question (press Enter to use default): ").strip() or "How do you show thinking?"
         cprint("Test mode: running language and thinking pipeline only")
-        orchestrator = Orchestrator(question, replay_only=args.replay_only)
+        orchestrator = Orchestrator(
+            question,
+            replay_only=args.replay_only,
+            use_trial_memory=not args.no_trials,
+        )
         try:
             asyncio.run(orchestrator.run())
         except KeyboardInterrupt:
@@ -67,7 +76,12 @@ def main():
 
     try:
         # Create the Furhat bridge
-        bridge = FurhatBridge(host=args.host, auth_key=args.auth_key, replay_only=args.replay_only)
+        bridge = FurhatBridge(
+            host=args.host,
+            auth_key=args.auth_key,
+            replay_only=args.replay_only,
+            use_trial_memory=not args.no_trials,
+        )
         
         if args.no_plan:
             cprint("Warning: planning module disabled (connection-only mode)")

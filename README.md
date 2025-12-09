@@ -20,7 +20,7 @@ This repository runs a two-stage pipeline for the Furhat robot:
 ## Run
 ```bash
 python3 main.py                 # normal: controller + thinking + reasoning
-python3 main.py --replay-only   # use answers from my_trials.json; skip stored thinking cues
+python3 main.py --replay-only   # prefer answers from my_trials.json; if no close match, fall back to models
 python3 main.py --test          # local test without Furhat
 ```
 
@@ -60,6 +60,7 @@ Matching is fuzzy (0.6), so paraphrased questions hit the same answer. In `--rep
 1. Populate `my_trials.json` with your QA pairs.
 2. Run `python3 main.py --replay-only`.
 3. If no match is found, the robot says it has no stored answer and asks for a prepared question.
+4. To bypass trials entirely and force model calls, run `python3 main.py --no-trials`.
 
 ## Notes on ASR / Interruptions
 - ASR keeps running, but while the robot speaks we ignore incoming audio (`robot_speaking` guard). After speech ends, user input is processed.

@@ -26,8 +26,9 @@ class BehaviorGenerator:
         )
         return (full[0], full[1])
 
-    def __init__(self, furhat_client: Optional[AsyncFurhatClient] = None):
+    def __init__(self, furhat_client: Optional[AsyncFurhatClient] = None, disable_multimodal: bool = False):
         self.furhat = furhat_client
+        self.disable_multimodal = disable_multimodal
         self._thinking_mode = False
         self._pending_confidence: Optional[str] = None
         self._thinking_script: List[Dict[str, Any]] = self._load_thinking_script()
@@ -164,7 +165,7 @@ class BehaviorGenerator:
 
     async def execute_multimodal_behavior(self, confidence: str):
         """Perform the confidence-specific multimodal behavior."""
-        if not self.furhat:
+        if not self.furhat or self.disable_multimodal:
             return
 
         prefix, gesture, expression = self.get_full_confidence_behavior(confidence)

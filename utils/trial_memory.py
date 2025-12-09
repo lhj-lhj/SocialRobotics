@@ -22,12 +22,14 @@ def _normalize_text(text: str) -> str:
 class TrialMemory:
     """Load/save trials so similar questions reuse the same flow."""
 
-    def __init__(self, path: Optional[Path] = None, match_threshold: float = 0.3):
+    def __init__(self, path: Optional[Path] = None, match_threshold: float = 0.6):
         self.path = path or DEFAULT_TRIALS_PATH
         self.match_threshold = match_threshold
         self.records: Dict[str, Dict[str, Any]] = {}
         # Map normalized text -> original question for exact fast lookup
         self._norm_index: Dict[str, str] = {}
+        # Preserve file order to allow question aliases like "question1"
+        self._ordered_questions: List[str] = []
         self._load()
 
     def _normalize_record(self, entry: Dict[str, Any]) -> Optional[Dict[str, Any]]:
@@ -76,6 +78,7 @@ class TrialMemory:
         if not self.path.exists():
             self.records = {}
             self._norm_index = {}
+            self._ordered_questions = []
             return
 
         try:
@@ -85,9 +88,11 @@ class TrialMemory:
             cprint(f"[TrialMemory] Failed to load {self.path.name}: {err}")
             self.records = {}
             self._norm_index = {}
+            self._ordered_questions = []
             return
 
         records: Dict[str, Dict[str, Any]] = {}
+        ordered_questions: List[str] = []
 
         def upsert(entry: Dict[str, Any], fallback_question: Optional[str] = None):
             if fallback_question and isinstance(entry, dict) and "question" not in entry:
@@ -96,6 +101,7 @@ class TrialMemory:
             normalized = self._normalize_record(entry)
             if normalized:
                 records[normalized["question"]] = normalized
+                ordered_questions.append(normalized["question"])
 
         if isinstance(data, list):
             for entry in data:
@@ -110,6 +116,7 @@ class TrialMemory:
                     upsert(entry)
 
         self.records = records
+        self._ordered_questions = ordered_questions
         self._reindex()
 
     def _reindex(self):
@@ -121,7 +128,7 @@ class TrialMemory:
                 self._norm_index[norm] = question
 
     def _best_fuzzy_match(self, norm_question: str) -> Optional[Tuple[str, float]]:
-        """Return (question, score) for the closest match above threshold."""
+        """Return the closest match if above threshold."""
         best_question = None
         best_score = 0.0
         for norm_candidate, original_question in self._norm_index.items():
@@ -129,15 +136,38 @@ class TrialMemory:
             if score > best_score:
                 best_score = score
                 best_question = original_question
+        if best_question is None:
+            return None
         if best_score >= self.match_threshold:
             return best_question, best_score
         return None
+
+    def _resolve_index_alias(self, text: str) -> Optional[str]:
+        """Allow aliases like 'question1', 'q1' to map to nth stored item."""
+        lowered = text.lower().strip()
+        match = re.match(r"q(uestion)?\s*0*([0-9]+)", lowered)
+        if not match:
+            return None
+        try:
+            idx = int(match.group(2))
+        except ValueError:
+            return None
+        if idx <= 0 or idx > len(self._ordered_questions):
+            return None
+        return self._ordered_questions[idx - 1]
 
     def get(self, question: str) -> Optional[Dict[str, Any]]:
         """Return a deep-ish copy of a stored record for the question (fuzzy)."""
         key = question.strip()
         if not key:
             return None
+
+        # Direct index alias (e.g., "question1", "q2")
+        alias_question = self._resolve_index_alias(key)
+        if alias_question:
+            record = self.records.get(alias_question)
+            if record:
+                return json.loads(json.dumps(record))
 
         norm = _normalize_text(key)
         if not norm:
@@ -150,7 +180,7 @@ class TrialMemory:
             if record:
                 return json.loads(json.dumps(record))
 
-        # Fuzzy best-match
+        # Fuzzy best-match (always returns best candidate)
         match = self._best_fuzzy_match(norm)
         if match:
             matched_question, score = match

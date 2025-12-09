@@ -27,6 +27,7 @@ MIN_THINKING_DURATION_SECONDS = float(
 DIRECT_RESPONSE_DELAY_SECONDS = float(
     THINKING_CONFIG.get("direct_response_delay_seconds", 0.0) or 0.0
 )  # Optional delay before speaking when no thinking is needed
+PERSIST_TRIALS = False  # Do not auto-record; rely on fixed my_trials.json
 
 CONFIDENCE_TONE_GUIDANCE = {
     "low": "Sound tentative and gentle, acknowledging uncertainty briefly.",
@@ -98,6 +99,7 @@ class Orchestrator:
         trial_memory: Optional[TrialMemory] = None,
         replay_only: bool = False,
         skip_replay_thinking: bool = False,
+        use_trial_memory: bool = True,
     ):
         self.question = question
         self.controller = ControllerModel(question)
@@ -106,6 +108,7 @@ class Orchestrator:
         self.trial_memory = trial_memory or TrialMemory()
         self.replay_only = replay_only
         self.skip_replay_thinking = skip_replay_thinking or replay_only
+        self.use_trial_memory = use_trial_memory
         self.decision: Dict[str, Any] = {}
         self.current_answer_text = ""
         self.thinking_cues_emitted: List[str] = []
@@ -119,20 +122,13 @@ class Orchestrator:
         self.thinking_window_done.clear()
         cprint(f"User: {self.question}")
 
-        cached = self.trial_memory.get(self.question)
-        if self.replay_only:
-            if cached:
-                cprint("Replay-only mode: using stored response")
-                await self._replay_cached_trial(cached, skip_thinking=self.skip_replay_thinking)
-            else:
-                cprint("Replay-only mode: no stored answer found")
-                await self._respond_no_record()
-            return
-
+        cached = self.trial_memory.get(self.question) if self.use_trial_memory else None
         if cached:
             cprint("Replaying recorded response for repeated question (no new model calls)")
             await self._replay_cached_trial(cached, skip_thinking=self.skip_replay_thinking)
             return
+        if self.replay_only and not cached:
+            cprint("Replay-only mode: no stored answer found, falling back to model")
 
         self.decision = self.controller.decide()
         need_thinking = bool(self.decision.get("need_thinking", False))
@@ -373,6 +369,8 @@ class Orchestrator:
 
     def _persist_trial_record(self):
         """Save the latest run so repeated questions reuse the same flow."""
+        if not PERSIST_TRIALS or not self.use_trial_memory:
+            return
         if not self.current_answer_text:
             return
         record = {
