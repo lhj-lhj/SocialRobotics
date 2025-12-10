@@ -143,18 +143,19 @@ class TrialMemory:
         return None
 
     def _resolve_index_alias(self, text: str) -> Optional[str]:
-        """Allow aliases like 'question1', 'q1' to map to nth stored item."""
-        lowered = text.lower().strip()
-        match = re.match(r"q(uestion)?\s*0*([0-9]+)", lowered)
-        if not match:
+        """Allow aliases like 'question1', 'q1' even when embedded in a sentence."""
+        lowered = text.lower()
+        matches = re.findall(r"\bq(uestion)?\s*0*([0-9]+)\b", lowered)
+        if not matches:
             return None
-        try:
-            idx = int(match.group(2))
-        except ValueError:
-            return None
-        if idx <= 0 or idx > len(self._ordered_questions):
-            return None
-        return self._ordered_questions[idx - 1]
+        for _, num in matches:
+            try:
+                idx = int(num)
+            except ValueError:
+                continue
+            if 1 <= idx <= len(self._ordered_questions):
+                return self._ordered_questions[idx - 1]
+        return None
 
     def get(self, question: str) -> Optional[Dict[str, Any]]:
         """Return a deep-ish copy of a stored record for the question (fuzzy)."""

@@ -64,7 +64,7 @@
           "gesture": "slight head shake",
           "expression": "BrowFrown",
           "look_at": {
-            "x": 0.2,
+            "x": 0.0,
             "y": 0.3,
             "z": 1.0
           },
