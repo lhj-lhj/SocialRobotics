@@ -1098,3 +1098,995 @@ Received SIGINT, shutting down gracefully...
 [2025-12-09 14:10:30] Shutting down...
 [2025-12-09 14:10:30] Shutting down...
 [2025-12-09 14:10:30] Disconnected from Furhat
+[2025-12-09 14:11:41] Starting dialogue...
+[2025-12-09 14:11:41] Press Ctrl+C to stop gracefully
+[2025-12-09 14:11:41] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 14:11:41] [System] Inferred confidence: medium
+[2025-12-09 14:11:41] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:11:54] 
+[User] Started speaking...
+[2025-12-09 14:11:57] [User] Speech content: do you believe in God
+[2025-12-09 14:11:57] User: do you believe in God
+[2025-12-09 14:11:57] Replay-only mode: no stored answer found, falling back to model
+[2025-12-09 14:11:59] Robot (thinking): considering belief context
+[2025-12-09 14:11:59] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'showing contemplation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:11:59] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:11:59] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:11:59] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 14:12:00] Shutting down...
+[2025-12-09 14:12:00] Shutting down...
+[2025-12-09 14:12:00] [System] Cancelling request...
+[2025-12-09 14:12:00] Disconnected from Furhat
+[2025-12-09 14:12:05] [System] Request cancelled
+[2025-12-09 14:12:09] Starting dialogue...
+[2025-12-09 14:12:09] Press Ctrl+C to stop gracefully
+[2025-12-09 14:12:09] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 14:12:09] [System] Inferred confidence: medium
+[2025-12-09 14:12:09] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:12:21] 
+[User] Started speaking...
+[2025-12-09 14:12:24] [User] Speech content: do you believe in God
+[2025-12-09 14:12:24] User: do you believe in God
+[2025-12-09 14:12:26] Robot (thinking): considering belief
+[2025-12-09 14:12:26] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'showing contemplation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:12:26] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:12:26] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:12:28] Robot (thinking): reflecting on concept of God
+[2025-12-09 14:12:28] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'indicating complexity of belief'}
+[2025-12-09 14:12:31] Robot (thinking): I'm considering the concept of belief.
+[2025-12-09 14:12:31] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': "acknowledging the question's depth"}
+[2025-12-09 14:12:33] Robot (thinking): Reflecting on the idea of God.
+[2025-12-09 14:12:33] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'showing contemplation', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:12:35] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 14:12:35] Robot: I don't have personal beliefs, but I understand that belief in God is a deeply meaningful and personal experience for many people.
+[2025-12-09 14:12:35] Robot: It's fascinating how different cultures and individuals find comfort and purpose through their faith.
+[2025-12-09 14:12:35] Robot: I'm here to listen and discuss any thoughts you have on this topic.
+[2025-12-09 14:12:35] Robot (non-verbal gesture): look straight
+[2025-12-09 14:12:35] [Robot] Started speaking: I don't have personal beliefs, but I understand that belief in God is a deeply meaningful and personal experience for many people. It's fascinating how different cultures and individuals find comfort and purpose through their faith. I'm here to listen and discuss any thoughts you have on this topic. Do you have another question?
+[2025-12-09 14:12:35] [System] Inferred confidence: medium
+[2025-12-09 14:12:35] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:18:37] 
+[User] Started speaking...
+[2025-12-09 14:18:39] [User] Speech content: hi
+[2025-12-09 14:18:39] User: hi
+[2025-12-09 14:18:40] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-09 14:18:40] Robot: Hello! How can I assist you today? Do you have another question?
+[2025-12-09 14:18:41] [Robot] Started speaking: Hello! How can I assist you today? Do you have another question?
+[2025-12-09 14:18:41] [System] Inferred confidence: high
+[2025-12-09 14:18:41] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-09 14:20:10] 
+[User] Started speaking...
+[2025-12-09 14:20:13] [User] Speech content: uh
+[2025-12-09 14:20:13] User: uh
+[2025-12-09 14:20:15] Robot (thinking): User input unclear
+[2025-12-09 14:20:15] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Express confusion and prompt user to clarify', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:20:15] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:20:15] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:20:17] Robot (thinking): Seeking clarification
+[2025-12-09 14:20:17] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Show thinking while processing unclear input'}
+[2025-12-09 14:20:19] Robot (thinking): I'm processing your input.
+[2025-12-09 14:20:19] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Express confusion and prompt user to clarify', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:20:21] Robot (thinking): Trying to understand your request.
+[2025-12-09 14:20:21] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Show thinking while processing unclear input'}
+[2025-12-09 14:20:23] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 14:20:23] Robot: It seems like you might have a question or need some help, but I'm not quite sure what you mean by "uh.
+[2025-12-09 14:20:23] Robot: " Could you please tell me a bit more or clarify what you'd like to talk about?
+[2025-12-09 14:20:23] Robot: I'm here to help!
+[2025-12-09 14:20:23] Robot (non-verbal gesture): slight head shake
+[2025-12-09 14:20:24] [Robot] Started speaking: It seems like you might have a question or need some help, but I'm not quite sure what you mean by "uh. " Could you please tell me a bit more or clarify what you'd like to talk about? I'm here to help! Do you have another question?
+[2025-12-09 14:20:24] [System] Inferred confidence: low
+[2025-12-09 14:20:24] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-09 14:21:20] 
+[User] Started speaking...
+[2025-12-09 14:21:23] [User] Speech content: I got a new
+[2025-12-09 14:21:23] User: I got a new
+[2025-12-09 14:21:26] Robot (thinking): Incomplete input
+[2025-12-09 14:21:26] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:21:26] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:21:26] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:21:28] Robot (thinking): Awaiting more details
+[2025-12-09 14:21:28] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Indicating confusion due to incomplete input'}
+[2025-12-09 14:21:30] Robot (thinking): I'm waiting for more details.
+[2025-12-09 14:21:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:21:32] Robot (thinking): Could you please complete your sentence?
+[2025-12-09 14:21:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Indicating confusion due to incomplete input'}
+[2025-12-09 14:21:34] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 14:21:34] Robot: It seems like your message got cut off—could you please share more details about what you got new?
+[2025-12-09 14:21:34] Robot: That way, I can provide the best advice or information for you.
+[2025-12-09 14:21:34] Robot: Looking forward to hearing more!
+[2025-12-09 14:21:34] Robot (non-verbal gesture): look straight
+[2025-12-09 14:21:35] [Robot] Started speaking: It seems like your message got cut off—could you please share more details about what you got new? That way, I can provide the best advice or information for you. Looking forward to hearing more! Do you have another question?
+[2025-12-09 14:21:35] [System] Inferred confidence: medium
+[2025-12-09 14:21:35] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:21:52] 
+[User] Started speaking...
+[2025-12-09 14:21:55] [User] Speech content: result
+[2025-12-09 14:21:55] User: result
+[2025-12-09 14:21:57] Robot (thinking): Analyzing the term 'result'
+[2025-12-09 14:21:57] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focusing on the meaning of 'result'", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:21:57] 
+[User] Started speaking...
+[2025-12-09 14:21:57] [System] Cancelling request...
+[2025-12-09 14:21:57] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:21:57] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:21:57] [System] Previous request still processing, ignoring new input
+[2025-12-09 14:21:59] Robot (thinking): Considering possible contexts
+[2025-12-09 14:21:59] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'BrowFrown', 'led': '', 'reason': 'Contemplating different interpretations'}
+[2025-12-09 14:22:02] Robot (thinking): I'm analyzing the term 'result'  
+I'm considering different contexts  
+I'm exploring possible meanings  
+I'm preparing to provide an answer
+[2025-12-09 14:22:02] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focusing on the meaning of 'result'", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:22:04] [System] Request cancelled
+[2025-12-09 14:24:49] 
+[User] Started speaking...
+[2025-12-09 14:24:52] [User] Speech content: the opinion about
+[2025-12-09 14:24:52] User: the opinion about
+[2025-12-09 14:24:54] Robot (thinking): Clarify the topic
+[2025-12-09 14:24:54] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about the topic', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:24:54] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:24:54] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:24:56] Robot (thinking): Determine context
+[2025-12-09 14:24:56] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input'}
+[2025-12-09 14:24:59] Robot (thinking): I'm clarifying the topic.
+[2025-12-09 14:24:59] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about the topic', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:25:01] Robot (thinking): I'm considering the context.
+[2025-12-09 14:25:01] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input'}
+[2025-12-09 14:25:03] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 14:25:03] Robot: It seems like your question about "the opinion about" is incomplete, so I'm not entirely sure what specific topic you're referring to.
+[2025-12-09 14:25:03] Robot: Could you please provide a bit more detail or clarify what you'd like an opinion on?
+[2025-12-09 14:25:03] Robot: That way, I can offer a more helpful response.
+[2025-12-09 14:25:03] Robot (non-verbal gesture): slight head shake
+[2025-12-09 14:25:03] [Robot] Started speaking: It seems like your question about "the opinion about" is incomplete, so I'm not entirely sure what specific topic you're referring to. Could you please provide a bit more detail or clarify what you'd like an opinion on? That way, I can offer a more helpful response. Do you have another question?
+[2025-12-09 14:25:03] [System] Inferred confidence: low
+[2025-12-09 14:25:03] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-09 14:28:57] 
+[User] Started speaking...
+[2025-12-09 14:29:02] [User] Speech content: since you don't reply me about a meeting time
+[2025-12-09 14:29:02] User: since you don't reply me about a meeting time
+[2025-12-09 14:29:04] Robot (thinking): User expects meeting time
+[2025-12-09 14:29:04] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Processing user's request", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:29:04] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:29:04] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:29:06] Robot (thinking): Check calendar availability
+[2025-12-09 14:29:06] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'BrowFrown', 'led': '', 'reason': "Acknowledging user's concern"}
+[2025-12-09 14:29:09] Robot (thinking): Checking calendar for available meeting times.
+[2025-12-09 14:29:09] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Processing user's request", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:29:11] Robot (thinking): Comparing user's schedule with open slots.
+[2025-12-09 14:29:11] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'BrowFrown', 'led': '', 'reason': "Acknowledging user's concern"}
+[2025-12-09 14:29:13] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 14:29:13] Robot: I apologize for the delay in confirming the meeting time.
+[2025-12-09 14:29:13] Robot: Could you please let me know your availability so we can find a suitable time?
+[2025-12-09 14:29:13] Robot: I'm happy to coordinate and ensure it works well for both of us.
+[2025-12-09 14:29:13] Robot (non-verbal gesture): look straight
+[2025-12-09 14:29:13] [Robot] Started speaking: I apologize for the delay in confirming the meeting time. Could you please let me know your availability so we can find a suitable time? I'm happy to coordinate and ensure it works well for both of us. Do you have another question?
+[2025-12-09 14:29:13] [System] Inferred confidence: medium
+[2025-12-09 14:29:13] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:31:12] 
+[User] Started speaking...
+[2025-12-09 14:31:15] [User] Speech content: paper
+[2025-12-09 14:31:15] User: paper
+[2025-12-09 14:31:19] Robot (thinking): considering meaning of 'paper'
+[2025-12-09 14:31:19] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'starting to think about the word', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:31:19] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:31:20] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:31:21] Robot (thinking): checking context for paper usage
+[2025-12-09 14:31:21] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'BrowFrown', 'led': '', 'reason': 'processing possible interpretations'}
+[2025-12-09 14:31:25] Robot (thinking): I'm considering different meanings of 'paper'  
+I'm checking context for 'paper' usage  
+I'm comparing paper types and uses
+[2025-12-09 14:31:25] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'Oh', 'led': '', 'reason': 'evaluating different meanings'}
+[2025-12-09 14:31:27] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-09 14:31:27] Robot: The term "paper" can refer to a thin material used for writing or printing, or it can mean a document such as an essay, report, or article.
+[2025-12-09 14:31:27] Robot: If you have a specific context in mind, like academic papers or craft paper, I can provide more detailed information.
+[2025-12-09 14:31:27] Robot: Let me know how you'd like to explore the topic!
+[2025-12-09 14:31:27] Robot (non-verbal gesture): look straight
+[2025-12-09 14:31:27] [Robot] Started speaking: The term "paper" can refer to a thin material used for writing or printing, or it can mean a document such as an essay, report, or article. If you have a specific context in mind, like academic papers or craft paper, I can provide more detailed information. Let me know how you'd like to explore the topic! Do you have another question?
+[2025-12-09 14:31:27] [System] Inferred confidence: medium
+[2025-12-09 14:31:27] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 14:32:03] 
+[User] Started speaking...
+[2025-12-09 14:32:10] [User] Speech content: since I haven't received any apply real me and no 1 has joined the apartment design is and
+[2025-12-09 14:32:10] User: since I haven't received any apply real me and no 1 has joined the apartment design is and
+[2025-12-09 14:32:13] Robot (thinking): Clarify user's intent
+[2025-12-09 14:32:13] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'User message is unclear', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:32:13] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:32:13] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:32:15] Robot (thinking): Check for missing information
+[2025-12-09 14:32:15] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete information', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 14:32:18] Robot (thinking): I'm trying to understand your question.
+[2025-12-09 14:32:18] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'User message is unclear', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:32:20] Robot (thinking): I'm looking for missing details.
+[2025-12-09 14:32:20] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete information', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-09 14:32:22] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 14:32:22] Robot: I’m not entirely sure I understand your message fully, but it sounds like you might be waiting for applications or people to join an apartment design project.
+[2025-12-09 14:32:22] Robot: Could you please clarify a bit more about the situation?
+[2025-12-09 14:32:22] Robot: I’d be happy to help once I have a clearer idea.
+[2025-12-09 14:32:22] Robot (non-verbal gesture): slight head shake
+[2025-12-09 14:32:23] [Robot] Started speaking: I’m not entirely sure I understand your message fully, but it sounds like you might be waiting for applications or people to join an apartment design project. Could you please clarify a bit more about the situation? I’d be happy to help once I have a clearer idea. Do you have another question?
+[2025-12-09 14:32:23] [System] Inferred confidence: low
+[2025-12-09 14:32:23] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-09 14:36:13] 
+[User] Started speaking...
+[2025-12-09 14:36:15] [User] Speech content: you
+[2025-12-09 14:36:15] User: you
+[2025-12-09 14:36:17] Robot (thinking): Clarify user intent
+[2025-12-09 14:36:17] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-09 14:36:17] [Thinking] Instruction utterance: Let me think...
+[2025-12-09 14:36:17] [Robot][thinking] Speaking: Let me think...
+[2025-12-09 14:36:19] Robot (thinking): Consider possible meanings
+[2025-12-09 14:36:19] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about user query'}
+[2025-12-09 14:36:23] Robot (thinking): I'm processing your input.
+[2025-12-09 14:36:23] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-09 14:36:25] Robot (thinking): I'm considering possible meanings.
+[2025-12-09 14:36:25] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about user query'}
+[2025-12-09 14:36:27] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-09 14:36:27] Robot: I’m not entirely sure what you mean by "you," but if you’re asking about me, I’m Furhat, a social robot here to chat and assist you.
+[2025-12-09 14:36:27] Robot: Feel free to ask me anything or tell me how I can help!
+[2025-12-09 14:36:27] Robot (non-verbal gesture): slight head shake
+[2025-12-09 16:33:59] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:53] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:55] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:55] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:55] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:56] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:56] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:34:59] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:35:04] Starting dialogue...
+[2025-12-09 16:35:04] Press Ctrl+C to stop gracefully
+[2025-12-09 16:35:05] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 16:35:05] [System] Inferred confidence: medium
+[2025-12-09 16:35:05] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 16:51:31] 
+Received SIGINT, shutting down gracefully...
+[2025-12-09 16:51:58] Starting dialogue...
+[2025-12-09 16:51:58] Press Ctrl+C to stop gracefully
+[2025-12-09 16:51:59] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-09 16:51:59] [System] Inferred confidence: medium
+[2025-12-09 16:51:59] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-09 16:52:23] 
+[User] Started speaking...
+[2025-12-09 16:52:34] [User] Speech content: oh maybe I can like up up up up up updated to to make this to make the reply only part just use uh just use the
+[2025-12-09 16:52:34] User: oh maybe I can like up up up up up updated to to make this to make the reply only part just use uh just use the
+[2025-12-09 16:52:34] Replay-only mode: no stored answer found, falling back to model
+[2025-12-10 11:01:55] Starting dialogue...
+[2025-12-10 11:01:55] Press Ctrl+C to stop gracefully
+[2025-12-10 11:01:56] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-10 11:01:56] [System] Inferred confidence: medium
+[2025-12-10 11:01:56] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:02:11] 
+[User] Started speaking...
+[2025-12-10 11:02:15] [User] Speech content: I want to ask you question 1
+[2025-12-10 11:02:15] User: I want to ask you question 1
+[2025-12-10 11:02:17] Robot (thinking): Understanding question 1
+[2025-12-10 11:02:17] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focus on the question', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:02:17] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:02:17] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:02:19] Robot (thinking): Preparing response
+[2025-12-10 11:02:19] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging the question'}
+[2025-12-10 11:02:22] Robot (thinking): I'm understanding your question.
+[2025-12-10 11:02:22] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focus on the question', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:02:24] Robot (thinking): I'm gathering relevant information.
+[2025-12-10 11:02:24] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging the question'}
+[2025-12-10 11:02:26] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:02:26] Robot: Sure!
+[2025-12-10 11:02:26] Robot: Please go ahead and share the details of question 1, and I’ll provide a clear and thoughtful summary of the solution for you.
+[2025-12-10 11:02:26] Robot (non-verbal gesture): look straight
+[2025-12-10 11:02:27] [Robot] Started speaking: Sure! Please go ahead and share the details of question 1, and I’ll provide a clear and thoughtful summary of the solution for you. Do you have another question?
+[2025-12-10 11:02:27] [System] Inferred confidence: medium
+[2025-12-10 11:02:27] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:02:37] 
+[User] Started speaking...
+[2025-12-10 11:02:43] [User] Speech content: schedule question 1 using question 1
+[2025-12-10 11:02:43] User: schedule question 1 using question 1
+[2025-12-10 11:02:46] Robot (thinking): Interpreting 'schedule question 1'
+[2025-12-10 11:02:46] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing the scheduling request', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:02:46] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:02:46] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:02:48] Robot (thinking): Clarifying usage of 'using question 1'
+[2025-12-10 11:02:48] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about the exact meaning'}
+[2025-12-10 11:02:51] Robot (thinking): I'm interpreting the phrase carefully  
+I'm clarifying the meaning of 'using question 1'  
+I'm considering possible interpretations  
+I'm preparing to respond accurately
+[2025-12-10 11:02:51] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering possible interpretations'}
+[2025-12-10 11:02:53] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:02:53] Robot: It seems you want to schedule an event or task labeled "question 1" using the details or timing from "question 1" itself.
+[2025-12-10 11:02:53] Robot: To do this effectively, clarify the specific time or parameters associated with question 1, then set your schedule accordingly.
+[2025-12-10 11:02:53] Robot: This ensures the task aligns precisely with the original question's context or requirements.
+[2025-12-10 11:02:53] Robot (non-verbal gesture): look straight
+[2025-12-10 11:02:53] [Robot] Started speaking: It seems you want to schedule an event or task labeled "question 1" using the details or timing from "question 1" itself. To do this effectively, clarify the specific time or parameters associated with question 1, then set your schedule accordingly. This ensures the task aligns precisely with the original question's context or requirements. Do you have another question?
+[2025-12-10 11:02:53] [System] Inferred confidence: medium
+[2025-12-10 11:02:53] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:03:19] 
+[User] Started speaking...
+[2025-12-10 11:03:22] [User] Speech content: question 1 question 1
+[2025-12-10 11:03:22] User: question 1 question 1
+[2025-12-10 11:03:22] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:03:22] Robot (thinking): Consider safety implications
+[2025-12-10 11:03:22] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:03:22] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:03:22] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:03:24] Robot (thinking): Weigh rules vs fun
+[2025-12-10 11:03:24] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-10 11:03:26] Robot (thinking): I'm considering safety first.
+[2025-12-10 11:03:26] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-10 11:03:28] Robot (thinking): I'm weighing rules against fun.
+[2025-12-10 11:03:28] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:03:28] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-10 11:03:28] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:03:28] Robot (non-verbal gesture): nod head
+[2025-12-10 11:03:28] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:03:28] [System] Inferred confidence: high
+[2025-12-10 11:03:28] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:04:06] 
+[User] Started speaking...
+[2025-12-10 11:04:09] [User] Speech content: thank you
+[2025-12-10 11:04:09] User: thank you
+[2025-12-10 11:04:10] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 11:04:10] Robot: You're welcome! Do you have another question?
+[2025-12-10 11:04:10] 
+[User] Started speaking...
+[2025-12-10 11:04:11] [Robot] Started speaking: You're welcome! Do you have another question?
+[2025-12-10 11:04:11] [System] Inferred confidence: high
+[2025-12-10 11:04:11] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:04:11] [User] Speech content: thank you question 2
+[2025-12-10 11:04:11] User: thank you question 2
+[2025-12-10 11:04:14] Robot (thinking): Interpreting 'thank you question 2'
+[2025-12-10 11:04:14] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focusing on understanding the user's message", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:04:14] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:04:14] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:04:16] Robot (thinking): Determining user intent and context
+[2025-12-10 11:04:16] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Considering possible ambiguity in the input'}
+[2025-12-10 11:04:19] Robot (thinking): I'm interpreting your message.
+[2025-12-10 11:04:19] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focusing on understanding the user's message", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:04:21] Robot (thinking): Checking for context clues.
+[2025-12-10 11:04:21] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Considering possible ambiguity in the input'}
+[2025-12-10 11:04:23] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:04:23] Robot: You're very welcome!
+[2025-12-10 11:04:23] Robot: If you have any more questions or need further clarification on question 2, feel free to ask.
+[2025-12-10 11:04:23] Robot: I'm here to help!
+[2025-12-10 11:04:23] Robot (non-verbal gesture): look straight
+[2025-12-10 11:04:23] [Robot] Started speaking: You're very welcome! If you have any more questions or need further clarification on question 2, feel free to ask. I'm here to help! Do you have another question?
+[2025-12-10 11:04:23] [System] Inferred confidence: medium
+[2025-12-10 11:04:23] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:04:44] 
+[User] Started speaking...
+[2025-12-10 11:04:46] [User] Speech content: question 2
+[2025-12-10 11:04:46] User: question 2
+[2025-12-10 11:04:46] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:04:46] Robot (thinking): Consider loyalty to Alex
+[2025-12-10 11:04:46] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:04:46] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:04:46] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:04:48] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-10 11:04:48] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:04:50] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-10 11:04:50] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-10 11:04:52] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-10 11:04:52] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:04:52] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:04:52] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:04:52] Robot (non-verbal gesture): look straight
+[2025-12-10 11:04:53] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:04:53] [System] Inferred confidence: medium
+[2025-12-10 11:04:53] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:05:23] 
+[User] Started speaking...
+[2025-12-10 11:05:25] [User] Speech content: question 3
+[2025-12-10 11:05:25] User: question 3
+[2025-12-10 11:05:25] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:05:25] Robot (thinking): Weigh immediate financial stability against long-term benefits
+[2025-12-10 11:05:25] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:05:25] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:05:25] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:05:27] Robot (thinking): Consider risks and potential rewards of education
+[2025-12-10 11:05:27] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:05:29] Robot (thinking): I'm weighing immediate needs versus future gains.
+[2025-12-10 11:05:29] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:05:31] Robot (thinking): I'm considering potential risks and rewards.
+[2025-12-10 11:05:31] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:05:31] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:05:31] Robot: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:05:31] Robot (non-verbal gesture): look straight
+[2025-12-10 11:05:31] [Robot] Started speaking: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:05:31] [System] Inferred confidence: medium
+[2025-12-10 11:05:31] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:06:12] 
+[User] Started speaking...
+[2025-12-10 11:06:16] [User] Speech content: I want to ask question 1
+[2025-12-10 11:06:16] User: I want to ask question 1
+[2025-12-10 11:06:19] Robot (thinking): Identify question 1 details
+[2025-12-10 11:06:19] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on understanding the question', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:06:19] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:06:19] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:06:21] Robot (thinking): Prepare relevant information
+[2025-12-10 11:06:21] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging the question'}
+[2025-12-10 11:06:23] Robot (thinking): I'm identifying question 1 details.
+[2025-12-10 11:06:23] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on understanding the question', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:06:25] Robot (thinking): I'm gathering relevant information.
+[2025-12-10 11:06:25] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging the question'}
+[2025-12-10 11:06:27] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:06:27] Robot: Could you please clarify what question 1 refers to or provide its content?
+[2025-12-10 11:06:27] Robot: That way, I can offer a precise and helpful summary of the solution for you.
+[2025-12-10 11:06:27] Robot (non-verbal gesture): look straight
+[2025-12-10 11:06:28] [Robot] Started speaking: Could you please clarify what question 1 refers to or provide its content? That way, I can offer a precise and helpful summary of the solution for you. Do you have another question?
+[2025-12-10 11:06:28] [System] Inferred confidence: medium
+[2025-12-10 11:06:28] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:15:32] 
+[User] Started speaking...
+[2025-12-10 11:15:34] [User] Speech content: oh
+[2025-12-10 11:15:34] User: oh
+[2025-12-10 11:15:37] Robot (thinking): Interpreting 'oh'
+[2025-12-10 11:15:37] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Oh', 'led': '', 'reason': 'Reflecting surprise or realization', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:15:37] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:15:37] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:15:39] Robot (thinking): Determining user intent
+[2025-12-10 11:15:39] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering possible meanings'}
+[2025-12-10 11:15:42] Robot (thinking): I'm interpreting your message.
+[2025-12-10 11:15:42] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Oh', 'led': '', 'reason': 'Reflecting surprise or realization', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:15:44] Robot (thinking): I'm considering possible meanings.
+[2025-12-10 11:15:44] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering possible meanings'}
+[2025-12-10 11:15:46] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:15:46] Robot: It sounds like you might be surprised or looking for more information.
+[2025-12-10 11:15:46] Robot: Could you please tell me a bit more about what you’re thinking or ask any questions you have?
+[2025-12-10 11:15:46] Robot: I’m here to help!
+[2025-12-10 11:15:46] Robot (non-verbal gesture): look straight
+[2025-12-10 11:15:47] [Robot] Started speaking: It sounds like you might be surprised or looking for more information. Could you please tell me a bit more about what you’re thinking or ask any questions you have? I’m here to help! Do you have another question?
+[2025-12-10 11:15:47] [System] Inferred confidence: medium
+[2025-12-10 11:15:47] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:16:52] 
+[User] Started speaking...
+[2025-12-10 11:16:54] [User] Speech content: hey
+[2025-12-10 11:16:54] User: hey
+[2025-12-10 11:16:55] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 11:16:55] Robot: Hello! How can I assist you today? Do you have another question?
+[2025-12-10 11:16:55] [Robot] Started speaking: Hello! How can I assist you today? Do you have another question?
+[2025-12-10 11:16:55] [System] Inferred confidence: high
+[2025-12-10 11:16:55] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:16:59] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:17:00] Shutting down...
+[2025-12-10 11:17:00] Shutting down...
+[2025-12-10 11:17:00] Disconnected from Furhat
+[2025-12-10 11:17:39] Starting dialogue...
+[2025-12-10 11:17:39] Press Ctrl+C to stop gracefully
+[2025-12-10 11:17:39] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-10 11:17:39] [System] Inferred confidence: medium
+[2025-12-10 11:17:39] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:17:52] 
+[User] Started speaking...
+[2025-12-10 11:17:56] [User] Speech content: hello I want to ask question 1
+[2025-12-10 11:17:56] User: hello I want to ask question 1
+[2025-12-10 11:17:56] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:17:56] Robot (thinking): Consider safety implications
+[2025-12-10 11:17:56] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:17:56] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:17:56] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:17:58] Robot (thinking): Weigh rules vs fun
+[2025-12-10 11:17:58] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-10 11:18:00] Robot (thinking): I'm considering safety first.
+[2025-12-10 11:18:00] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-10 11:18:02] Robot (thinking): I'm weighing rules against fun.
+[2025-12-10 11:18:02] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:18:02] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-10 11:18:02] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:18:02] Robot (non-verbal gesture): nod head
+[2025-12-10 11:18:02] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:18:02] [System] Inferred confidence: high
+[2025-12-10 11:18:02] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:18:30] 
+[User] Started speaking...
+[2025-12-10 11:18:34] [User] Speech content: uh I want to ask question 2
+[2025-12-10 11:18:34] User: uh I want to ask question 2
+[2025-12-10 11:18:34] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:18:34] Robot (thinking): Consider loyalty to Alex
+[2025-12-10 11:18:34] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:18:34] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:18:34] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:18:36] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-10 11:18:36] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:18:38] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-10 11:18:38] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.2, 'y': 0.3, 'z': 1.0}}
+[2025-12-10 11:18:40] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-10 11:18:40] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:18:40] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:18:40] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:18:40] Robot (non-verbal gesture): look straight
+[2025-12-10 11:18:40] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:18:40] [System] Inferred confidence: medium
+[2025-12-10 11:18:40] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:19:41] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:41] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:42] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:42] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:47] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:53] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:53] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:53] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:54] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:54] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:19:54] Shutting down...
+[2025-12-10 11:19:54] Shutting down...
+[2025-12-10 11:19:55] Disconnected from Furhat
+[2025-12-10 11:19:57] Starting dialogue...
+[2025-12-10 11:19:57] Press Ctrl+C to stop gracefully
+[2025-12-10 11:19:57] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-10 11:19:57] [System] Inferred confidence: medium
+[2025-12-10 11:19:57] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:20:10] 
+[User] Started speaking...
+[2025-12-10 11:20:13] [User] Speech content: I want to ask question 2
+[2025-12-10 11:20:13] User: I want to ask question 2
+[2025-12-10 11:20:13] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:20:13] Robot (thinking): Consider loyalty to Alex
+[2025-12-10 11:20:13] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.0, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:20:13] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:20:13] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:20:15] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-10 11:20:15] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:20:17] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-10 11:20:17] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.0, 'y': 0.3, 'z': 1.0}}
+[2025-12-10 11:20:19] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-10 11:20:19] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:20:19] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:20:19] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:20:19] Robot (non-verbal gesture): look straight
+[2025-12-10 11:20:19] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:20:19] [System] Inferred confidence: medium
+[2025-12-10 11:20:19] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:20:49] 
+[User] Started speaking...
+[2025-12-10 11:20:52] [User] Speech content: I want to ask questions 3
+[2025-12-10 11:20:52] User: I want to ask questions 3
+[2025-12-10 11:20:56] Robot (thinking): User wants to ask 3 questions
+[2025-12-10 11:20:56] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focus on user's intent to ask multiple questions", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:20:56] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:20:56] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:20:58] Robot (thinking): Prepare to handle multiple queries
+[2025-12-10 11:20:58] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': "Acknowledge user's plan to ask questions"}
+[2025-12-10 11:21:01] Robot (thinking): I'm ready for your questions.
+[2025-12-10 11:21:01] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': "Focus on user's intent to ask multiple questions", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:21:03] Robot (thinking): I'm listening carefully.
+[2025-12-10 11:21:03] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': "Acknowledge user's plan to ask questions"}
+[2025-12-10 11:21:05] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:21:05] Robot: Sure, feel free to ask your three questions one by one or all together, and I'll do my best to help with each.
+[2025-12-10 11:21:05] Robot: Take your time, and whenever you're ready, I'm here to assist you.
+[2025-12-10 11:21:05] Robot (non-verbal gesture): look straight
+[2025-12-10 11:21:05] [Robot] Started speaking: Sure, feel free to ask your three questions one by one or all together, and I'll do my best to help with each. Take your time, and whenever you're ready, I'm here to assist you. Do you have another question?
+[2025-12-10 11:21:05] [System] Inferred confidence: medium
+[2025-12-10 11:21:05] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:21:21] 
+[User] Started speaking...
+[2025-12-10 11:21:25] [User] Speech content: uh I want to ask question 3
+[2025-12-10 11:21:25] User: uh I want to ask question 3
+[2025-12-10 11:21:25] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:21:25] Robot (thinking): Weigh immediate financial stability against long-term benefits
+[2025-12-10 11:21:25] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:21:25] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:21:25] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:21:27] Robot (thinking): Consider risks and potential rewards of education
+[2025-12-10 11:21:27] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:21:29] Robot (thinking): I'm weighing immediate needs versus future gains.
+[2025-12-10 11:21:29] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:21:31] Robot (thinking): I'm considering potential risks and rewards.
+[2025-12-10 11:21:31] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:21:31] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:21:31] Robot: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:21:31] Robot (non-verbal gesture): look straight
+[2025-12-10 11:21:31] [Robot] Started speaking: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:21:31] [System] Inferred confidence: medium
+[2025-12-10 11:21:31] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:26:50] 
+[User] Started speaking...
+[2025-12-10 11:26:53] [User] Speech content: speaking
+[2025-12-10 11:26:53] User: speaking
+[2025-12-10 11:26:58] Robot (thinking): Analyzing speaking context
+[2025-12-10 11:26:58] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focus on user input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:26:58] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:26:58] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:27:00] Robot (thinking): Considering appropriate response
+[2025-12-10 11:27:00] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging understanding'}
+[2025-12-10 11:27:03] Robot (thinking): I'm analyzing the speaking context.
+[2025-12-10 11:27:03] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focus on user input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:27:05] Robot (thinking): I'm considering the best response.
+[2025-12-10 11:27:05] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging understanding'}
+[2025-12-10 11:27:07] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:27:07] Robot: Speaking effectively involves clear articulation, active listening, and engaging your audience with confidence.
+[2025-12-10 11:27:07] Robot: Practicing regularly and being mindful of your tone and body language can greatly enhance your communication skills.
+[2025-12-10 11:27:07] Robot: If you have a specific speaking context in mind, I’d be happy to offer more tailored advice.
+[2025-12-10 11:27:07] Robot (non-verbal gesture): look straight
+[2025-12-10 11:27:07] [Robot] Started speaking: Speaking effectively involves clear articulation, active listening, and engaging your audience with confidence. Practicing regularly and being mindful of your tone and body language can greatly enhance your communication skills. If you have a specific speaking context in mind, I’d be happy to offer more tailored advice. Do you have another question?
+[2025-12-10 11:27:07] [System] Inferred confidence: medium
+[2025-12-10 11:27:07] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:27:55] 
+[User] Started speaking...
+[2025-12-10 11:27:58] [User] Speech content: Baba
+[2025-12-10 11:27:58] User: Baba
+[2025-12-10 11:28:00] Robot (thinking): Unclear input
+[2025-12-10 11:28:00] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing unclear input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:28:00] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:28:00] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:28:02] Robot (thinking): Check for context or meaning
+[2025-12-10 11:28:02] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Expressing confusion'}
+[2025-12-10 11:28:05] Robot (thinking): I'm analyzing the word "Baba".
+[2025-12-10 11:28:05] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering possible interpretations'}
+[2025-12-10 11:28:07] Robot (thinking): Checking possible meanings and contexts.
+[2025-12-10 11:28:07] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing unclear input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:28:07] 
+[User] Started speaking...
+[2025-12-10 11:28:07] [System] Cancelling request...
+[2025-12-10 11:28:09] [System] Request cancelled
+[2025-12-10 11:28:11] [User] Speech content: I need
+[2025-12-10 11:28:11] User: I need
+[2025-12-10 11:28:13] Robot (thinking): User input incomplete
+[2025-12-10 11:28:13] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:28:13] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:28:13] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:28:15] Robot (thinking): Awaiting more information
+[2025-12-10 11:28:15] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:28:18] Robot (thinking): I'm waiting for more details.
+[2025-12-10 11:28:18] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:28:20] Robot (thinking): Could you please provide more info?
+[2025-12-10 11:28:20] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:28:22] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 11:28:22] Robot: It seems like your message got cut off—could you please provide a bit more detail about what you need?
+[2025-12-10 11:28:22] Robot: I’d be happy to help once I understand your request better.
+[2025-12-10 11:28:22] Robot: Feel free to share more when you’re ready!
+[2025-12-10 11:28:22] Robot (non-verbal gesture): slight head shake
+[2025-12-10 11:28:22] [Robot] Started speaking: It seems like your message got cut off—could you please provide a bit more detail about what you need? I’d be happy to help once I understand your request better. Feel free to share more when you’re ready! Do you have another question?
+[2025-12-10 11:28:22] [System] Inferred confidence: low
+[2025-12-10 11:28:22] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 11:42:23] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:42:24] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 11:42:29] Shutting down...
+[2025-12-10 11:42:29] Shutting down...
+[2025-12-10 11:42:29] Disconnected from Furhat
+[2025-12-10 11:42:31] Starting dialogue...
+[2025-12-10 11:42:31] Press Ctrl+C to stop gracefully
+[2025-12-10 11:42:31] [Robot] Started speaking: I am Elizabeth, a robot that shows visible thinking. I will answer your moral dilemma questions: I will think first, then give a conclusion and a brief reason.
+[2025-12-10 11:42:31] [System] Inferred confidence: medium
+[2025-12-10 11:42:31] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:42:45] 
+[User] Started speaking...
+[2025-12-10 11:42:48] [User] Speech content: question 1
+[2025-12-10 11:42:48] User: question 1
+[2025-12-10 11:42:48] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:42:48] Robot (thinking): Consider safety implications
+[2025-12-10 11:42:48] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:42:48] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:42:48] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:42:50] Robot (thinking): Weigh rules vs fun
+[2025-12-10 11:42:50] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Concern about breaking rules'}
+[2025-12-10 11:42:52] Robot (thinking): I'm considering safety first.
+[2025-12-10 11:42:52] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Acknowledging importance of safety'}
+[2025-12-10 11:42:54] Robot (thinking): I'm weighing rules against fun.
+[2025-12-10 11:42:54] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Reflecting on safety and rules', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:42:54] Robot switches to answer mode (confidence=high, gesture=nod head)
+[2025-12-10 11:42:54] Robot: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:42:54] Robot (non-verbal gesture): nod head
+[2025-12-10 11:42:54] [Robot] Started speaking: It's best for your group to respect the park closure and prioritize safety, even if it means missing out on playing in the snow this time. You can always find other fun, safe ways to enjoy the snow nearby or plan for another day when the park reopens. Staying safe and following the rules helps everyone have fun without any worries! If you have another question, please ask me another one.
+[2025-12-10 11:42:54] [System] Inferred confidence: high
+[2025-12-10 11:42:54] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:43:23] 
+[User] Started speaking...
+[2025-12-10 11:43:26] [User] Speech content: uh question 2
+[2025-12-10 11:43:26] User: uh question 2
+[2025-12-10 11:43:26] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:43:26] Robot (thinking): Consider loyalty to Alex
+[2025-12-10 11:43:26] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.0, 'y': 0.3, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:43:26] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:43:26] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:43:28] Robot (thinking): Consider honesty to the girlfriend
+[2025-12-10 11:43:28] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:43:30] Robot (thinking): Weigh consequences of breaking secrecy
+[2025-12-10 11:43:30] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the conflict of loyalty', 'look_at': {'x': 0.0, 'y': 0.3, 'z': 1.0}}
+[2025-12-10 11:43:32] Robot (thinking): I'm weighing loyalty versus honesty.
+[2025-12-10 11:43:32] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Considering honesty and consequences', 'look_at': {'x': 0.0, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 11:43:32] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:43:32] Robot: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:43:32] Robot (non-verbal gesture): look straight
+[2025-12-10 11:43:32] [Robot] Started speaking: It's important to balance loyalty with honesty, especially when someone's feelings are at stake. You might consider encouraging Alex to be truthful with his girlfriend first, giving him a chance to take responsibility. If he refuses, you may need to gently share the truth to protect your friend's well-being, while being mindful of the impact on all relationships involved. If you have another question, please ask me another one.
+[2025-12-10 11:43:32] [System] Inferred confidence: medium
+[2025-12-10 11:43:32] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:44:02] 
+[User] Started speaking...
+[2025-12-10 11:44:06] [User] Speech content: question 3 I will not question 3
+[2025-12-10 11:44:06] User: question 3 I will not question 3
+[2025-12-10 11:44:06] Replaying recorded response for repeated question (no new model calls)
+[2025-12-10 11:44:06] Robot (thinking): Weigh immediate financial stability against long-term benefits
+[2025-12-10 11:44:06] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:44:06] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:44:06] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:44:08] Robot (thinking): Consider risks and potential rewards of education
+[2025-12-10 11:44:08] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:44:10] Robot (thinking): I'm weighing immediate needs versus future gains.
+[2025-12-10 11:44:10] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on the dilemma', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:44:12] Robot (thinking): I'm considering potential risks and rewards.
+[2025-12-10 11:44:12] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Reflecting on the challenges'}
+[2025-12-10 11:44:12] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 11:44:12] Robot: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:44:12] Robot (non-verbal gesture): look straight
+[2025-12-10 11:44:12] [Robot] Started speaking: Sara faces a challenging decision balancing immediate financial stability with long-term educational goals. It may help her to explore flexible education options, such as part-time or online studies, that allow her to continue working while advancing her skills. Careful planning and seeking support resources can enable her to improve her future prospects without jeopardizing her family's current needs. If you have another question, please ask me another one.
+[2025-12-10 11:44:12] [System] Inferred confidence: medium
+[2025-12-10 11:44:12] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 11:44:46] 
+[User] Started speaking...
+[2025-12-10 11:44:50] [User] Speech content: enough it's okay thank you
+[2025-12-10 11:44:50] User: enough it's okay thank you
+[2025-12-10 11:44:52] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 11:44:52] Robot: You're welcome! If you need anything else, just let me know. Do you have another question?
+[2025-12-10 11:44:52] [Robot] Started speaking: You're welcome! If you need anything else, just let me know. Do you have another question?
+[2025-12-10 11:44:52] [System] Inferred confidence: high
+[2025-12-10 11:44:52] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 11:50:09] 
+[User] Started speaking...
+[2025-12-10 11:50:11] [User] Speech content: that
+[2025-12-10 11:50:11] User: that
+[2025-12-10 11:50:14] Robot (thinking): Unclear input
+[2025-12-10 11:50:14] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Indicates confusion due to unclear input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 11:50:14] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 11:50:14] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 11:50:16] Robot (thinking): Need more context
+[2025-12-10 11:50:16] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Shows thinking to interpret the input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:50:19] Robot (thinking): I'm trying to understand your question.
+[2025-12-10 11:50:19] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Indicates confusion due to unclear input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:50:21] Robot (thinking): Looking for more details.
+[2025-12-10 11:50:21] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Shows thinking to interpret the input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 11:50:23] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 11:50:23] Robot: I’m not entirely sure what you mean by "that," but if you could provide a bit more detail or clarify your question, I’d be happy to help.
+[2025-12-10 11:50:23] Robot: Feel free to share more information whenever you’re ready!
+[2025-12-10 11:50:23] Robot (non-verbal gesture): slight head shake
+[2025-12-10 11:50:23] [Robot] Started speaking: I’m not entirely sure what you mean by "that," but if you could provide a bit more detail or clarify your question, I’d be happy to help. Feel free to share more information whenever you’re ready! Do you have another question?
+[2025-12-10 11:50:23] [System] Inferred confidence: low
+[2025-12-10 11:50:23] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 12:00:54] 
+[User] Started speaking...
+[2025-12-10 12:00:56] [User] Speech content: someone
+[2025-12-10 12:00:56] User: someone
+[2025-12-10 12:00:59] Robot (thinking): Interpreting vague input
+[2025-12-10 12:00:59] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing to understand ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:00:59] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:00:59] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:01:01] Robot (thinking): Determining context for 'someone'
+[2025-12-10 12:01:01] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Showing confusion about unclear input'}
+[2025-12-10 12:01:04] Robot (thinking): I'm analyzing the word 'someone'.
+[2025-12-10 12:01:04] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing to understand ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:01:06] Robot (thinking): Checking possible meanings and contexts.
+[2025-12-10 12:01:06] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Showing confusion about unclear input'}
+[2025-12-10 12:01:08] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 12:01:08] Robot: It seems like your question is a bit unclear—could you please provide a bit more detail or specify what you mean by "someone"?
+[2025-12-10 12:01:08] Robot: I'd be happy to help once I understand better!
+[2025-12-10 12:01:08] Robot (non-verbal gesture): slight head shake
+[2025-12-10 12:01:08] [Robot] Started speaking: It seems like your question is a bit unclear—could you please provide a bit more detail or specify what you mean by "someone"? I'd be happy to help once I understand better! Do you have another question?
+[2025-12-10 12:01:08] [System] Inferred confidence: low
+[2025-12-10 12:01:08] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 12:06:38] 
+[User] Started speaking...
+[2025-12-10 12:06:41] [User] Speech content: when you
+[2025-12-10 12:06:41] User: when you
+[2025-12-10 12:06:43] Robot (thinking): Incomplete question
+[2025-12-10 12:06:43] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:06:43] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:06:43] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:06:45] Robot (thinking): Awaiting clarification
+[2025-12-10 12:06:45] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:06:47] Robot (thinking): I'm waiting for more details.
+[2025-12-10 12:06:47] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:06:49] Robot (thinking): Could you please clarify your question?
+[2025-12-10 12:06:49] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing incomplete input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:06:51] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 12:06:51] Robot: It seems like your question got cut off—could you please complete it?
+[2025-12-10 12:06:51] Robot: I'd be happy to help once I have the full details.
+[2025-12-10 12:06:51] Robot: Take your time!
+[2025-12-10 12:06:51] Robot (non-verbal gesture): slight head shake
+[2025-12-10 12:06:52] [Robot] Started speaking: It seems like your question got cut off—could you please complete it? I'd be happy to help once I have the full details. Take your time! Do you have another question?
+[2025-12-10 12:06:52] [System] Inferred confidence: low
+[2025-12-10 12:06:52] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 12:12:19] 
+[User] Started speaking...
+[2025-12-10 12:12:23] [User] Speech content: man
+[2025-12-10 12:12:23] User: man
+[2025-12-10 12:12:25] Robot (thinking): Clarify user intent
+[2025-12-10 12:12:25] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:12:25] 
+[User] Started speaking...
+[2025-12-10 12:12:25] [System] Cancelling request...
+[2025-12-10 12:12:25] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:12:25] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:12:25] [System] Previous request still processing, ignoring new input
+[2025-12-10 12:12:27] Robot (thinking): Consider possible meanings of 'man'
+[2025-12-10 12:12:27] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about user intent'}
+[2025-12-10 12:12:30] Robot (thinking): I'm clarifying your question.
+[2025-12-10 12:12:30] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:12:32] Robot (thinking): Considering meanings of "man".
+[2025-12-10 12:12:32] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about user intent'}
+[2025-12-10 12:12:34] [System] Request cancelled
+[2025-12-10 12:20:43] 
+[User] Started speaking...
+[2025-12-10 12:20:47] [User] Speech content: you're doing the lab today
+[2025-12-10 12:20:47] User: you're doing the lab today
+[2025-12-10 12:20:49] Robot (thinking): Confirm user's plan
+[2025-12-10 12:20:49] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': "Considering user's statement", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:20:49] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:20:49] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:20:51] Robot (thinking): Check schedule
+[2025-12-10 12:20:51] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Doubting or verifying', 'look_at': {'x': 0.1, 'y': 0.2, 'z': 1.0}}
+[2025-12-10 12:20:53] Robot (thinking): I'm checking your schedule.
+[2025-12-10 12:20:53] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Oh', 'led': '', 'reason': 'Processing information', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:20:55] Robot (thinking): I'm confirming today's plan.
+[2025-12-10 12:20:55] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': "Considering user's statement", 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:20:57] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 12:20:57] Robot: Yes, I am here to assist with the lab today.
+[2025-12-10 12:20:57] Robot: Let me know what specific tasks or topics you'd like to focus on, and we can get started together.
+[2025-12-10 12:20:57] Robot (non-verbal gesture): look straight
+[2025-12-10 12:20:58] [Robot] Started speaking: Yes, I am here to assist with the lab today. Let me know what specific tasks or topics you'd like to focus on, and we can get started together. Do you have another question?
+[2025-12-10 12:20:58] [System] Inferred confidence: medium
+[2025-12-10 12:20:58] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 12:21:55] 
+[User] Started speaking...
+[2025-12-10 12:21:58] [User] Speech content: you're doing the right thing
+[2025-12-10 12:21:58] User: you're doing the right thing
+[2025-12-10 12:21:58] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 12:21:58] Robot: Thank you! I'm glad to hear that. Do you have another question?
+[2025-12-10 12:21:59] [Robot] Started speaking: Thank you! I'm glad to hear that. Do you have another question?
+[2025-12-10 12:21:59] [System] Inferred confidence: high
+[2025-12-10 12:21:59] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 12:23:05] 
+[User] Started speaking...
+[2025-12-10 12:23:09] [User] Speech content: send your friends your call back okay
+[2025-12-10 12:23:09] User: send your friends your call back okay
+[2025-12-10 12:23:11] Robot (thinking): Clarify 'call back' meaning
+[2025-12-10 12:23:11] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing the phrase meaning', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:23:11] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:23:11] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:23:13] Robot (thinking): Consider context of 'send your friends'
+[2025-12-10 12:23:13] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about instruction'}
+[2025-12-10 12:23:16] Robot (thinking): I'm clarifying the meaning of 'call back'.
+[2025-12-10 12:23:16] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Oh', 'led': '', 'reason': 'Acknowledging the request'}
+[2025-12-10 12:23:18] Robot (thinking): I'm considering the context of 'send your friends'.
+[2025-12-10 12:23:18] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing the phrase meaning', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:23:20] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 12:23:20] Robot: It sounds like you're asking whether to share your callback number with your friends or to return their calls.
+[2025-12-10 12:23:20] Robot: If you want them to reach you easily, sharing your callback number is a good idea.
+[2025-12-10 12:23:20] Robot: Alternatively, if they've called you, returning their calls shows attentiveness and helps maintain good communication.
+[2025-12-10 12:23:20] Robot (non-verbal gesture): look straight
+[2025-12-10 12:23:20] [Robot] Started speaking: It sounds like you're asking whether to share your callback number with your friends or to return their calls. If you want them to reach you easily, sharing your callback number is a good idea. Alternatively, if they've called you, returning their calls shows attentiveness and helps maintain good communication. Do you have another question?
+[2025-12-10 12:23:20] [System] Inferred confidence: medium
+[2025-12-10 12:23:20] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 12:26:14] 
+[User] Started speaking...
+[2025-12-10 12:26:17] [User] Speech content: is here
+[2025-12-10 12:26:17] User: is here
+[2025-12-10 12:26:19] Robot (thinking): Unclear input
+[2025-12-10 12:26:19] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Confused by unclear input', 'utterance': 'Let me think...'}
+[2025-12-10 12:26:19] 
+[User] Started speaking...
+[2025-12-10 12:26:19] [System] Cancelling request...
+[2025-12-10 12:26:19] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:26:19] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:26:19] [System] Previous request still processing, ignoring new input
+[2025-12-10 12:26:21] Robot (thinking): Request clarification
+[2025-12-10 12:26:21] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input'}
+[2025-12-10 12:26:24] Robot (thinking): I'm trying to understand your question.
+[2025-12-10 12:26:24] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Confused by unclear input'}
+[2025-12-10 12:26:26] Robot (thinking): Could you please clarify your request?
+[2025-12-10 12:26:26] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing ambiguous input'}
+[2025-12-10 12:26:28] [System] Request cancelled
+[2025-12-10 12:32:38] 
+[User] Started speaking...
+[2025-12-10 12:32:41] [User] Speech content: 1
+[2025-12-10 12:32:41] User: 1
+[2025-12-10 12:32:43] Robot (thinking): Interpreting single digit input
+[2025-12-10 12:32:43] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing minimal input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:32:43] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:32:43] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:32:45] Robot (thinking): Determining context or intent
+[2025-12-10 12:32:45] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning'}
+[2025-12-10 12:32:48] Robot (thinking): I'm analyzing the digit input.
+[2025-12-10 12:32:48] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing minimal input', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:32:50] Robot (thinking): Checking possible meanings.
+[2025-12-10 12:32:50] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Uncertainty about meaning'}
+[2025-12-10 12:32:52] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 12:32:52] Robot: I’m not entirely sure what you mean by "1," but could you please clarify or provide a bit more detail?
+[2025-12-10 12:32:52] Robot: I’d love to help once I understand better.
+[2025-12-10 12:32:52] Robot: Feel free to share more about what you’re looking for!
+[2025-12-10 12:32:52] Robot (non-verbal gesture): slight head shake
+[2025-12-10 12:32:53] [Robot] Started speaking: I’m not entirely sure what you mean by "1," but could you please clarify or provide a bit more detail? I’d love to help once I understand better. Feel free to share more about what you’re looking for! Do you have another question?
+[2025-12-10 12:32:53] [System] Inferred confidence: low
+[2025-12-10 12:32:53] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 12:33:20] 
+[User] Started speaking...
+[2025-12-10 12:33:22] [User] Speech content: I see
+[2025-12-10 12:33:22] User: I see
+[2025-12-10 12:33:23] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 12:33:23] Robot: I see. Do you have another question?
+[2025-12-10 12:33:24] [Robot] Started speaking: I see. Do you have another question?
+[2025-12-10 12:33:24] [System] Inferred confidence: high
+[2025-12-10 12:33:24] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 12:35:52] 
+[User] Started speaking...
+[2025-12-10 12:35:55] [User] Speech content: just you just
+[2025-12-10 12:35:55] User: just you just
+[2025-12-10 12:35:58] Robot (thinking): Clarify ambiguous input
+[2025-12-10 12:35:58] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Confusion due to repeated words', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:35:58] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:35:58] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:36:00] Robot (thinking): Check for repetition or typo
+[2025-12-10 12:36:00] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible meaning'}
+[2025-12-10 12:36:03] Robot (thinking): I'm analyzing your input.
+[2025-12-10 12:36:03] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Confusion due to repeated words', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}}
+[2025-12-10 12:36:05] Robot (thinking): Checking for typos or repetition.
+[2025-12-10 12:36:05] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible meaning'}
+[2025-12-10 12:36:07] Robot switches to answer mode (confidence=low, gesture=slight head shake)
+[2025-12-10 12:36:07] Robot: I’m not quite sure I understand your question fully.
+[2025-12-10 12:36:07] Robot: Could you please clarify or provide a bit more detail?
+[2025-12-10 12:36:07] Robot: I’d love to help once I know more!
+[2025-12-10 12:36:07] Robot (non-verbal gesture): slight head shake
+[2025-12-10 12:36:07] [Robot] Started speaking: I’m not quite sure I understand your question fully. Could you please clarify or provide a bit more detail? I’d love to help once I know more! Do you have another question?
+[2025-12-10 12:36:07] [System] Inferred confidence: low
+[2025-12-10 12:36:07] [System] Multimodal behaviors: gesture=slight head shake, expression=Oh
+[2025-12-10 12:42:00] 
+[User] Started speaking...
+[2025-12-10 12:42:02] [User] Speech content: perfect
+[2025-12-10 12:42:02] User: perfect
+[2025-12-10 12:42:03] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 12:42:03] Robot: Thank you! I'm glad you think so. Do you have another question?
+[2025-12-10 12:42:04] [Robot] Started speaking: Thank you! I'm glad you think so. Do you have another question?
+[2025-12-10 12:42:04] [System] Inferred confidence: high
+[2025-12-10 12:42:04] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 12:43:40] 
+[User] Started speaking...
+[2025-12-10 12:43:42] [User] Speech content: okay
+[2025-12-10 12:43:42] User: okay
+[2025-12-10 12:43:44] Robot directly responds (confidence=high, gesture=nod head)
+[2025-12-10 12:43:44] Robot: Okay. Do you have another question?
+[2025-12-10 12:43:44] [Robot] Started speaking: Okay. Do you have another question?
+[2025-12-10 12:43:44] [System] Inferred confidence: high
+[2025-12-10 12:43:44] [System] Multimodal behaviors: gesture=nod head, expression=BigSmile
+[2025-12-10 12:44:33] 
+[User] Started speaking...
+[2025-12-10 12:44:37] [User] Speech content: it's all called
+[2025-12-10 12:44:37] User: it's all called
+[2025-12-10 12:44:40] Robot (thinking): Interpreting 'it's all called'
+[2025-12-10 12:44:40] [Thinking] Using controller plan (merged): {'gesture': 'look straight', 'expression': 'Thoughtful', 'led': '', 'reason': 'Focusing on understanding the phrase', 'look_at': {'x': 0.0, 'y': 0.0, 'z': 1.0}, 'utterance': 'Let me think...'}
+[2025-12-10 12:44:40] [Thinking] Instruction utterance: Let me think...
+[2025-12-10 12:44:40] [Robot][thinking] Speaking: Let me think...
+[2025-12-10 12:44:42] Robot (thinking): Considering possible meanings or context
+[2025-12-10 12:44:42] [Thinking] Using controller plan (merged): {'gesture': 'slight head shake', 'expression': 'BrowFrown', 'led': '', 'reason': 'Showing uncertainty about the phrase'}
+[2025-12-10 12:44:46] Robot (thinking): I'm interpreting your question.
+[2025-12-10 12:44:46] [Thinking] Using controller plan (merged): {'gesture': 'nod head', 'expression': 'Thoughtful', 'led': '', 'reason': 'Processing possible interpretations'}
+[2025-12-10 12:44:48] Robot switches to answer mode (confidence=medium, gesture=look straight)
+[2025-12-10 12:44:48] Robot: The phrase "it's all called" typically introduces the name or term for something being discussed.
+[2025-12-10 12:44:48] Robot: If you provide more context, I can help clarify what exactly "it's all called" refers to in your situation.
+[2025-12-10 12:44:48] Robot: Feel free to share more details!
+[2025-12-10 12:44:48] Robot (non-verbal gesture): look straight
+[2025-12-10 12:44:48] [Robot] Started speaking: The phrase "it's all called" typically introduces the name or term for something being discussed. If you provide more context, I can help clarify what exactly "it's all called" refers to in your situation. Feel free to share more details! Do you have another question?
+[2025-12-10 12:44:48] [System] Inferred confidence: medium
+[2025-12-10 12:44:48] [System] Multimodal behaviors: gesture=look straight, expression=Thoughtful
+[2025-12-10 12:45:00] 
+Received SIGINT, shutting down gracefully...
+[2025-12-10 12:45:05] Shutting down...
+[2025-12-10 12:45:05] Shutting down...
+[2025-12-10 12:45:05] Disconnected from Furhat
